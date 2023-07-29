@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/frontend/home/index"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route exact path="/" Component={Home} />
+            {/*<Route exact path="/projects" Component={Projects} />*/}
+            {/*<Route exact path="/about" Component={About} />*/}
+            {/*<Route exact path="/service" Component={Services} />*/}
+            {/*<Route exact path="/contact" Component={Contact} />*/}
+            {/*<Route exact path="/case-studies" Component={CaseStudies} />*/}
+            {/*<Route exact path="/team" Component={Team} />*/}
+            {/*<Route exact path="/pricing-plans" Component={Pricing} />*/}
+            {/*<Route*/}
+            {/*    exact*/}
+            {/*    path="/free-consultation"*/}
+            {/*    Component={FreeConsultation}*/}
+            {/*/>*/}
+            {/* WHEN NO ROUTE FOUND */}
+            {/*<Route path="*" Component={Error404} />*/}
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </>
   );
 }
 
