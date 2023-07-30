@@ -9,7 +9,8 @@ import Blog from "./components/frontend/blog";
 import Membership from "./components/frontend/Membership";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index"
-
+import Register from "./components/frontend/Auth/Register";
+import Login from "./components/frontend/Auth/Login";
 function App() {
   return (
     <>
@@ -25,6 +26,9 @@ function App() {
             <Route exact path="/memberships" Component={Membership} />
             <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
             <Route exact path="/terms-of-condition" Component={TermsConditions} />
+            {/*auth route */}
+            <Route exact path="/register" Component={Register} />
+            <Route exact path="/login" Component={Login} />
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
