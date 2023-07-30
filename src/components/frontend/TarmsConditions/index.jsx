@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import Brodcamp from "../brodcamp";
 import {Helmet} from "react-helmet";
 
-class PrivacyPolicy extends Component {
+class Index extends Component {
     render() {
         return (
             <div>
-                <Helmet title={'Privacy Policy'}/>
+                <Helmet title={'Terms Of Condition'}/>
                 <div className="rbt-overlay-page-wrapper">
-                    <Brodcamp bgImg={"assets/images/bg/bg-image-10.jpg"} Title={'Privacy Policy'} SubTitle={'Janine Course Privacy Policy Here.'}/>
+                    <Brodcamp bgImg={"assets/images/bg/bg-image-10.jpg"} Title={'TERMS OF USE'} SubTitle={'Janine Course Terms of Use Here.'}/>
                     <div className="rbt-putchase-guide-area breadcrumb-style-max-width rbt-section-gapBottom">
                         <div className="rbt-article-content-wrapper">
                             <div className="content">
@@ -23,4 +23,4 @@ class PrivacyPolicy extends Component {
     }
 }
 
-export default PrivacyPolicy;
+export default Index;

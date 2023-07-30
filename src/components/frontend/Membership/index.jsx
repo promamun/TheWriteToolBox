@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import Membership from "./Membership";
+import {Helmet} from "react-helmet";
 
 class Index extends Component {
     render() {
         return (
-            <div>
-                test
-            </div>
+            <>
+                <Helmet title={'Membership'}/>
+                <Membership/>
+            </>
         );
     }
 }

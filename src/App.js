@@ -7,6 +7,8 @@ import Course from "./components/frontend/Course";
 import Contact from "./components/frontend/contact";
 import Blog from "./components/frontend/blog";
 import Membership from "./components/frontend/Membership";
+import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
+import TermsConditions from "./components/frontend/TarmsConditions/index"
 
 function App() {
   return (
@@ -21,8 +23,8 @@ function App() {
             <Route exact path="/contact" Component={Contact} />
             <Route exact path="/blog" Component={Blog} />
             <Route exact path="/memberships" Component={Membership} />
-            {/*<Route exact path="/privacy-policy" Component={memberships} />*/}
-            {/*<Route exact path="/terms-of-condition" Component={memberships} />*/}
+            <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
+            <Route exact path="/terms-of-condition" Component={TermsConditions} />
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>

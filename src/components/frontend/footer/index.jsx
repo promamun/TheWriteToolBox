@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 class Index extends Component {
     render() {
+        const currentYear = new Date().getFullYear();
         return (
             <div>
                 <footer className="rbt-footer footer-style-1">
@@ -114,6 +116,30 @@ class Index extends Component {
                         </div>
                     </div>
                 </footer>
+                <div className="rbt-separator-mid">
+                    <div className="container">
+                        <hr className="rbt-separator m-0"/>
+                    </div>
+                </div>
+                {/*// <!-- Start Copyright Area  -->*/}
+                <div className="copyright-area copyright-style-1 ptb--20">
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                                <p className="rbt-link-hover text-center text-lg-start">Copyright © {currentYear} <a
+                                    href="/">The-Write-ToolsBox</a> All Rights Reserved</p>
+                            </div>
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                                <ul className="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
+                                    <li><Link to="/terms-of-condition">Terms of service</Link></li>
+                                    <li><Link to="/privacy-policy">Privacy policy</Link></li>
+                                    <li><Link to="/memberships">Subscription</Link></li>
+                                    <li><Link to="/login">Login & Register</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

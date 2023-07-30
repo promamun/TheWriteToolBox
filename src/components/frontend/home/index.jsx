@@ -10,11 +10,13 @@ import FreeCourseContact from "../contact/FreeCourseContact";
 import Blog from "../blog/blog";
 import JaninBook from "./JaninBook";
 import Newsletter from "./Newsletter";
+import { Helmet } from "react-helmet";
 
 class Index extends Component {
     render() {
         return (
             <div>
+                <Helmet title={'Home'}/>
                 <Slider/>
                 <AboutJanin/>
                 <Testimonial/>
