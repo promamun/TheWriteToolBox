@@ -5,8 +5,6 @@ import SliderImg1 from "../../../assets/images/shape/shape-01.png";
 import SliderImg2 from "../../../assets/images/shape/shape-02.png";
 import SliderImg3 from "../../../assets/images/course/course-01.jpg";
 
-
-
 class Slider extends Component {
   render() {
     return (
@@ -72,21 +70,12 @@ class Slider extends Component {
                     </div>
                   </div>
                   <div className="shape-wrapper" id="scene">
-                    <img
-                      src={SliderImg}
-                      alt="Hero Image"
-                    />
+                    <img src={SliderImg} alt="Hero Image" />
                     <div className="hero-bg-shape-1 layer" data-depth="0.4">
-                      <img
-                        src={SliderImg1}
-                        alt="Hero Image Background Shape"
-                      />
+                      <img src={SliderImg1} alt="Hero Image Background Shape" />
                     </div>
                     <div className="hero-bg-shape-2 layer" data-depth="0.4">
-                      <img
-                        src={SliderImg2}
-                        alt="Hero Image Background Shape"
-                      />
+                      <img src={SliderImg2} alt="Hero Image Background Shape" />
                     </div>
                   </div>
 
@@ -97,10 +86,7 @@ class Slider extends Component {
                         <div className="rbt-card variation-01 rbt-hover">
                           <div className="rbt-card-img">
                             <Link to="">
-                              <img
-                                src={SliderImg3}
-                                alt="Course image"
-                              />
+                              <img src={SliderImg3} alt="Course image" />
                               <div className="rbt-badge-3 bg-white">
                                 <span>-40%</span>
                                 <span>Off</span>
@@ -131,7 +117,6 @@ class Slider extends Component {
                                 <i className="fas fa-star"></i>
                               </div>
                               <span className="rating-count">
-                                {" "}
                                 (15 Reviews)
                               </span>
                             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../../../assets/images/logo/logo.png";
 
 class Index extends Component {
   render() {
@@ -13,9 +13,9 @@ class Index extends Component {
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
                   <div className="footer-widget">
                     <div className="logo">
-                      <Link to="index.html">
+                      <Link to="/index">
                         <img
-                          src="assets/images/logo/logo.png"
+                          src={Logo}
                           alt="Edu-cause"
                         />
                       </Link>
@@ -49,19 +49,19 @@ class Index extends Component {
                     <h5 className="ft-title">Useful Links</h5>
                     <ul className="ft-link">
                       <li>
-                        <Link to="12-marketplace.html">Marketplace</Link>
+                        <Link to="/12-marketplace">Marketplace</Link>
                       </li>
                       <li>
-                        <Link to="04-kindergarten.html">kindergarten</Link>
+                        <Link to="/04-kindergarten">kindergarten</Link>
                       </li>
                       <li>
-                        <Link to="13-university-classic.html">University</Link>
+                        <Link to="/13-university-classic">University</Link>
                       </li>
                       <li>
-                        <Link to="09-gym-coaching.html">GYM Coaching</Link>
+                        <Link to="/09-gym-coaching">GYM Coaching</Link>
                       </li>
                       <li>
-                        <Link to="faqs.html">FAQ</Link>
+                        <Link to="/faqs">FAQ</Link>
                       </li>
                     </ul>
                   </div>
@@ -72,19 +72,19 @@ class Index extends Component {
                     <h5 className="ft-title">Our Company</h5>
                     <ul className="ft-link">
                       <li>
-                        <Link to="contact.html">Contact Us</Link>
+                        <Link to="/contact">Contact Us</Link>
                       </li>
                       <li>
-                        <Link to="become-a-teacher.html">Become Teacher</Link>
+                        <Link to="/become-a-teacher">Become Teacher</Link>
                       </li>
                       <li>
-                        <Link to="blog.html">Blog</Link>
+                        <Link to="/blog">Blog</Link>
                       </li>
                       <li>
-                        <Link to="instructor.html">Instructor</Link>
+                        <Link to="/instructor">Instructor</Link>
                       </li>
                       <li>
-                        <Link to="event-list.html">Events</Link>
+                        <Link to="/event-list">Events</Link>
                       </li>
                     </ul>
                   </div>
@@ -98,7 +98,9 @@ class Index extends Component {
                       </li>
                       <li>
                         <span>E-mail:</span>
-                        <Link to="mailto:hr@example.com">rainbow@example.com</Link>
+                        <Link to="mailto:hr@example.com">
+                          rainbow@example.com
+                        </Link>
                       </li>
                       <li>
                         <span>Location:</span> North America, USA
