@@ -1,4 +1,6 @@
 import React from "react";
+import Logo from "../../../assets/Logo.png"
+
 const Navbar = () => {
     return(
         <>
@@ -138,7 +140,7 @@ const Navbar = () => {
                                 <div className="header-info">
                                     <div className="logo">
                                         <a href="index.html">
-                                            <img src="assets/images/logo/logo.png" alt="Education Logo Images"/>
+                                            <img src={Logo} alt="Education Logo Images"/>
                                         </a>
                                     </div>
                                 </div>
@@ -146,19 +148,17 @@ const Navbar = () => {
                                     <div className="rbt-category-menu-wrapper">
                                         <div className="rbt-category-btn rbt-side-offcanvas-activation">
                                             <div className="rbt-offcanvas-trigger md-size icon">
-                                        <span className="d-none d-xl-block">
-                                    <i className="feather-grid"/>
-                                </span>
+                                                <span className="d-none d-xl-block"><i className="feather-grid"/></span>
                                                 <i title="Category" className="feather-grid d-block d-xl-none"/>
                                             </div>
-                                            <span className="category-text d-none d-xl-block">Category</span>
+                                            <span className="category-text d-none d-xl-block">Services</span>
                                         </div>
 
                                         <div className="category-dropdown-menu d-none d-xl-block">
                                             <div className="category-menu-item">
                                                 <div className="rbt-vertical-nav">
                                                     <ul className="rbt-vertical-nav-list-wrapper vertical-nav-menu">
-                                                        <li className="vertical-nav-item active">
+                                                        <li className="vertical-nav-item ">
                                                             <a href="#tab1">Course School</a>
                                                         </li>
                                                         <li className="vertical-nav-item">
@@ -172,122 +172,6 @@ const Navbar = () => {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div className="rbt-vertical-nav-content">
-                                                    {/*// <!-- Start One Item  -->*/}
-                                                    <div className="rbt-vertical-inner tab-content" id="tab1"
-                                                         // style="display: block"
-                                                    >
-                                                        <div className="rbt-vertical-single">
-                                                            <div className="row">
-                                                                <div className="col-lg-6 col-sm-6 col-6">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Web Design</a></li>
-                                                                            <li><a href="#">Art</a></li>
-                                                                            <li><a href="#">Figma</a></li>
-                                                                            <li><a href="#">Adobe</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-6 col-sm-6 col-6">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Photo</a></li>
-                                                                            <li><a href="#">English</a></li>
-                                                                            <li><a href="#">Math</a></li>
-                                                                            <li><a href="#">Read</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/*// <!-- End One Item  -->*/}
-                                                    {/*//*/}
-                                                    {/*// <!-- Start One Item  -->*/}
-                                                    <div className="rbt-vertical-inner tab-content" id="tab2">
-                                                        <div className="rbt-vertical-single">
-                                                            <div className="row">
-                                                                <div className="col-lg-6">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Photo</a></li>
-                                                                            <li><a href="#">English</a></li>
-                                                                            <li><a href="#">Math</a></li>
-                                                                            <li><a href="#">Read</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-6">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Web Design</a></li>
-                                                                            <li><a href="#">Art</a></li>
-                                                                            <li><a href="#">Figma</a></li>
-                                                                            <li><a href="#">Adobe</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/*// <!-- End One Item  -->*/}
-                                                    {/*//*/}
-                                                    {/*// <!-- Start One Item  -->*/}
-                                                    <div className="rbt-vertical-inner tab-content" id="tab3">
-                                                        <div className="rbt-vertical-single">
-                                                            <div className="row">
-                                                                <div className="col-lg-12">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Photo</a></li>
-                                                                            <li><a href="#">English</a></li>
-                                                                            <li><a href="#">Math</a></li>
-                                                                        </ul>
-                                                                        <div className="read-more-btn">
-                                                                            <a className="rbt-btn-link" href="#">Learn
-                                                                                More<i
-                                                                                    className="feather-arrow-right"/></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/*// <!-- End One Item  -->*/}
-                                                    {/*//*/}
-                                                    {/*// <!-- Start One Item  -->*/}
-                                                    <div className="rbt-vertical-inner tab-content" id="tab4">
-                                                        <div className="rbt-vertical-single">
-                                                            <div className="row">
-                                                                <div className="col-lg-12">
-                                                                    <div className="vartical-nav-content-menu">
-                                                                        <h3 className="rbt-short-title">Course
-                                                                            Title</h3>
-                                                                        <ul className="rbt-vertical-nav-list-wrapper">
-                                                                            <li><a href="#">Photo</a></li>
-                                                                            <li><a href="#">English</a></li>
-                                                                            <li><a href="#">Math</a></li>
-                                                                            <li><a href="#">Read</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/*// <!-- End One Item  -->*/}
-
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -298,32 +182,215 @@ const Navbar = () => {
                                 <nav className="mainmenu-nav">
                                     <ul className="mainmenu">
                                         <li className="with-megamenu has-menu-child-item position-static">
-                                            <a href="#">Home <i className="feather-chevron-down"/></a>
+                                            <a href="/">Home</a>
                                         </li>
-
+                                        <li>
+                                            <a href="/about-janine">About Janine</a>
+                                        </li>
                                         <li className="with-megamenu has-menu-child-item">
-                                            <a href="#">Courses <i className="feather-chevron-down"/></a>
+                                            <a href="/courses">Courses <i
+                                                className="feather-chevron-down"/></a>
+                                            {/*// <!-- Start Mega Menu  -->*/}
+                                            <div className="rbt-megamenu grid-item-2">
+                                                <div className="wrapper">
+                                                    <div className="row row--15">
+                                                        <div className="col-lg-12 col-xl-6 col-xxl-12 single-mega-item">
+                                                            <ul className="mega-menu-item">
+                                                                <li>
+                                                                    <a href="/course-details">title</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/*// <!-- End Mega Menu  -->*/}
                                         </li>
-
-                                        <li className="has-dropdown has-menu-child-item">
-                                            <a href="#">Dashboard
-                                                <i className="feather-chevron-down"/>
-                                            </a>
+                                        <li>
+                                            <a href="/memberships">Membership</a>
                                         </li>
-
-                                        <li className="with-megamenu has-menu-child-item position-static">
-                                            <a href="#">Pages <i className="feather-chevron-down"/></a>
+                                        <li>
+                                            <a href="/blogs">Blog</a>
                                         </li>
-
-                                        <li className="with-megamenu has-menu-child-item position-static">
-                                            <a href="#">Elements <i className="feather-chevron-down"/></a>
+                                        <li>
+                                            <a href="/privacy-policy">Privacy Policy</a>
                                         </li>
-
-                                        <li className="with-megamenu has-menu-child-item position-static">
-                                            <a href="#">Blog <i className="feather-chevron-down"/></a>
+                                        <li>
+                                            <a href="/terms-of-condition">Terms of Use</a>
                                         </li>
                                     </ul>
                                 </nav>
+                            </div>
+                            <div className="header-right">
+                                {/*// <!-- Navbar Icons -->*/}
+                                <ul className="quick-access">
+                                    <li className="access-icon">
+                                        <a className="search-trigger-active rbt-round-btn" href="#">
+                                            <i className="feather-search"/>
+                                        </a>
+                                    </li>
+                                    <li className="access-icon rbt-mini-cart">
+                                        <a id="cardCount" className="rbt-cart-sidenav-activation rbt-round-btn"
+                                           href="#">
+                                            <i className="feather-shopping-cart"/>
+                                            <span className="rbt-cart-count">5</span>
+                                        </a>
+                                    </li>
+                                    <li className="account-access rbt-user-wrapper d-none d-xl-block">
+                                        <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                            <a href="/"
+                                               className="text-sm text-gray-700 dark:text-gray-500 underline"><i
+                                                className="feather-user"/> name</a>
+                                            <a href="/login"
+                                               className="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                                            <a href="/register"
+                                               className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                        </div>
+                                        <div className="rbt-user-menu-list-wrapper">
+                                            <div className="inner">
+                                                <div className="rbt-admin-profile">
+                                                    <div className="admin-thumbnail">
+                                                        <img src="assets/images/team/avatar.jpg"
+                                                             alt="User Images"/>
+                                                    </div>
+                                                    <div className="admin-info">
+                                                        <span className="name">Nipa Bali</span>
+                                                        <a className="rbt-btn-link color-primary"
+                                                           href="/profile">View Profile</a>
+                                                    </div>
+                                                </div>
+                                                <ul className="user-list-wrapper">
+                                                    <li>
+                                                        <a href="/dashboard">
+                                                            <i className="feather-home"/>
+                                                            <span>My Dashboard</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/enrolled-courses">
+                                                            <i className="feather-shopping-bag"/>
+                                                            <span>Enrolled Courses</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/wishlist">
+                                                            <i className="feather-heart"/>
+                                                            <span>Wishlist</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/reviews">
+                                                            <i className="feather-star"/>
+                                                            <span>Reviews</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/order-history">
+                                                            <i className="feather-clock"/>
+                                                            <span>Order History</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <hr className="mt--10 mb--10"/>
+                                                <ul className="user-list-wrapper">
+                                                    <li>
+                                                        <a href="/settings">
+                                                            <i className="feather-settings"/>
+                                                            <span>Settings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a className="dropdown-item" href="/logout"
+                                                           >
+                                                            <i className="feather-log-out"/>Logout
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="access-icon rbt-user-wrapper d-block d-xl-none">
+                                        <a className="rbt-round-btn" href="#"><i className="feather-user"/></a>
+                                        <div className="rbt-user-menu-list-wrapper">
+                                            <div className="inner">
+                                                <div className="rbt-admin-profile">
+                                                    <div className="admin-thumbnail">
+                                                        <img src="assets/images/team/avatar.jpg"
+                                                             alt="User Images"/>
+                                                    </div>
+                                                    <div className="admin-info">
+                                                        <span className="name">Nipa Bali</span>
+                                                        <a className="rbt-btn-link color-primary"
+                                                           href="/profile">View Profile</a>
+                                                    </div>
+                                                </div>
+                                                <ul className="user-list-wrapper">
+                                                    <li>
+                                                        <a href="/profile">
+                                                            <i className="feather-home"/>
+                                                            <span>My Dashboard</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/enrolled-courses">
+                                                            <i className="feather-shopping-bag"/>
+                                                            <span>Enrolled Courses</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/wishlist">
+                                                            <i className="feather-heart"/>
+                                                            <span>Wishlist</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/reviews">
+                                                            <i className="feather-star"/>
+                                                            <span>Reviews</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/order-history">
+                                                            <i className="feather-clock"/>
+                                                            <span>Order History</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <hr className="mt--10 mb--10"/>
+                                                <hr className="mt--10 mb--10"/>
+                                                <ul className="user-list-wrapper">
+                                                    <li>
+                                                        <a href="/settings">
+                                                            <i className="feather-settings"/>
+                                                            <span>Settings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/logout">
+                                                            <i className="feather-log-out"/>
+                                                            <span>Logout</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div className="rbt-btn-wrapper d-none d-xl-block">
+                                    <a className="rbt-btn rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none"
+                                       href="#">
+                                        <span data-text="Enroll Now">Enroll Now</span>
+                                    </a>
+                                </div>
+                                {/*// <!-- Start Mobile-Menu-Bar -->*/}
+                                <div className="mobile-menu-bar d-block d-xl-none">
+                                    <div className="hamberger">
+                                        <button className="hamberger-button rbt-round-btn">
+                                            <i className="feather-menu"/>
+                                        </button>
+                                    </div>
+                                </div>
+                                {/*// <!-- Start Mobile-Menu-Bar -->*/}
                             </div>
                         </div>
                     </div>
