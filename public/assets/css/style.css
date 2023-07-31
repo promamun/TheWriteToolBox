@@ -14682,7 +14682,7 @@ span.transparent-button:hover i {
   box-shadow: var(--shadow-1);
   padding: 30px;
   border-radius: var(--radius);
-  /*background: var(--color-white);*/
+  background: var(--color-white);
   position: relative;
   height: 100%;
 }
