@@ -125,26 +125,18 @@ const Navbar = () => {
                       <li>
                         <Link to="/blog">Blog</Link>
                       </li>
-                      <li>
-                        <Link to="/privacy-policy">Privacy Policy</Link>
-                      </li>
-                      <li>
-                        <Link to="/terms-of-condition">Terms of Use</Link>
-                      </li>
+                      {/*<li>*/}
+                      {/*  <Link to="/privacy-policy">Privacy Policy</Link>*/}
+                      {/*</li>*/}
+                      {/*<li>*/}
+                      {/*  <Link to="/terms-of-condition">Terms of Use</Link>*/}
+                      {/*</li>*/}
                     </ul>
                   </nav>
                 </div>
                 <div className="header-right">
                   {/*// <!-- Navbar Icons -->*/}
                   <ul className="quick-access">
-                    <li className="access-icon">
-                      <Link
-                        className="search-trigger-active rbt-round-btn"
-                        to="#"
-                      >
-                        <i className="feather-search" />
-                      </Link>
-                    </li>
                     <li className="access-icon rbt-mini-cart">
                       <Link
                         id="cardCount"
@@ -163,18 +155,18 @@ const Navbar = () => {
                         >
                           <i className="feather-user" /> name
                         </Link>
-                        {/*<Link*/}
-                        {/*  to="/login"*/}
-                        {/*  className="text-sm text-gray-700 dark:text-gray-500 underline"*/}
-                        {/*>*/}
-                        {/*  Log in*/}
-                        {/*</Link>*/}
-                        {/*<Link*/}
-                        {/*  to="/register"*/}
-                        {/*  className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"*/}
-                        {/*>*/}
-                        {/*  Register*/}
-                        {/*</Link>*/}
+                        <Link
+                          to="/login"
+                          className="text-sm text-gray-700 dark:text-gray-500 underline"
+                        >
+                          Log in
+                        </Link>
+                        <Link
+                          to="/register"
+                          className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
+                        >
+                          Register
+                        </Link>
                       </div>
                       <div className="rbt-user-menu-list-wrapper">
                         <div className="inner">
