@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Img from "../../../assets/images/testimonial/client-03.png";
 import Img1 from "../../../assets/images/testimonial/client-04.png";
 import Img2 from "../../../assets/images/testimonial/client-06.png";
+import Img3 from "../../../assets/images/icons/three-shape.png";
 
 class FreeCourseContact extends Component {
   render() {
@@ -137,7 +138,7 @@ class FreeCourseContact extends Component {
           <div className="shape-wrapper">
             <div className="left-shape">
               <img
-                src="assets/images/icons/three-shape.png"
+                src={Img3}
                 alt="Shape Images"
               />
             </div>
