@@ -24248,7 +24248,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-------------------------------------------------------
-    Banner Style Home One And Home Five (variation-2)
+    Banner Style AdminHome One And AdminHome Five (variation-2)
 -------------------------------------------------------------*/
 .rbt-banner-1 {
   background-color: var(--color-light);
@@ -24590,7 +24590,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*------------------------------
-    Banner Style Home Two
+    Banner Style AdminHome Two
 -------------------------------*/
 .rbt-banner-2 {
   background-color: var(--color-light);
@@ -24647,7 +24647,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Home 03 Banner
+    AdminHome 03 Banner
 ------------------------*/
 .rbt-banner-3 {
   overflow: hidden;
@@ -24788,7 +24788,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Home 04 Banner
+    AdminHome 04 Banner
 ------------------------*/
 .rbt-banner-4 {
   position: relative;
@@ -24890,7 +24890,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------
-    Banner Home 06 && 12
+    Banner AdminHome 06 && 12
 --------------------------------*/
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-banner-5 {
@@ -25091,7 +25091,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------------
-    Banner Home 07 && 09 && 13
+    Banner AdminHome 07 && 09 && 13
 ------------------------------------------*/
 .rbt-banner-6 .inner .rbt-badge {
   background: rgba(0, 0, 0, 0.45);
@@ -25270,7 +25270,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Banner Home 08
+    Banner AdminHome 08
 ------------------------*/
 .rbt-banner-7 {
   height: 850px;
@@ -25355,7 +25355,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------------
-    Banner Home 10 && 14 && 15 &&  about
+    Banner AdminHome 10 && 14 && 15 &&  about
 ----------------------------------------*/
 .rbt-banner-8 .inner .meta-text {
   font-weight: 600;

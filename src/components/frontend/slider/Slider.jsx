@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import SliderImg from "../../../assets/image/the-write-toolbox.png";
 import SliderImg1 from "../../../assets/images/shape/shape-01.png";
 import SliderImg2 from "../../../assets/images/shape/shape-02.png";
-import SliderImg3 from "../../../assets/images/course/course-01.jpg";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade } from 'swiper/modules';
 import SwiperSlider from "./SwiperSlider";
+import WordAnimation from "./WordAnimation";
 class Slider extends Component {
   render() {
     return (
@@ -21,33 +19,7 @@ class Slider extends Component {
                       <span className="rbt-new-badge-icon">🏆</span> The Leader
                       in Online Learning
                     </div>
-                    <h1 className="title">
-                      We Help You Write
-                      <br />
-                      <span className="header-caption">
-                        <span className="cd-headline clip is-full-width">
-                          <span className="cd-words-wrapper">
-                            <b className="is-visible theme-gradient">Blogs.</b>
-                            <b className="is-hidden theme-gradient">Books.</b>
-                            <b className="is-hidden theme-gradient">
-                              Articles.
-                            </b>
-                            <b className="is-hidden theme-gradient">
-                              Guest Blog Posts.
-                            </b>
-                            <b className="is-hidden theme-gradient">
-                              Website Contents.
-                            </b>
-                            <b className="is-hidden theme-gradient">
-                              Email Campaigns.
-                            </b>
-                            <b className="is-hidden theme-gradient">
-                              Social Media Posts.
-                            </b>
-                          </span>
-                        </span>
-                      </span>
-                    </h1>
+                    <WordAnimation/>
                     <p className="description">
                       Increasing Confidence, Clarity & Publicity for Self-Made
                       Industry Leaders and Influencers Who Want to Uplevel Their
