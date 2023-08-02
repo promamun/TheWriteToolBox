@@ -8,7 +8,8 @@ import Contact from "./components/frontend/contact";
 import Blog from "./components/frontend/blog";
 import Membership from "./components/frontend/Membership";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
-import TermsConditions from "./components/frontend/TarmsConditions/index"
+import TermsConditions from "./components/frontend/TarmsConditions/index";
+import LandingPagePen from "./components/frontend/landingPAge/Pen";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/memberships" Component={Membership} />
             <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
             <Route exact path="/terms-of-condition" Component={TermsConditions} />
+            <Route exact path="/pen" Component={LandingPagePen}/>
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>

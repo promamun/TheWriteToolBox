@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/images/logo/logo.png";
+import Logo from "../../../assets/Logo.png";
 
 class Index extends Component {
   render() {
