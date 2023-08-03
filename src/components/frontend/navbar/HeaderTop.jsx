@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Img from "../../../assets/images/icons/hand-emojji.svg";
 import React from "react";
-
 function HeaderTop() {
   return (
     <>
