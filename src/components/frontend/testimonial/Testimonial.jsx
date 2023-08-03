@@ -15,10 +15,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img}
-                        alt="Clint Images"
-                      />
+                      <img src={Img} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
@@ -44,10 +41,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img1}
-                        alt="Clint Images"
-                      />
+                      <img src={Img1} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
@@ -74,10 +68,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img2}
-                        alt="Clint Images"
-                      />
+                      <img src={Img2} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
@@ -103,10 +94,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img}
-                        alt="Clint Images"
-                      />
+                      <img src={Img} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
@@ -132,10 +120,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img1}
-                        alt="Clint Images"
-                      />
+                      <img src={Img1} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
@@ -162,10 +147,7 @@ class Testimonial extends Component {
                 <div className="rbt-testimonial-box style-2">
                   <div className="inner">
                     <div className="icons">
-                      <img
-                        src={Img2}
-                        alt="Clint Images"
-                      />
+                      <img src={Img2} alt="Clint Images" />
                     </div>
                     <div className="description">
                       <div className="clint-info-wrapper">
