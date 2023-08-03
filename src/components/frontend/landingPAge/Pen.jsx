@@ -524,7 +524,7 @@ function Pen() {
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
                       alt="Card image"
-                    />{" "}
+                    />
                   </a>
                 </div>
                 <div class="rbt-card-body">
@@ -546,7 +546,7 @@ function Pen() {
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
                       alt="Card image"
-                    />{" "}
+                    />
                   </a>
                 </div>
                 <div class="rbt-card-body">

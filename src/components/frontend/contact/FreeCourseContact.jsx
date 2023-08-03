@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import CustomInput from "../inputComponent/CustomInput";
+import TextArea from "../inputComponent/TextArea";
+import Button from "../inputComponent/Button";
 import { Link } from "react-router-dom";
 import Img from "../../../assets/images/testimonial/client-03.png";
 import Img1 from "../../../assets/images/testimonial/client-04.png";
@@ -98,36 +101,16 @@ class FreeCourseContact extends Component {
                     <h3 className="title">Get a Free TWT Online Course</h3>
                     <form id="contact-form">
                       <div className="form-group">
-                        <input name="con_name" type="text" />
-                        <label>Name</label>
-                        <span className="focus-border" />
+                       <CustomInput Label="Full Name" type="text"  />
                       </div>
                       <div className="form-group">
-                        <input name="con_email" type="email" />
-                        <label>Email</label>
-                        <span className="focus-border" />
+                      <CustomInput Label="Email" type="email"  />
                       </div>
                       <div className="form-group">
-                        <input name="con_email" type="email" />
-                        {/*<textarea></textarea>*/}
-                        <label>Message</label>
-                        <span className="focus-border" />
+                       <TextArea Label="Message" />
                       </div>
                       <div className="form-submit-group">
-                        <button
-                          type="submit"
-                          className="rbt-btn btn-md btn-gradient hover-icon-reverse radius-round w-100"
-                        >
-                          <div className="icon-reverse-wrapper">
-                            <span className="btn-text">Get It Now</span>
-                            <span className="btn-icon">
-                              <i className="feather-arrow-right" />
-                            </span>
-                            <span className="btn-icon">
-                              <i className="feather-arrow-right" />
-                            </span>
-                          </div>
-                        </button>
+                        <Button name="Submit" />
                       </div>
                     </form>
                   </div>
