@@ -11,7 +11,6 @@ import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index"
 import Register from "./components/frontend/Auth/Register";
 import Login from "./components/frontend/Auth/Login";
-import AdminHome from "./AdminPanel/home/AdminHome";
 function App() {
   return (
     <>
@@ -30,10 +29,6 @@ function App() {
             {/*auth route */}
             <Route exact path="/register" Component={Register} />
             <Route exact path="/login" Component={Login} />
-
-            {/*Admin route */}
-            <Route exact path="/twt/home" Component={AdminHome} />
-
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
