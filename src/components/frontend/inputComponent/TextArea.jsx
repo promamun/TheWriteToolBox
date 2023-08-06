@@ -10,4 +10,4 @@ function TextArea({Label}) {
   )
 }
 
-export default TextArea
+export default TextArea;
