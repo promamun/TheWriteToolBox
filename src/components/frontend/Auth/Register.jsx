@@ -17,29 +17,33 @@ function Register() {
                 <h3 className="title">Register</h3>
                 <form className="max-width-auto" method="POST" action="">
                   <div className="form-group">
-                    <CustomInput type="text" Label="Full Name" required />
+                    <CustomInput type="text" Label="Full Name" Required='required' />
                   </div>
                   <div className="form-group">
                     <CustomInput
                       type="email"
                       Label="Email address *"
-                      required
+                      Required='required'
                     />
                   </div>
                   <div className="form-group">
-                    <CustomInput type="password" Label="Password" required />
-
+                    <CustomInput
+                      type="number"
+                      Label="Phone *"
+                      Required='required'
+                    />
+                  </div>
+                  <div className="form-group">
+                    <CustomInput type="password" Label="Password" Required='required' />
                     <span className="focus-border" />
                   </div>
-
                   <div className="form-group">
                     <CustomInput
                       type="password"
                       Label="Confirm Password "
-                      required
+                      Required='required'
                     />
                   </div>
-
                   <div className="form-group">
                     <DatePicker
                       selected={selectedDate}
@@ -53,7 +57,6 @@ function Register() {
                       scrollableMonthYearDropdown
                     />
                   </div>
-
                   <div className="form-submit-group">
                     <Button name="Register" />
                   </div>

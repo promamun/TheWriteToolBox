@@ -11,6 +11,7 @@ import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index"
 import Register from "./components/frontend/Auth/Register";
 import Login from "./components/frontend/Auth/Login";
+import Pen from "./components/frontend/landingPage/Pen";
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/memberships" Component={Membership} />
             <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
             <Route exact path="/terms-of-condition" Component={TermsConditions} />
+            <Route exact path="/pen" Component={Pen} />
             {/*auth route */}
             <Route exact path="/register" Component={Register} />
             <Route exact path="/login" Component={Login} />
