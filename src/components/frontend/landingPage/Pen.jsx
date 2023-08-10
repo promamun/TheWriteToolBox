@@ -7,7 +7,6 @@ import Button from "../inputComponent/Button";
 function Pen() {
   return (
     <>
-
       <div
         class="rbt-banner-6 variation-02 bg_image bg_image--7 header-transperent-spacer"
         data-black-overlay="2"
@@ -238,9 +237,12 @@ function Pen() {
             <div class="col-lg-12">
               <div class="section-title text-center">
                 <span class="subtitle bg-pink-opacity">Histudy Feature</span>
-                <h2 class="title">
-                  Check out Histudy's features <br /> to win any exam
-                </h2>
+                <h3 class="title">
+                  Whether you have book ideas scrambling in your head, you’ve
+                  nailed down your ideal book topic, you’ve already written your
+                  manuscript, or you feel your book hasn’t done a thing for you,
+                  The Writer’s Story Path is designed to:
+                </h3>
               </div>
             </div>
           </div>
@@ -249,55 +251,29 @@ function Pen() {
               <div class="row row--15 mt_dec--30">
                 <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
                   <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-1">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
-                          <img
-                            src="assets/images/icons/card-icon-1.png"
-                            alt="card-icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h5 class="title">
-                            <Link to="#">Best Coaching</Link>
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
-                          </p>
-                          <Link class="rbt-btn-link stretched-link" to="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </Link>
-                        </div>
+                    <div class="rbt-flipbox-front rbt-flipbox-face inner">
+                      <div class="icon">
+                        <img
+                          src="assets/images/icons/card-icon-1.png"
+                          alt="card-icon"
+                        />
                       </div>
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 570 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 35 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <Link
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          to="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </Link>
+                      <div class="content">
+                        <h5 class="title">
+                          <Link to="#">GET YOU ORGANIZED</Link>
+                        </h5>
+                        <p>
+                          Organizing your thoughts and getting your book out of
+                          your head sets you up for an effortless writing
+                          experience.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
                   <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-2">
+                    <div class="rbt-flipbox">
                       <div class="rbt-flipbox-front rbt-flipbox-face inner">
                         <div class="icon">
                           <img
@@ -307,39 +283,14 @@ function Pen() {
                         </div>
                         <div class="content">
                           <h5 class="title">
-                            <Link to="#">Convenient practice</Link>
+                            <Link to="#">ALLEVIATE YOUR STRESS</Link>
                           </h5>
                           <p>
-                            Convenient practice dolor sit adipisicing elit.
-                            Minima error reiciendis.
+                            A well-planned path not only organizes the process,
+                            but removes fear, stress, and overwhelm leaving you
+                            feeling successful.
                           </p>
-                          <Link class="rbt-btn-link stretched-link" to="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </Link>
                         </div>
-                      </div>
-
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 370 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 120 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <Link
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          to="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -356,11 +307,12 @@ function Pen() {
                         </div>
                         <div class="content">
                           <h5 class="title">
-                            <Link to="#">Video Lecture</Link>
+                            <Link to="#">REACH THE GOAL LINE</Link>
                           </h5>
                           <p>
-                            Video Lecture sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
+                            Every milestone, achievement, and goal you set is a
+                            breeze to achieve as you plan the follow through and
+                            follow the plan.
                           </p>
                           <Link class="rbt-btn-link stretched-link" to="#">
                             Learn More<i class="feather-arrow-right"></i>
@@ -393,55 +345,7 @@ function Pen() {
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
-                  <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-4">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
-                          <img
-                            src="assets/images/icons/card-icon-4.png"
-                            alt="card-icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h5 class="title">
-                            <Link to="#">Live Class</Link>
-                          </h5>
-                          <p>
-                            Live Class dolor sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
-                          </p>
-                          <Link class="rbt-btn-link stretched-link" to="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </Link>
-                        </div>
-                      </div>
-
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 124 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 56 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <Link
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          to="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>
