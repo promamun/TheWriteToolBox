@@ -1,26 +1,26 @@
 import React from "react";
 
-function CartModal({open,toggleSideNav}) {
+function CartModal({toggleSideNav}) {
   return (
     <>
-      <div class="rbt-cart-side-menu">
-        <div class="inner-wrapper">
-          <div class="inner-top">
-            <div class="content">
-              <div class="title">
-                <h4 class="title mb--0">Your shopping cart</h4>
+      <div id={'sideManu'} className="rbt-cart-side-menu">
+        <div className="inner-wrapper">
+          <div className="inner-top">
+            <div className="content">
+              <div className="title">
+                <h4 className="title mb--0">Your shopping cart</h4>
               </div>
-              <div class="rbt-btn-close" id="btn_sideNavClose">
-                <button class="minicart-close-button rbt-round-btn">
-                  <i class="feather-x"></i>
+              <div className="rbt-btn-close" onClick={toggleSideNav}>
+                <button className="minicart-close-button rbt-round-btn">
+                  <i className="feather-x"/>
                 </button>
               </div>
             </div>
           </div>
-          <nav class="side-nav w-100">
-            <ul class="rbt-minicart-wrapper">
-              <li class="minicart-item">
-                <div class="thumbnail">
+          <nav className="side-nav w-100">
+            <ul className="rbt-minicart-wrapper">
+              <li className="minicart-item">
+                <div className="thumbnail">
                   <a href="#">
                     <img
                       src="assets/images/product/1.jpg"
@@ -28,24 +28,24 @@ function CartModal({open,toggleSideNav}) {
                     />
                   </a>
                 </div>
-                <div class="product-content">
-                  <h6 class="title">
+                <div className="product-content">
+                  <h6 className="title">
                     <a href="single-product.html">Miracle Morning</a>
                   </h6>
 
-                  <span class="quantity">
-                    1 * <span class="price">$22</span>
+                  <span className="quantity">
+                    1 * <span className="price">$22</span>
                   </span>
                 </div>
-                <div class="close-btn">
-                  <button class="rbt-round-btn">
-                    <i class="feather-x"></i>
+                <div className="close-btn">
+                  <button className="rbt-round-btn">
+                    <i className="feather-x"/>
                   </button>
                 </div>
               </li>
 
-              <li class="minicart-item">
-                <div class="thumbnail">
+              <li className="minicart-item">
+                <div className="thumbnail">
                   <a href="#">
                     <img
                       src="assets/images/product/7.jpg"
@@ -53,24 +53,24 @@ function CartModal({open,toggleSideNav}) {
                     />
                   </a>
                 </div>
-                <div class="product-content">
-                  <h6 class="title">
+                <div className="product-content">
+                  <h6 className="title">
                     <a href="single-product.html">Happy Strong</a>
                   </h6>
 
-                  <span class="quantity">
-                    1 * <span class="price">$30</span>
+                  <span className="quantity">
+                    1 * <span className="price">$30</span>
                   </span>
                 </div>
-                <div class="close-btn">
-                  <button class="rbt-round-btn">
-                    <i class="feather-x"></i>
+                <div className="close-btn">
+                  <button className="rbt-round-btn">
+                    <i className="feather-x"/>
                   </button>
                 </div>
               </li>
 
-              <li class="minicart-item">
-                <div class="thumbnail">
+              <li className="minicart-item">
+                <div className="thumbnail">
                   <a href="#">
                     <img
                       src="assets/images/product/3.jpg"
@@ -78,24 +78,24 @@ function CartModal({open,toggleSideNav}) {
                     />
                   </a>
                 </div>
-                <div class="product-content">
-                  <h6 class="title">
+                <div className="product-content">
+                  <h6 className="title">
                     <a href="single-product.html">Rich Dad Poor Dad</a>
                   </h6>
 
-                  <span class="quantity">
-                    1 * <span class="price">$50</span>
+                  <span className="quantity">
+                    1 * <span className="price">$50</span>
                   </span>
                 </div>
-                <div class="close-btn">
-                  <button class="rbt-round-btn">
-                    <i class="feather-x"></i>
+                <div className="close-btn">
+                  <button className="rbt-round-btn">
+                    <i className="feather-x"/>
                   </button>
                 </div>
               </li>
 
-              <li class="minicart-item">
-                <div class="thumbnail">
+              <li className="minicart-item">
+                <div className="thumbnail">
                   <a href="#">
                     <img
                       src="assets/images/product/4.jpg"
@@ -103,53 +103,53 @@ function CartModal({open,toggleSideNav}) {
                     />
                   </a>
                 </div>
-                <div class="product-content">
-                  <h6 class="title">
+                <div className="product-content">
+                  <h6 className="title">
                     <a href="single-product.html">Momentum Theorem</a>
                   </h6>
 
-                  <span class="quantity">
-                    1 * <span class="price">$50</span>
+                  <span className="quantity">
+                    1 * <span className="price">$50</span>
                   </span>
                 </div>
-                <div class="close-btn">
-                  <button class="rbt-round-btn">
-                    <i class="feather-x"></i>
+                <div className="close-btn">
+                  <button className="rbt-round-btn">
+                    <i className="feather-x"></i>
                   </button>
                 </div>
               </li>
             </ul>
           </nav>
 
-          <div class="rbt-minicart-footer">
-            <hr class="mb--0" />
-            <div class="rbt-cart-subttotal">
-              <p class="subtotal">
+          <div className="rbt-minicart-footer">
+            <hr className="mb--0" />
+            <div className="rbt-cart-subttotal">
+              <p className="subtotal">
                 <strong>Subtotal:</strong>
               </p>
-              <p class="price">$121</p>
+              <p className="price">$121</p>
             </div>
-            <hr class="mb--0" />
-            <div class="rbt-minicart-bottom mt--20">
-              <div class="view-cart-btn">
+            <hr className="mb--0" />
+            <div className="rbt-minicart-bottom mt--20">
+              <div className="view-cart-btn">
                 <a
-                  class="rbt-btn btn-border icon-hover w-100 text-center"
+                  className="rbt-btn btn-border icon-hover w-100 text-center"
                   href="#"
                 >
-                  <span class="btn-text">View Cart</span>
-                  <span class="btn-icon">
-                    <i class="feather-arrow-right"></i>
+                  <span className="btn-text">View Cart</span>
+                  <span className="btn-icon">
+                    <i className="feather-arrow-right"></i>
                   </span>
                 </a>
               </div>
-              <div class="checkout-btn mt--20">
+              <div className="checkout-btn mt--20">
                 <a
-                  class="rbt-btn btn-gradient icon-hover w-100 text-center"
+                  className="rbt-btn btn-gradient icon-hover w-100 text-center"
                   href="#"
                 >
-                  <span class="btn-text">Checkout</span>
-                  <span class="btn-icon">
-                    <i class="feather-arrow-right"></i>
+                  <span className="btn-text">Checkout</span>
+                  <span className="btn-icon">
+                    <i className="feather-arrow-right"></i>
                   </span>
                 </a>
               </div>
