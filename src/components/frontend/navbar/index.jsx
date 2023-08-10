@@ -517,9 +517,9 @@ const Navbar = () => {
           </div>
         </div>
         {/*// <!-- End Side Vav -->*/}
-        <Link className="rbt-close_side_menu" to="javascript:void(0);" />
       </header>
       <CartModal toggleSideNav={toggleSideNav}/>
+      <Link className="close_side_menu" to="#" toggleSideNav={toggleSideNav} />
     </>
   );
 };
