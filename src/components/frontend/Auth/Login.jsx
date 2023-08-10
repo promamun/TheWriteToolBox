@@ -1,10 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import CustomInput from "../inputComponent/CustomInput";
-import Button from "../inputComponent/Button";
-function Login() {
-  return (
-    <>
+import React, { Component } from "react";
+
+export default class Login extends Component {
+  render() {
+    return (
       <div className="rbt-elements-area bg-color-white rbt-section-gap">
         <div className="container">
           <div className="row gy-5 row--30">
@@ -14,12 +12,19 @@ function Login() {
                 <h3 className="title">Login</h3>
                 <form className="max-width-auto" method="POST" action="">
                   <div className="form-group">
-                    <CustomInput type="email" Label="Email *" />
+                    <input id="email" type="email" name="email" required />
+                    <label>Email *</label>
                   </div>
                   <div className="form-group">
-                    <CustomInput type="password" Label="Password *" />
+                    <input
+                      id="password"
+                      type="password"
+                      name="password"
+                      required
+                    />
+                    <label>Password *</label>
+                    <span className="focus-border" />
                   </div>
-
                   <div className="row mb--30">
                     <div className="col-lg-6">
                       <div className="rbt-checkbox">
@@ -29,14 +34,28 @@ function Login() {
                     </div>
                     <div className="col-lg-6">
                       <div className="rbt-lost-password text-end">
-                        <Link className="rbt-btn-link" to="">
+                        <a className="rbt-btn-link" href="">
                           Forgot Your Password
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
+
                   <div className="form-submit-group">
-                    <Button name="Login" />
+                    <button
+                      type="submit"
+                      className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
+                    >
+                      <span className="icon-reverse-wrapper">
+                        <span className="btn-text">Log In</span>
+                        <span className="btn-icon">
+                          <i className="feather-arrow-right" />
+                        </span>
+                        <span className="btn-icon">
+                          <i className="feather-arrow-right" />
+                        </span>
+                      </span>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -45,7 +64,6 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
-  );
+    );
+  }
 }
-export default Login;
