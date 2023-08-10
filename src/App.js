@@ -28,13 +28,18 @@ function App() {
             <Route exact path="/blog" Component={Blog} />
             <Route exact path="/memberships" Component={Membership} />
             <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
-            <Route exact path="/terms-of-condition" Component={TermsConditions} />
+            <Route
+              exact
+              path="/terms-of-condition"
+              Component={TermsConditions}
+            />
             <Route exact path="/pen" Component={Pen} />
             {/*auth route */}
             <Route exact path="/register" Component={Register} />
             <Route exact path="/login" Component={Login} />
             <Route exact path="/pen" Component={Pen} />
             <Route exact path="/faqs" Component={Faqs} />
+
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
