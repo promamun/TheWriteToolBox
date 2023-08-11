@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Logo from "../../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Img4 from "../../../assets/images/team/avatar.jpg";
 import Img5 from "../../../assets/images/team/avatar.jpg";
 import HeaderTop from "./HeaderTop";
-import CartModal from "../cart/CartModal";
 
-const Navbar = ({ toggleSideNav, open }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-
+const Navbar = ({ toggleSideNav }) => {
   useEffect(() => {
     const handleScroll = () => {
       const bodyHasStickyHeader =
@@ -517,11 +513,6 @@ const Navbar = ({ toggleSideNav, open }) => {
         {/*// <!-- End Side Vav -->*/}
         <Link className="rbt-close_side_menu" to="javascript:void(0);" />
       </header>
-      <CartModal
-        open={sidebarOpen}
-        toggleSidebar={toggleSideNav}
-      
-      />
     </>
   );
 };

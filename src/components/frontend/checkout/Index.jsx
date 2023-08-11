@@ -1,14 +1,14 @@
 import React from 'react';
-import Faqs from './Faqs';
+import CheckOut from './CheckOut';
 import Brodcamp from "../brodcamp/style2";
 import {Helmet} from "react-helmet";
 
 function index() {
   return (
     <div>
-    <Helmet title="Faqs"/>
-    <Brodcamp Title="Faqs" SubTile="Faqs"/>
-    <Faqs/>
+    <Helmet title="CheckOut"/>
+    <Brodcamp Title="Checkout" SubTile="Checkout"/>
+    <CheckOut/>
     </div>
   )
 }
