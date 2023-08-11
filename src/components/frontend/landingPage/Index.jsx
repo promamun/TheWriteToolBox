@@ -54,8 +54,13 @@ export default function Index() {
               </div>
             </Col>
           </Row>
-          <Row  class="g-5">
-            <Col lg="4" md="6" sm="12" class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <Row class="g-5">
+            <Col
+              lg="4"
+              md="6"
+              sm="12"
+              class="col-lg-4 col-md-6 col-sm-12 col-12"
+            >
               <div class="rbt-card variation-02 rbt-hover">
                 <div class="rbt-card-img">
                   <a href="blog-details.html">
@@ -537,11 +542,12 @@ export default function Index() {
                 </p>
                 <p>
                   In your business attire attending to your work day? Lunch hour
-                  is a great time to carve out a<br/> little bit  of course work.
+                  is a great time to carve out a<br /> little bit of course
+                  work.
                 </p>
                 <p>
                   Modules are released weekly. Go through the material as it’s
-                  released or work at a slower pace <br/> that’s best for your
+                  released or work at a slower pace <br /> that’s best for your
                   circumstances and schedule.
                 </p>
               </div>
@@ -549,7 +555,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <JenienLetter/>
+      <JenienLetter />
       <Pen />
     </>
   );

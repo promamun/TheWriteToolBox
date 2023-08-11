@@ -15,6 +15,7 @@ import Pen from "./components/frontend/landingPage/Index";
 import Faqs from "./components/frontend/faqs/Index";
 import CheckOut from "./components/frontend/checkout/Index";
 import Cart from "./components/frontend/cartPage/Index";
+import ThankYou from "./components/frontend/thankUpage/ThankYou";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route exact path="/faqs" Component={Faqs} />
             <Route exact path="/checkout" Component={CheckOut}/>
             <Route exact path="/cart" Component={Cart}/>
+            <Route exact path="thankyou" Component={ThankYou}/>
 
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
