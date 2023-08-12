@@ -103,7 +103,7 @@ export default class Register extends Component {
         })
         .catch((err) => {
           this.setState({ isLoading: false });
-          message.error("Something Went Wrong");
+          message.error("Something Went Wrong!!!");
           console.error(err);
         });
     }

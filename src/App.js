@@ -13,6 +13,7 @@ import Register from "./components/frontend/Auth/Register";
 import Login from "./components/frontend/Auth/Login";
 import Pen from "./components/frontend/landingPage/Index";
 import Faqs from "./components/frontend/faqs/Index";
+import AccountActivation from "./components/frontend/page/AccountActivation";
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
             <Route exact path="/login" Component={Login} />
             <Route exact path="/pen" Component={Pen} />
             <Route exact path="/faqs" Component={Faqs} />
+            <Route
+              exact
+              path="/activate-account/:id"
+              Component={AccountActivation}
+            />
 
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
