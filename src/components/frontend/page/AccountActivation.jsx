@@ -13,12 +13,12 @@ export default function AccountActivation() {
     setLoading(true);
 
     axios
-      .post("/activate-account", { id })
+      .get(`/activate-account/${id}`)
       .then((res) => {
         setLoading(false);
 
         if (res.data.success) {
-          // go to login page
+          message.success(res.data.message);
         } else {
           message.error(res.data.message);
         }
