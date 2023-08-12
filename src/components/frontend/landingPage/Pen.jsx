@@ -1,4 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import CustomInput from "../inputComponent/CustomInput";
+import TextArea from "../inputComponent/TextArea";
+import Button from "../inputComponent/Button";
 
 function Pen() {
   return (
@@ -14,17 +18,20 @@ function Pen() {
                 <div class="inner text-start">
                   <div class="section-title">
                     <span class="subtitle bg-white-opacity d-inline-block">
-                    MARIE FORLEO'S
+                      MARIE FORLEO'S
                     </span>
                   </div>
                   <h2 class="title w-700">
-                  B-School <br />
+                    B-School <br />
                     <strong>
                       <span class="header-caption">
                         <span class="cd-headline zoom">
                           <span class="cd-words-wrapper">
                             <b class="is-visible theme-gradient">
-                            The ultimate system to grow <br/>
+                              <h5>
+                                The ultimate system to grow your business and
+                                own your freedom
+                              </h5>
                             </b>
                             <b class="is-hidden theme-gradient">
                               With GYM Instructor.
@@ -35,12 +42,12 @@ function Pen() {
                     </strong>
                   </h2>
                   <div class="button-group mt--30 mt_sm--10">
-                    <a
+                    <Link
                       class="rbt-btn btn-gradient rbt-switch-btn rbt-switch-y"
-                      href="#"
+                      to="#"
                     >
                       <span data-text="Join Us Today">Join Us Today</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -98,9 +105,7 @@ function Pen() {
                 </p>
                 <br />
                 <p>
-                  <strong>
-                    We’ve helped over 80,000 entrepreneurs across
-                  </strong>
+                  <strong>We’ve helped over 80,000 entrepreneurs across</strong>
                   650+ industries and 171 countries and territories build their
                   dream businesses and create lasting financial freedom. We’d be
                   honored to help you too. 💕
@@ -117,13 +122,13 @@ function Pen() {
               <div class="media row align-items-center g-5">
                 <div class="col-lg-3 col-xl-3 offset-xl-2">
                   <div class="thumbnail">
-                    <a href="#">
+                    <Link to="#">
                       <img
                         class="radius-10 w-100"
                         src="assets/images/team/team-08.jpg"
                         alt="Author Images"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div class="col-lg-5">
@@ -143,24 +148,24 @@ function Pen() {
                       </p>
                       <ul class="social-icon color-white social-default transparent-with-border justify-content-start mt--15">
                         <li>
-                          <a href="https://www.facebook.com/">
+                          <Link to="https://www.facebook.com/">
                             <i class="feather-facebook"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="https://www.twitter.com/">
+                          <Link to="https://www.twitter.com/">
                             <i class="feather-twitter"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="https://www.instagram.com/">
+                          <Link to="https://www.instagram.com/">
                             <i class="feather-instagram"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="https://www.linkdin.com/">
+                          <Link to="https://www.linkdin.com/">
                             <i class="feather-linkedin"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -206,40 +211,19 @@ function Pen() {
                 <h3 class="title">Get a Free Course You Can Contact With Me</h3>
                 <form id="contact-form" class="w-100">
                   <div class="form-group">
-                    <input name="con_name" type="text" />
-                    <label>Name</label>
-                    <span class="focus-border"></span>
+                    <CustomInput placeholder="Name" type="text" />
                   </div>
                   <div class="form-group">
-                    <input name="con_email" type="email" />
-                    <label>Email</label>
-                    <span class="focus-border"></span>
+                    <CustomInput placeholder="Email" type="email" />
                   </div>
                   <div class="form-group">
-                    <input type="text" />
-                    <label>Phone</label>
-                    <span class="focus-border"></span>
+                    <CustomInput placeholder="Phone" type="text" />
                   </div>
                   <div class="form-group">
-                    <textarea></textarea>
-                    <label>Message</label>
-                    <span class="focus-border"></span>
+                    <TextArea Label="Message" />
                   </div>
                   <div class="form-submit-group">
-                    <button
-                      type="submit"
-                      class="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
-                    >
-                      <span class="icon-reverse-wrapper">
-                        <span class="btn-text">GET IT NOW</span>
-                        <span class="btn-icon">
-                          <i class="feather-arrow-right"></i>
-                        </span>
-                        <span class="btn-icon">
-                          <i class="feather-arrow-right"></i>
-                        </span>
-                      </span>
-                    </button>
+                    <Button name="SUBMIT" />
                   </div>
                 </form>
               </div>
@@ -253,9 +237,12 @@ function Pen() {
             <div class="col-lg-12">
               <div class="section-title text-center">
                 <span class="subtitle bg-pink-opacity">Histudy Feature</span>
-                <h2 class="title">
-                  Check out Histudy's features <br /> to win any exam
-                </h2>
+                <h3 class="title">
+                  Whether you have book ideas scrambling in your head, you’ve
+                  nailed down your ideal book topic, you’ve already written your
+                  manuscript, or you feel your book hasn’t done a thing for you,
+                  The Writer’s Story Path is designed to:
+                </h3>
               </div>
             </div>
           </div>
@@ -264,55 +251,29 @@ function Pen() {
               <div class="row row--15 mt_dec--30">
                 <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
                   <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-1">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
-                          <img
-                            src="assets/images/icons/card-icon-1.png"
-                            alt="card-icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h5 class="title">
-                            <a href="#">Best Coaching</a>
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
-                          </p>
-                          <a class="rbt-btn-link stretched-link" href="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </a>
-                        </div>
+                    <div class="rbt-flipbox-front rbt-flipbox-face inner">
+                      <div class="icon">
+                        <img
+                          src="assets/images/icons/card-icon-1.png"
+                          alt="card-icon"
+                        />
                       </div>
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 570 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 35 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <a
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          href="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </a>
+                      <div class="content">
+                        <h5 class="title">
+                          <Link to="#">GET YOU ORGANIZED</Link>
+                        </h5>
+                        <p>
+                          Organizing your thoughts and getting your book out of
+                          your head sets you up for an effortless writing
+                          experience.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
                   <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-2">
+                    <div class="rbt-flipbox">
                       <div class="rbt-flipbox-front rbt-flipbox-face inner">
                         <div class="icon">
                           <img
@@ -322,39 +283,14 @@ function Pen() {
                         </div>
                         <div class="content">
                           <h5 class="title">
-                            <a href="#">Convenient practice</a>
+                            <Link to="#">ALLEVIATE YOUR STRESS</Link>
                           </h5>
                           <p>
-                            Convenient practice dolor sit adipisicing elit.
-                            Minima error reiciendis.
+                            A well-planned path not only organizes the process,
+                            but removes fear, stress, and overwhelm leaving you
+                            feeling successful.
                           </p>
-                          <a class="rbt-btn-link stretched-link" href="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </a>
                         </div>
-                      </div>
-
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 370 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 120 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <a
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          href="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -371,15 +307,16 @@ function Pen() {
                         </div>
                         <div class="content">
                           <h5 class="title">
-                            <a href="#">Video Lecture</a>
+                            <Link to="#">REACH THE GOAL LINE</Link>
                           </h5>
                           <p>
-                            Video Lecture sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
+                            Every milestone, achievement, and goal you set is a
+                            breeze to achieve as you plan the follow through and
+                            follow the plan.
                           </p>
-                          <a class="rbt-btn-link stretched-link" href="#">
+                          <Link class="rbt-btn-link stretched-link" to="#">
                             Learn More<i class="feather-arrow-right"></i>
-                          </a>
+                          </Link>
                         </div>
                       </div>
 
@@ -398,65 +335,17 @@ function Pen() {
                             <i class="feather-info"></i> MCQ and CQ Bank
                           </li>
                         </ul>
-                        <a
+                        <Link
                           class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          href="#"
+                          to="#"
                         >
                           <span data-text="Learn More">Learn More</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
-                  <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-4">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
-                          <img
-                            src="assets/images/icons/card-icon-4.png"
-                            alt="card-icon"
-                          />
-                        </div>
-                        <div class="content">
-                          <h5 class="title">
-                            <a href="#">Live Class</a>
-                          </h5>
-                          <p>
-                            Live Class dolor sit, amet consectetur adipisicing
-                            elit. Minima error reiciendis.
-                          </p>
-                          <a class="rbt-btn-link stretched-link" href="#">
-                            Learn More<i class="feather-arrow-right"></i>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
-                          <li>
-                            <i class="feather-youtube"></i> 124 Free Video
-                          </li>
-                          <li>
-                            <i class="feather-book"></i> 56 Subjects
-                          </li>
-                          <li>
-                            <i class="feather-video"></i> Live Class
-                          </li>
-                          <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
-                          </li>
-                        </ul>
-                        <a
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
-                          href="#"
-                        >
-                          <span data-text="Learn More">Learn More</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -497,16 +386,18 @@ function Pen() {
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
               <div class="rbt-card variation-02 rbt-hover">
                 <div class="rbt-card-img">
-                  <a href="course-details.html">
+                  <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
                       alt="Card image"
                     />{" "}
-                  </a>
+                  </Link>
                 </div>
                 <div class="rbt-card-body">
                   <h4 class="rbt-card-title">
-                    <a href="course-details.html">Product-Based Businesses</a>
+                    <Link to="course-details.html">
+                      Product-Based Businesses
+                    </Link>
                   </h4>
                   <p class="rbt-card-text">
                     B-School grads are out there selling flowers, cupcakes,
@@ -520,16 +411,18 @@ function Pen() {
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
               <div class="rbt-card variation-02 rbt-hover">
                 <div class="rbt-card-img">
-                  <a href="course-details.html">
+                  <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
                       alt="Card image"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div class="rbt-card-body">
                   <h4 class="rbt-card-title">
-                    <a href="course-details.html">Service-Based Businesses</a>
+                    <Link to="course-details.html">
+                      Service-Based Businesses
+                    </Link>
                   </h4>
                   <p class="rbt-card-text">
                     Whether you teach people how to swing dance at their wedding
@@ -542,16 +435,18 @@ function Pen() {
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
               <div class="rbt-card variation-02 rbt-hover">
                 <div class="rbt-card-img">
-                  <a href="course-details.html">
+                  <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
                       alt="Card image"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div class="rbt-card-body">
                   <h4 class="rbt-card-title">
-                    <a href="course-details.html">Brick-and-Mortar Businesse</a>
+                    <Link to="course-details.html">
+                      Brick-and-Mortar Businesse
+                    </Link>
                   </h4>
                   <p class="rbt-card-text">
                     Take your brick-and-mortar business online to reach a
@@ -612,7 +507,7 @@ function Pen() {
                 role="tablist"
               >
                 <li>
-                  <a
+                  <Link
                     class="active"
                     id="testimonial-tab1-tab"
                     data-bs-toggle="tab"
@@ -629,11 +524,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab2-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab2"
@@ -649,11 +544,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab3-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab3"
@@ -669,10 +564,10 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab4-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab4"
@@ -688,11 +583,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab5-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab5"
@@ -708,11 +603,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab6-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab6"
@@ -728,11 +623,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab7-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab7"
@@ -748,11 +643,11 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     id="testimonial-tab8-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab8"
@@ -768,7 +663,7 @@ function Pen() {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
