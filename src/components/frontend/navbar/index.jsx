@@ -5,6 +5,9 @@ import Img4 from "../../../assets/images/team/avatar.jpg";
 import Img5 from "../../../assets/images/team/avatar.jpg";
 import HeaderTop from "./HeaderTop";
 import CartModal from "../cart/CartModal";
+import axios from "../../../helper/axios";
+import message from "../../../helper/message";
+import config from "../../../helper/config";
 
 const Navbar = () => {
   const [userDetails, setUserDetails] = useState({});
@@ -48,6 +51,24 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const logout = () => {
+    let load = message.loading("Please wait...");
+    axios
+      .get("/student-logout", config)
+      .then((res) => {
+        load();
+
+        localStorage.clear();
+        window.location.pathname = "/";
+      })
+      .catch((err) => {
+        load();
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
   return (
     <>
       <header className="rbt-header rbt-header-10">
@@ -249,7 +270,11 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link className="dropdown-item" to="/logout">
+                              <Link
+                                className="dropdown-item"
+                                to="#"
+                                onClick={logout}
+                              >
                                 <i className="feather-log-out" />
                                 Logout
                               </Link>
@@ -321,9 +346,13 @@ const Navbar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link to="/logout">
+                            <Link
+                              className="dropdown-item"
+                              to="#"
+                              onClick={logout}
+                            >
                               <i className="feather-log-out" />
-                              <span>Logout</span>
+                              Logout
                             </Link>
                           </li>
                         </ul>
