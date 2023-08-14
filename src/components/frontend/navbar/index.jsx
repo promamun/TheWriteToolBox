@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Img4 from "../../../assets/images/team/avatar.jpg";
@@ -7,6 +7,8 @@ import HeaderTop from "./HeaderTop";
 import CartModal from "../cart/CartModal";
 
 const Navbar = () => {
+  const [userDetails, setUserDetails] = useState({});
+
   const toggleSideNav = () => {
     document.body.classList.toggle("cart-sidenav-menu-active");
     document.getElementById("sideManu").classList.toggle("side-menu-active");
@@ -35,6 +37,10 @@ const Navbar = () => {
         }
       }
     };
+
+    let data = localStorage.getItem("userDetails");
+
+    setUserDetails(data ? JSON.parse(data) : {});
 
     window.addEventListener("scroll", handleScroll);
 
@@ -166,7 +172,7 @@ const Navbar = () => {
                           to="/"
                           className="text-sm text-gray-700 dark:text-gray-500 underline"
                         >
-                          <i className="feather-user" /> name
+                          <i className="feather-user" /> {userDetails.name}
                         </Link>
                       ) : (
                         <>
@@ -193,7 +199,7 @@ const Navbar = () => {
                               <img src={Img4} alt="User Images" />
                             </div>
                             <div className="admin-info">
-                              <span className="name">Nipa Bali</span>
+                              <span className="name">{userDetails.name}</span>
                               <Link
                                 className="rbt-btn-link color-primary"
                                 to="/profile"
