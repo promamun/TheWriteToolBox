@@ -14,6 +14,13 @@ import Login from "./components/frontend/Auth/Login";
 import Pen from "./components/frontend/landingPage/Index";
 import Faqs from "./components/frontend/faqs/Index";
 import AccountActivation from "./components/frontend/page/AccountActivation";
+import UserDashboard from "./components/frontend/User/UserDashboard";
+import EnrollCourses from "./components/frontend/User/EnrollCourses";
+import UserReview from "./components/frontend/User/UserReview";
+import OrderHistory from "./components/frontend/User/OrderHistory";
+import Setting from "./components/frontend/User/Setting";
+import Wishlist from "./components/frontend/User/Wishlist";
+import CourseDetails from "./components/frontend/Course/CourseDetails";
 
 function App() {
   return (
@@ -24,7 +31,7 @@ function App() {
             <Route exact path="/" Component={Home} />
             <Route exact path="/about-janine" Component={About} />
             <Route exact path="/courses" Component={Course} />
-            {/*<Route exact path="/course-details" Component={Services} />*/}
+            <Route exact path="/course-details" Component={CourseDetails} />
             <Route exact path="/contact" Component={Contact} />
             <Route exact path="/blog" Component={Blog} />
             <Route exact path="/memberships" Component={Membership} />
@@ -45,7 +52,13 @@ function App() {
               path="/activate-account/:id"
               Component={AccountActivation}
             />
-
+            {/*User route*/}
+            <Route exact path="/dashboard" Component={UserDashboard} />
+            <Route exact path="/wishlist" Component={Wishlist} />
+            <Route exact path="/enrolled-courses" Component={EnrollCourses} />
+            <Route exact path="/reviews" Component={UserReview} />
+            <Route exact path="/order-history" Component={OrderHistory} />
+            <Route exact path="/settings" Component={Setting} />
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
