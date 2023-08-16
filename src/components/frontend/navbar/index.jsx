@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Img4 from "../../../assets/images/team/avatar.jpg";
 import Img5 from "../../../assets/images/team/avatar.jpg";
 import HeaderTop from "./HeaderTop";
+import CartModal from "../cart/CartModal";
+import axios from "../../../helper/axios";
+import message from "../../../helper/message";
+import config from "../../../helper/config";
 
-const Navbar = ({ toggleSideNav }) => {
+const Navbar = () => {
+  const [userDetails, setUserDetails] = useState({});
+
+  const toggleSideNav = () => {
+    document.body.classList.toggle("cart-sidenav-menu-active");
+    document.getElementById("sideManu").classList.toggle("side-menu-active");
+  };
   useEffect(() => {
     const handleScroll = () => {
       const bodyHasStickyHeader =
@@ -30,12 +40,34 @@ const Navbar = ({ toggleSideNav }) => {
       }
     };
 
+    let data = localStorage.getItem("userDetails");
+
+    setUserDetails(data ? JSON.parse(data) : {});
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const logout = () => {
+    let load = message.loading("Please wait...");
+    axios
+      .get("/student-logout", config)
+      .then((res) => {
+        load();
+
+        localStorage.clear();
+        window.location.pathname = "/";
+      })
+      .catch((err) => {
+        load();
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
   return (
     <>
       <header className="rbt-header rbt-header-10">
@@ -155,90 +187,101 @@ const Navbar = ({ toggleSideNav }) => {
                   </li>
                   <li className="account-access rbt-user-wrapper d-none d-xl-block">
                     <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                      <Link
-                        to="/"
-                        className="text-sm text-gray-700 dark:text-gray-500 underline"
-                      >
-                        <i className="feather-user" /> name
-                      </Link>
-                      <Link
-                        to="/login"
-                        className="text-sm text-gray-700 dark:text-gray-500 underline"
-                      >
-                        Log in
-                      </Link>
-                      <Link
-                        to="/register"
-                        className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
-                      >
-                        Register
-                      </Link>
+                      {localStorage.getItem("token") ? (
+                        <Link
+                          to="/"
+                          className="text-sm text-gray-700 dark:text-gray-500 underline"
+                        >
+                          <i className="feather-user" /> {userDetails.name}
+                        </Link>
+                      ) : (
+                        <>
+                          <Link
+                            to="/login"
+                            className="text-sm text-gray-700 dark:text-gray-500 underline"
+                          >
+                            Log in
+                          </Link>
+                          <Link
+                            to="/register"
+                            className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
+                          >
+                            Register
+                          </Link>
+                        </>
+                      )}
                     </div>
-                    <div className="rbt-user-menu-list-wrapper">
-                      <div className="inner">
-                        <div className="rbt-admin-profile">
-                          <div className="admin-thumbnail">
-                            <img src={Img4} alt="User Images" />
+                    {localStorage.getItem("token") && (
+                      <div className="rbt-user-menu-list-wrapper">
+                        <div className="inner">
+                          <div className="rbt-admin-profile">
+                            <div className="admin-thumbnail">
+                              <img src={Img4} alt="User Images" />
+                            </div>
+                            <div className="admin-info">
+                              <span className="name">{userDetails.name}</span>
+                              <Link
+                                className="rbt-btn-link color-primary"
+                                to="/profile"
+                              >
+                                View Profile
+                              </Link>
+                            </div>
                           </div>
-                          <div className="admin-info">
-                            <span className="name">Nipa Bali</span>
-                            <Link
-                              className="rbt-btn-link color-primary"
-                              to="/profile"
-                            >
-                              View Profile
-                            </Link>
-                          </div>
+                          <ul className="user-list-wrapper">
+                            <li>
+                              <Link to="/dashboard">
+                                <i className="feather-home" />
+                                <span>My Dashboard</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/enrolled-courses">
+                                <i className="feather-shopping-bag" />
+                                <span>Enrolled Courses</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/wishlist">
+                                <i className="feather-heart" />
+                                <span>Wishlist</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/reviews">
+                                <i className="feather-star" />
+                                <span>Reviews</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/order-history">
+                                <i className="feather-clock" />
+                                <span>Order History</span>
+                              </Link>
+                            </li>
+                          </ul>
+                          <hr className="mt--10 mb--10" />
+                          <ul className="user-list-wrapper">
+                            <li>
+                              <Link to="/settings">
+                                <i className="feather-settings" />
+                                <span>Settings</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="dropdown-item"
+                                to="#"
+                                onClick={logout}
+                              >
+                                <i className="feather-log-out" />
+                                Logout
+                              </Link>
+                            </li>
+                          </ul>
                         </div>
-                        <ul className="user-list-wrapper">
-                          <li>
-                            <Link to="/dashboard">
-                              <i className="feather-home" />
-                              <span>My Dashboard</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/enrolled-courses">
-                              <i className="feather-shopping-bag" />
-                              <span>Enrolled Courses</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/wishlist">
-                              <i className="feather-heart" />
-                              <span>Wishlist</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/reviews">
-                              <i className="feather-star" />
-                              <span>Reviews</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/order-history">
-                              <i className="feather-clock" />
-                              <span>Order History</span>
-                            </Link>
-                          </li>
-                        </ul>
-                        <hr className="mt--10 mb--10" />
-                        <ul className="user-list-wrapper">
-                          <li>
-                            <Link to="/settings">
-                              <i className="feather-settings" />
-                              <span>Settings</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link className="dropdown-item" to="/logout">
-                              <i className="feather-log-out" />
-                              Logout
-                            </Link>
-                          </li>
-                        </ul>
                       </div>
-                    </div>
+                    )}
                   </li>
                   <li className="access-icon rbt-user-wrapper d-block d-xl-none">
                     <Link className="rbt-round-btn" to="#">
@@ -302,9 +345,13 @@ const Navbar = ({ toggleSideNav }) => {
                             </Link>
                           </li>
                           <li>
-                            <Link to="/logout">
+                            <Link
+                              className="dropdown-item"
+                              to="#"
+                              onClick={logout}
+                            >
                               <i className="feather-log-out" />
-                              <span>Logout</span>
+                              Logout
                             </Link>
                           </li>
                         </ul>
@@ -511,8 +558,9 @@ const Navbar = ({ toggleSideNav }) => {
           </div>
         </div>
         {/*// <!-- End Side Vav -->*/}
-        <Link className="rbt-close_side_menu" to="javascript:void(0);" />
       </header>
+      <CartModal toggleSideNav={toggleSideNav} />
+      <Link className="close_side_menu" to="#" toggleSideNav={toggleSideNav} />
     </>
   );
 };

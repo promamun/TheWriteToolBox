@@ -16,6 +16,7 @@ import Faqs from "./components/frontend/faqs/Index";
 import CheckOut from "./components/frontend/checkout/Index";
 import Cart from "./components/frontend/cartPage/Index";
 import ThankYou from "./components/frontend/thankUpage/ThankYou";
+import AccountActivation from "./components/frontend/page/AccountActivation";
 
 function App() {
   return (
@@ -42,10 +43,15 @@ function App() {
             <Route exact path="/login" Component={Login} />
             <Route exact path="/pen" Component={Pen} />
             <Route exact path="/faqs" Component={Faqs} />
-            <Route exact path="/checkout" Component={CheckOut}/>
-            <Route exact path="/cart" Component={Cart}/>
-            <Route exact path="thankyou" Component={ThankYou}/>
-
+            <Route exact path="/checkout" Component={CheckOut} />
+            <Route exact path="/cart" Component={Cart} />
+            <Route exact path="thankyou" Component={ThankYou} />
+            =======
+            <Route
+              exact
+              path="/activate-account/:id"
+              Component={AccountActivation}
+            />
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
