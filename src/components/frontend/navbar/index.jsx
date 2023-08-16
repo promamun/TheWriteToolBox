@@ -162,12 +162,6 @@ const Navbar = () => {
                     <li>
                       <Link to="/blog">Blog</Link>
                     </li>
-                    {/*<li>*/}
-                    {/*  <Link to="/privacy-policy">Privacy Policy</Link>*/}
-                    {/*</li>*/}
-                    {/*<li>*/}
-                    {/*  <Link to="/terms-of-condition">Terms of Use</Link>*/}
-                    {/*</li>*/}
                   </ul>
                 </nav>
               </div>
@@ -199,21 +193,15 @@ const Navbar = () => {
                       ) : (
                         <>
                           <Link
-                            to="/login"
-                            className="text-sm text-gray-700 dark:text-gray-500 underline"
+                              to="/"
+                              className="text-sm text-gray-700 dark:text-gray-500 underline"
                           >
-                            Log in
-                          </Link>
-                          <Link
-                            to="/register"
-                            className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
-                          >
-                            Register
+                            <i className="feather-user" />
                           </Link>
                         </>
                       )}
                     </div>
-                    {localStorage.getItem("token") && (
+                    {localStorage.getItem("token") ? (
                       <div className="rbt-user-menu-list-wrapper">
                         <div className="inner">
                           <div className="rbt-admin-profile">
@@ -230,9 +218,28 @@ const Navbar = () => {
                               </Link>
                             </div>
                           </div>
-                          <UserProfileManu/>
+                          <UserProfileManu Classname='user-list-wrapper'/>
                         </div>
                       </div>
+                    ):(
+                        <div className="rbt-user-menu-list-wrapper">
+                          <div className="inner">
+                            <ul className='user-list-wrapper'>
+                              <li>
+                                <Link to="/login">
+                                  <i className="feather-log-in" />
+                                  <span>Log in</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/register">
+                                  <i className="feather-log-in" />
+                                  <span>Register</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                     )}
                   </li>
                   <li className="access-icon rbt-user-wrapper d-block d-xl-none">

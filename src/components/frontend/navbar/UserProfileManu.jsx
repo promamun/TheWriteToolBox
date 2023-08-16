@@ -4,7 +4,7 @@ import message from "../../../helper/message";
 import axios from "../../../helper/axios";
 import config from "../../../helper/config";
 
-export default function UserProfileManu() {
+export default function UserProfileManu({Classname}) {
     const logout = () => {
         let load = message.loading("Please wait...");
         axios
@@ -23,7 +23,7 @@ export default function UserProfileManu() {
     };
   return (
     <>
-        <ul className="user-list-wrapper">
+        <ul className={Classname}>
             <li>
                 <Link to="/dashboard">
                     <i className="feather-home" />
@@ -56,7 +56,7 @@ export default function UserProfileManu() {
             </li>
         </ul>
         <hr className="mt--10 mb--10" />
-        <ul className="user-list-wrapper">
+        <ul className={Classname}>
             <li>
                 <Link to="/settings">
                     <i className="feather-settings" />
