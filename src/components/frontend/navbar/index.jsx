@@ -8,6 +8,7 @@ import CartModal from "../cart/CartModal";
 import axios from "../../../helper/axios";
 import message from "../../../helper/message";
 import config from "../../../helper/config";
+import UserProfileManu from "./UserProfileManu";
 
 const Navbar = () => {
   const [userDetails, setUserDetails] = useState({});
@@ -229,57 +230,7 @@ const Navbar = () => {
                               </Link>
                             </div>
                           </div>
-                          <ul className="user-list-wrapper">
-                            <li>
-                              <Link to="/dashboard">
-                                <i className="feather-home" />
-                                <span>My Dashboard</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/enrolled-courses">
-                                <i className="feather-shopping-bag" />
-                                <span>Enrolled Courses</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/wishlist">
-                                <i className="feather-heart" />
-                                <span>Wishlist</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/reviews">
-                                <i className="feather-star" />
-                                <span>Reviews</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/order-history">
-                                <i className="feather-clock" />
-                                <span>Order History</span>
-                              </Link>
-                            </li>
-                          </ul>
-                          <hr className="mt--10 mb--10" />
-                          <ul className="user-list-wrapper">
-                            <li>
-                              <Link to="/settings">
-                                <i className="feather-settings" />
-                                <span>Settings</span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                className="dropdown-item"
-                                to="#"
-                                onClick={logout}
-                              >
-                                <i className="feather-log-out" />
-                                Logout
-                              </Link>
-                            </li>
-                          </ul>
+                          <UserProfileManu/>
                         </div>
                       </div>
                     )}
