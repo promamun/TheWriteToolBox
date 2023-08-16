@@ -138,23 +138,8 @@ const Navbar = () => {
                     </li>
                     <li className="with-megamenu has-menu-child-item">
                       <Link to="/courses">
-                        Courses <i className="feather-chevron-down" />
+                        Courses
                       </Link>
-                      {/*// <!-- Start Mega Menu  -->*/}
-                      <div className="rbt-megamenu grid-item-2">
-                        <div className="wrapper">
-                          <div className="row row--15">
-                            <div className="col-lg-12 col-xl-6 col-xxl-12 single-mega-item">
-                              <ul className="mega-menu-item">
-                                <li>
-                                  <Link to="/course-details">title</Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      {/*// <!-- End Mega Menu  -->*/}
                     </li>
                     <li>
                       <Link to="/memberships">Membership</Link>

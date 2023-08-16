@@ -20,6 +20,7 @@ import UserReview from "./components/frontend/User/UserReview";
 import OrderHistory from "./components/frontend/User/OrderHistory";
 import Setting from "./components/frontend/User/Setting";
 import Wishlist from "./components/frontend/User/Wishlist";
+import CourseDetails from "./components/frontend/Course/CourseDetails";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             <Route exact path="/" Component={Home} />
             <Route exact path="/about-janine" Component={About} />
             <Route exact path="/courses" Component={Course} />
-            {/*<Route exact path="/course-details" Component={Services} />*/}
+            <Route exact path="/course-details" Component={CourseDetails} />
             <Route exact path="/contact" Component={Contact} />
             <Route exact path="/blog" Component={Blog} />
             <Route exact path="/memberships" Component={Membership} />
