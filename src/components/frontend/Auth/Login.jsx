@@ -92,7 +92,7 @@ export default class Login extends Component {
 
             // GOTO PROFILE PAGE
 
-            window.location.pathname = "profile";
+            window.location.pathname = "dashboard";
           } else {
             message.error(res.data.message);
           }
