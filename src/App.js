@@ -21,6 +21,7 @@ import OrderHistory from "./components/frontend/User/OrderHistory";
 import Setting from "./components/frontend/User/Setting";
 import Wishlist from "./components/frontend/User/Wishlist";
 import CourseDetails from "./components/frontend/Course/CourseDetails";
+import ProtectRoute from "./utils/ProtectRoute";
 
 function App() {
   return (
@@ -52,13 +53,15 @@ function App() {
               path="/activate-account/:id"
               Component={AccountActivation}
             />
-            {/*User route*/}
-            <Route exact path="/dashboard" Component={UserDashboard} />
-            <Route exact path="/wishlist" Component={Wishlist} />
-            <Route exact path="/enrolled-courses" Component={EnrollCourses} />
-            <Route exact path="/reviews" Component={UserReview} />
-            <Route exact path="/order-history" Component={OrderHistory} />
-            <Route exact path="/settings" Component={Setting} />
+            {/*AFTER LOGIN ALL ROUTES */}
+            <Route element={<ProtectRoute />}>
+              <Route exact path="/dashboard" Component={UserDashboard} />
+              <Route exact path="/wishlist" Component={Wishlist} />
+              <Route exact path="/enrolled-courses" Component={EnrollCourses} />
+              <Route exact path="/reviews" Component={UserReview} />
+              <Route exact path="/order-history" Component={OrderHistory} />
+              <Route exact path="/settings" Component={Setting} />
+            </Route>
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>
