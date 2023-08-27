@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Img from "../../../assets/images/course/course-01.jpg"
-import SwiperSlider from "../slider/SwiperSlider";
+import PenImg from "../../../assets/image/pen.png"
+import PolishImg from "../../../assets/image/polish.png"
+import PromoteImg from "../../../assets/image/promote.png"
+import PublishImg from "../../../assets/image/publish.png"
 
 class Course extends Component {
   render() {
@@ -27,7 +29,7 @@ class Course extends Component {
                   <div className="rbt-card-img">
                     <Link to="/course-details">
                       <img
-                        src={Img}
+                        src={PenImg}
                         alt="Card image"
                       />
                       <div className="rbt-badge-3-custom bg-white">
@@ -49,14 +51,14 @@ class Course extends Component {
                         <span className="rating-count"> (15 Reviews)</span>
                       </div>
                       <div className="rbt-bookmark-btn">
-                        <Link className="rbt-round-btn" title="Bookmark" to="#">
-                          <i className="feather-bookmark" />
+                        <Link className="rbt-round-btn" title="Favorite" to="#">
+                          <i className="feather-heart" />
                         </Link>
                       </div>
                     </div>
 
                     <h4 className="rbt-card-title">
-                      <Link to="/course-details">title</Link>
+                      <Link to="/course-details">Pen</Link>
                     </h4>
                     <ul className="rbt-meta">
                       <li>
@@ -89,7 +91,7 @@ class Course extends Component {
                   <div className="rbt-card-img">
                     <Link to="/course-details">
                       <img
-                        src={Img}
+                        src={PolishImg}
                         alt="Card image"
                       />
                       <div className="rbt-badge-3-custom bg-white">
@@ -111,14 +113,14 @@ class Course extends Component {
                         <span className="rating-count"> (15 Reviews)</span>
                       </div>
                       <div className="rbt-bookmark-btn">
-                        <Link className="rbt-round-btn" title="Bookmark" to="#">
-                          <i className="feather-bookmark" />
+                        <Link className="rbt-round-btn" title="Favorite" to="#">
+                          <i className="feather-heart" />
                         </Link>
                       </div>
                     </div>
 
                     <h4 className="rbt-card-title">
-                      <Link to="/course-details">title</Link>
+                      <Link to="/course-details">Polish</Link>
                     </h4>
                     <ul className="rbt-meta">
                       <li>
@@ -151,7 +153,7 @@ class Course extends Component {
                   <div className="rbt-card-img">
                     <Link to="/course-details">
                       <img
-                          src={Img}
+                          src={PromoteImg}
                           alt="Card image"
                       />
                       <div className="rbt-badge-3-custom bg-white">
@@ -173,14 +175,14 @@ class Course extends Component {
                         <span className="rating-count"> (15 Reviews)</span>
                       </div>
                       <div className="rbt-bookmark-btn">
-                        <Link className="rbt-round-btn" title="Bookmark" to="#">
-                          <i className="feather-bookmark" />
+                        <Link className="rbt-round-btn" title="Favorite" to="#">
+                          <i className="feather-heart" />
                         </Link>
                       </div>
                     </div>
 
                     <h4 className="rbt-card-title">
-                      <Link to="/course-details">title</Link>
+                      <Link to="/course-details">Promote</Link>
                     </h4>
                     <ul className="rbt-meta">
                       <li>
@@ -213,7 +215,7 @@ class Course extends Component {
                   <div className="rbt-card-img">
                     <Link to="/course-details">
                       <img
-                          src={Img}
+                          src={PublishImg}
                           alt="Card image"
                       />
                       <div className="rbt-badge-3-custom bg-white">
@@ -235,14 +237,14 @@ class Course extends Component {
                         <span className="rating-count"> (15 Reviews)</span>
                       </div>
                       <div className="rbt-bookmark-btn">
-                        <Link className="rbt-round-btn" title="Bookmark" to="#">
-                          <i className="feather-bookmark" />
+                        <Link className="rbt-round-btn" title="Favorite" to="#">
+                          <i className="feather-heart" />
                         </Link>
                       </div>
                     </div>
 
                     <h4 className="rbt-card-title">
-                      <Link to="/course-details">title</Link>
+                      <Link to="/course-details">Publish</Link>
                     </h4>
                     <ul className="rbt-meta">
                       <li>

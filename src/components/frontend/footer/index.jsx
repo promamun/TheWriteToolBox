@@ -28,7 +28,7 @@ class Index extends Component {
                     <div className="contact-btn mt--30">
                       <Link
                         className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
-                        to="#"
+                        to="/contact"
                       >
                         <div className="icon-reverse-wrapper">
                           <span className="btn-text">Contact With Us</span>
@@ -46,22 +46,22 @@ class Index extends Component {
 
                 <div className="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30">
                   <div className="footer-widget">
-                    <h5 className="ft-title">Useful Links</h5>
+                    <h5 className="ft-title">Important Links</h5>
                     <ul className="ft-link">
                       <li>
-                        <Link to="/12-marketplace">Marketplace</Link>
+                        <Link to="/courses">Course</Link>
                       </li>
                       <li>
-                        <Link to="/04-kindergarten">kindergarten</Link>
+                        <Link to="/memberships">Membership</Link>
                       </li>
                       <li>
-                        <Link to="/13-university-classic">University</Link>
+                        <Link to="/blog">Blog</Link>
                       </li>
                       <li>
-                        <Link to="/09-gym-coaching">GYM Coaching</Link>
+                        <Link to="https://devtechmasters.com/service">Services</Link>
                       </li>
                       <li>
-                        <Link to="/faqs">FAQ</Link>
+                        <Link to="/about-janine">About Janine</Link>
                       </li>
                     </ul>
                   </div>
@@ -69,22 +69,22 @@ class Index extends Component {
 
                 <div className="col-lg-2 col-md-6 col-sm-6 col-12 mt--30">
                   <div className="footer-widget">
-                    <h5 className="ft-title">Our Company</h5>
+                    <h5 className="ft-title">TWT Useful Links</h5>
                     <ul className="ft-link">
                       <li>
                         <Link to="/contact">Contact Us</Link>
                       </li>
                       <li>
-                        <Link to="/become-a-teacher">Become Teacher</Link>
+                        <Link to="/faqs">FAQ</Link>
                       </li>
                       <li>
-                        <Link to="/blog">Blog</Link>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
                       </li>
                       <li>
-                        <Link to="/instructor">Instructor</Link>
+                        <Link to="/terms-of-condition">Terms of Condition</Link>
                       </li>
                       <li>
-                        <Link to="/event-list">Events</Link>
+                        <Link to="/refund-policy">Refund Policy</Link>
                       </li>
                     </ul>
                   </div>
@@ -94,16 +94,13 @@ class Index extends Component {
                     <h5 className="ft-title">Get Contact</h5>
                     <ul className="ft-link">
                       <li>
-                        <span>Phone:</span> <Link to="#">(406) 555-0120</Link>
-                      </li>
-                      <li>
                         <span>E-mail:</span>
-                        <Link to="mailto:hr@example.com">
-                          rainbow@example.com
+                        <Link to="mailto:support@thewritetoolboxforyou.com">
+                          support@thewritetoolboxforyou.com
                         </Link>
                       </li>
                       <li>
-                        <span>Location:</span> North America, USA
+                        <span>Location:</span> 2124 NE19th Street, #F240 Gresham, OR 97030
                       </li>
                     </ul>
                     <ul className="social-icon social-default icon-naked justify-content-start mt--20">

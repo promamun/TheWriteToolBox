@@ -21,48 +21,52 @@ import OrderHistory from "./components/frontend/User/OrderHistory";
 import Setting from "./components/frontend/User/Setting";
 import Wishlist from "./components/frontend/User/Wishlist";
 import CourseDetails from "./components/frontend/Course/CourseDetails";
+import Cart from "./components/frontend/cart/Cart";
+import Checkout from "./components/frontend/cart/Checkout";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route exact path="/" Component={Home} />
-            <Route exact path="/about-janine" Component={About} />
-            <Route exact path="/courses" Component={Course} />
-            <Route exact path="/course-details" Component={CourseDetails} />
-            <Route exact path="/contact" Component={Contact} />
-            <Route exact path="/blog" Component={Blog} />
-            <Route exact path="/memberships" Component={Membership} />
-            <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
-            <Route
-              exact
-              path="/terms-of-condition"
-              Component={TermsConditions}
-            />
-            <Route exact path="/pen" Component={Pen} />
-            {/*auth route */}
-            <Route exact path="/register" Component={Register} />
-            <Route exact path="/login" Component={Login} />
-            <Route exact path="/pen" Component={Pen} />
-            <Route exact path="/faqs" Component={Faqs} />
-            <Route
-              exact
-              path="/activate-account/:id"
-              Component={AccountActivation}
-            />
-            {/*User route*/}
-            <Route exact path="/dashboard" Component={UserDashboard} />
-            <Route exact path="/wishlist" Component={Wishlist} />
-            <Route exact path="/enrolled-courses" Component={EnrollCourses} />
-            <Route exact path="/reviews" Component={UserReview} />
-            <Route exact path="/order-history" Component={OrderHistory} />
-            <Route exact path="/settings" Component={Setting} />
-            {/* WHEN NO ROUTE FOUND */}
-            <Route path="*" Component={Error404} />
-          </Routes>
-        </Layout>
+        <Routes>
+          {/* Route without Layout */}
+          <Route exact path="/pen" Component={Pen} />
+          {/* Route with Layout */}
+          <Route element={
+            <Layout>
+              <Route exact path="/" Component={Home} />
+              <Route exact path="/about-janine" Component={About} />
+              <Route exact path="/courses" Component={Course} />
+              <Route exact path="/course-details" Component={CourseDetails} />
+              <Route exact path="/contact" Component={Contact} />
+              <Route exact path="/blog" Component={Blog} />
+              <Route exact path="/memberships" Component={Membership} />
+              <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
+              <Route exact path="/terms-of-condition" Component={TermsConditions}/>
+              <Route exact path="/cart" Component={Cart} />
+              <Route exact path="/checkout" Component={Checkout} />
+              {/*auth route */}
+              <Route exact path="/register" Component={Register} />
+              <Route exact path="/login" Component={Login} />
+              <Route exact path="/pen" Component={Pen} />
+              <Route exact path="/faqs" Component={Faqs} />
+              <Route
+                  exact
+                  path="/activate-account/:id"
+                  Component={AccountActivation}
+              />
+              {/*User route*/}
+              <Route exact path="/dashboard" Component={UserDashboard} />
+              <Route exact path="/wishlist" Component={Wishlist} />
+              <Route exact path="/enrolled-courses" Component={EnrollCourses} />
+              <Route exact path="/reviews" Component={UserReview} />
+              <Route exact path="/order-history" Component={OrderHistory} />
+              <Route exact path="/settings" Component={Setting} />
+            </Layout>
+          } />
+          {/* WHEN NO ROUTE FOUND */}
+          <Route path="*" Component={Error404} />
+        </Routes>
       </BrowserRouter>
     </>
   );
