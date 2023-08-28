@@ -136,9 +136,7 @@ const Navbar = () => {
                       <Link to="/about-janine">About Janine</Link>
                     </li>
                     <li className="with-megamenu has-menu-child-item">
-                      <Link to="/courses">
-                        Courses
-                      </Link>
+                      <Link to="/courses">Courses</Link>
                     </li>
                     <li>
                       <Link to="/memberships">Membership</Link>
@@ -177,8 +175,8 @@ const Navbar = () => {
                       ) : (
                         <>
                           <Link
-                              to="/"
-                              className="text-sm text-gray-700 dark:text-gray-500 underline"
+                            to="/"
+                            className="text-sm text-gray-700 dark:text-gray-500 underline"
                           >
                             <i className="feather-user" />
                           </Link>
@@ -202,28 +200,28 @@ const Navbar = () => {
                               </Link>
                             </div>
                           </div>
-                          <UserProfileManu Classname='user-list-wrapper'/>
+                          <UserProfileManu Classname="user-list-wrapper" />
                         </div>
                       </div>
-                    ):(
-                        <div className="rbt-user-menu-list-wrapper">
-                          <div className="inner">
-                            <ul className='user-list-wrapper'>
-                              <li>
-                                <Link to="/login">
-                                  <i className="feather-log-in" />
-                                  <span>Log in</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/register">
-                                  <i className="feather-log-in" />
-                                  <span>Register</span>
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
+                    ) : (
+                      <div className="rbt-user-menu-list-wrapper">
+                        <div className="inner">
+                          <ul className="user-list-wrapper">
+                            <li>
+                              <Link to="/login">
+                                <i className="feather-log-in" />
+                                <span>Log in</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/register">
+                                <i className="feather-log-in" />
+                                <span>Register</span>
+                              </Link>
+                            </li>
+                          </ul>
                         </div>
+                      </div>
                     )}
                   </li>
                   <li className="access-icon rbt-user-wrapper d-block d-xl-none">

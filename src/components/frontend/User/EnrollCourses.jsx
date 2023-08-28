@@ -1,6 +1,12 @@
 import React from "react";
 import UserLayout from "./UserLayout";
 import { Link } from "react-router-dom";
+import Img1 from "../../../assets/images/course/course-online-01.jpg";
+import Img2 from "../../../assets/images/course/course-online-02.jpg";
+import Img3 from "../../../assets/images/course/course-online-03.jpg";
+import Img4 from "../../../assets/images/course/course-online-04.jpg";
+import Img5 from "../../../assets/images/course/course-online-06.jpg";
+import Img6 from "../../../assets/images/course/course-online-05.jpg";
 
 export default function EnrollCourses() {
   return (
@@ -19,7 +25,7 @@ export default function EnrollCourses() {
               >
                 <li role="presentation">
                   <Link
-                    href="#"
+                    to="#"
                     className="tab-button active"
                     id="home-tab-4"
                     data-bs-toggle="tab"
@@ -33,7 +39,7 @@ export default function EnrollCourses() {
                 </li>
                 <li role="presentation">
                   <Link
-                    href="#"
+                    to="#"
                     className="tab-button"
                     id="profile-tab-4"
                     data-bs-toggle="tab"
@@ -47,7 +53,7 @@ export default function EnrollCourses() {
                 </li>
                 <li role="presentation">
                   <Link
-                    href="#"
+                    to="#"
                     className="tab-button"
                     id="contact-tab-4"
                     data-bs-toggle="tab"
@@ -75,10 +81,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-01.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img1} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -97,16 +100,14 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
                           </div>
                         </div>
                         <h4 className="rbt-card-title">
-                          <Link href="/course-details">
-                            React Front To Back
-                          </Link>
+                          <Link to="/course-details">React Front To Back</Link>
                         </h4>
                         <ul className="rbt-meta">
                           <li>
@@ -144,7 +145,7 @@ export default function EnrollCourses() {
                         <div className="rbt-card-bottom">
                           <Link
                             className="rbt-btn btn-sm bg-primary-opacity w-100 text-center"
-                            href="#"
+                            to="#"
                           >
                             Download Certificate
                           </Link>
@@ -159,10 +160,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-02.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img2} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -181,7 +179,7 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
@@ -228,7 +226,7 @@ export default function EnrollCourses() {
                         <div className="rbt-card-bottom">
                           <Link
                             className="rbt-btn btn-sm bg-primary-opacity w-100 text-center"
-                            href="#"
+                            to="#"
                           >
                             Download Certificate
                           </Link>
@@ -243,10 +241,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-03.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img3} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -265,7 +260,7 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
@@ -312,7 +307,7 @@ export default function EnrollCourses() {
                         <div className="rbt-card-bottom">
                           <Link
                             className="rbt-btn btn-sm bg-primary-opacity w-100 text-center"
-                            href="#"
+                            to="#"
                           >
                             Download Certificate
                           </Link>
@@ -336,10 +331,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-04.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img4} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -358,7 +350,7 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
@@ -400,10 +392,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-06.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img5} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -422,7 +411,7 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
@@ -462,10 +451,7 @@ export default function EnrollCourses() {
                     <div className="rbt-card variation-01 rbt-hover">
                       <div className="rbt-card-img">
                         <Link to="/course-details">
-                          <img
-                            src="assets/images/course/course-online-05.jpg"
-                            alt="Card image"
-                          />
+                          <img src={Img6} alt="Card image" />
                         </Link>
                       </div>
                       <div className="rbt-card-body">
@@ -484,7 +470,7 @@ export default function EnrollCourses() {
                             <Link
                               className="rbt-round-btn"
                               title="Bookmark"
-                              href="#"
+                              to="#"
                             >
                               <i className="feather-bookmark" />
                             </Link>
