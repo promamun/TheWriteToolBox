@@ -27,7 +27,7 @@ class AboutJanin extends Component {
                       <div className="inner">
                         <h4 className="title">
                           Hi, I’m
-                          <span className="theme-gradient">Janine.</span>
+                          <span className="theme-gradient"> Janine.</span>
                         </h4>
                         <p>
                           Welcome to my little corner of the world. I teach

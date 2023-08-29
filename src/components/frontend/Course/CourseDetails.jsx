@@ -46,7 +46,7 @@ export default function CourseDetails() {
               <div className="content text-start">
                 <ul className="page-list">
                   <li className="rbt-breadcrumb-item">
-                    <Link href="/">Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
                     <div className="icon-right">
@@ -72,28 +72,28 @@ export default function CourseDetails() {
                   </div>
 
                   <div className="feature-sin rating">
-                    <a href="#">4.8</a>
-                    <a href="#">
+                    <Link to="#">4.8</Link>
+                    <Link to="#">
                       <i className="fa fa-star"></i>
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="#">
                       <i className="fa fa-star"></i>
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="#">
                       <i className="fa fa-star"></i>
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="#">
                       <i className="fa fa-star"></i>
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="#">
                       <i className="fa fa-star"></i>
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="feature-sin total-rating">
-                    <a className="rbt-badge-4" href="#">
+                    <Link className="rbt-badge-4" to="#">
                       215,475 rating
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="feature-sin total-student">
@@ -135,16 +135,16 @@ export default function CourseDetails() {
                   <nav className="mainmenu-nav onepagenav">
                     <ul className="mainmenu">
                       <li className="current">
-                        <a href="#overview">Overview</a>
+                        <Link to="#overview">Overview</Link>
                       </li>
                       <li>
-                        <a href="#coursecontent">Course Content</a>
+                        <Link to="#coursecontent">Course Content</Link>
                       </li>
                       <li>
-                        <a href="#details">Details</a>
+                        <Link to="#details">Details</Link>
                       </li>
                       <li>
-                        <a href="#review">Review</a>
+                        <Link to="#review">Review</Link>
                       </li>
                     </ul>
                   </nav>
@@ -199,7 +199,7 @@ export default function CourseDetails() {
                             <div className="accordion-body card-body pr--0">
                               <ul className="rbt-course-main-content liststyle">
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">Course Intro</span>
@@ -210,11 +210,11 @@ export default function CourseDetails() {
                                         <i className="feather-eye"></i> Preview
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -227,11 +227,11 @@ export default function CourseDetails() {
                                         <i className="feather-eye"></i> Preview
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -243,7 +243,7 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -278,7 +278,7 @@ export default function CourseDetails() {
                             <div className="accordion-body card-body pr--0">
                               <ul className="rbt-course-main-content liststyle">
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">Course Intro</span>
@@ -288,10 +288,10 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -303,11 +303,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -319,11 +319,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -335,11 +335,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -352,11 +352,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -368,7 +368,7 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -403,7 +403,7 @@ export default function CourseDetails() {
                             <div className="accordion-body card-body pr--0">
                               <ul className="rbt-course-main-content liststyle">
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">Course Intro</span>
@@ -413,10 +413,10 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -428,11 +428,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -444,11 +444,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -460,11 +460,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -477,11 +477,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -493,7 +493,7 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -528,7 +528,7 @@ export default function CourseDetails() {
                             <div className="accordion-body card-body pr--0">
                               <ul className="rbt-course-main-content liststyle">
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">Course Intro</span>
@@ -538,10 +538,10 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -553,11 +553,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -569,11 +569,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -585,11 +585,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -602,11 +602,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -618,7 +618,7 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -653,7 +653,7 @@ export default function CourseDetails() {
                             <div className="accordion-body card-body pr--0">
                               <ul className="rbt-course-main-content liststyle">
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">Course Intro</span>
@@ -663,10 +663,10 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -678,11 +678,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -694,11 +694,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -710,11 +710,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle"></i>{" "}
                                       <span className="text">
@@ -727,11 +727,11 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
 
                                 <li>
-                                  <a href="#">
+                                  <Link to="#">
                                     <div className="course-content-left">
                                       <i className="feather-file-text"></i>{" "}
                                       <span className="text">
@@ -743,7 +743,7 @@ export default function CourseDetails() {
                                         <i className="feather-lock"></i>
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               </ul>
                             </div>
@@ -1176,9 +1176,9 @@ export default function CourseDetails() {
               <div className="course-sidebar sticky-top rbt-shadow-box course-sidebar-top rbt-gradient-border">
                 <div className="inner">
                   {/*Start Viedo Wrapper  */}
-                  <a
+                  <Link
                     className="video-popup-with-text video-popup-wrapper text-center popup-video sidebar-video-hidden mb--15"
-                    href="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
+                    to="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
                   >
                     <div className="video-content">
                       <img
@@ -1195,7 +1195,7 @@ export default function CourseDetails() {
                         <i className="feather-eye"></i> Preview this course
                       </span>
                     </div>
-                  </a>
+                  </Link>
 
                   <div className="content-item-content">
                     <div className="rbt-price-wrapper d-flex flex-wrap align-items-center justify-content-between">
@@ -1211,27 +1211,27 @@ export default function CourseDetails() {
                     </div>
 
                     <div className="add-to-card-button mt--15">
-                      <a
+                      <Link
                         className="rbt-btn btn-gradient icon-hover w-100 d-block text-center"
-                        href="#"
+                        to="#"
                       >
                         <span className="btn-text">Add to Cart</span>
                         <span className="btn-icon">
                           <i className="feather-arrow-right"></i>
                         </span>
-                      </a>
+                      </Link>
                     </div>
 
                     <div className="buy-now-btn mt--15">
-                      <a
+                      <Link
                         className="rbt-btn btn-border icon-hover w-100 d-block text-center"
-                        href="#"
+                        to="#"
                       >
                         <span className="btn-text">Buy Now</span>
                         <span className="btn-icon">
                           <i className="feather-arrow-right"></i>
                         </span>
-                      </a>
+                      </Link>
                     </div>
 
                     <span className="subtitle">
@@ -1297,24 +1297,24 @@ export default function CourseDetails() {
                       <div className="rbt-post-share d-flex align-items-center justify-content-center">
                         <ul className="social-icon social-default transparent-with-border justify-content-center">
                           <li>
-                            <a href="https://www.facebook.com/">
+                            <Link to="https://www.facebook.com/">
                               <i className="feather-facebook"></i>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.twitter.com/">
+                            <Link to="https://www.twitter.com/">
                               <i className="feather-twitter"></i>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.instagram.com/">
+                            <Link to="https://www.instagram.com/">
                               <i className="feather-instagram"></i>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.linkdin.com/">
+                            <Link to="https://www.linkdin.com/">
                               <i className="feather-linkedin"></i>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -1323,9 +1323,9 @@ export default function CourseDetails() {
                         <p>For details about the course</p>
                         <p className="rbt-badge-2 mt--10 justify-content-center w-100">
                           <i className="feather-phone mr--5"></i> Call Us:{" "}
-                          <a href="#">
+                          <Link to="#">
                             <strong>+444 555 666 777</strong>
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div>
