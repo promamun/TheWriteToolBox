@@ -6,6 +6,8 @@ import { Container, Row, Col } from "reactstrap";
 import { FiCheck } from "react-icons/fi";
 import JenienLetter from "./JenienLetter";
 import {Link} from "react-router-dom";
+import Questions from "./Questions";
+import WriteStoryNotForYou from "./WriteStoryNotForYou";
 
 export default function Index() {
   const IconColor = {
@@ -549,6 +551,8 @@ export default function Index() {
         </div>
       </div>
       <JenienLetter/>
+      <WriteStoryNotForYou/>
+      <Questions/>
       <Pen />
     </>
   );
