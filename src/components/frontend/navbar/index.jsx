@@ -167,7 +167,7 @@ const Navbar = () => {
                     <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                       {localStorage.getItem("token") ? (
                         <Link
-                          to="/"
+                          to="/settings"
                           className="text-sm text-gray-700 dark:text-gray-500 underline"
                         >
                           <i className="feather-user" /> {userDetails.name}
@@ -194,7 +194,7 @@ const Navbar = () => {
                               <span className="name">{userDetails.name}</span>
                               <Link
                                 className="rbt-btn-link color-primary"
-                                to="/profile"
+                                to="/settings"
                               >
                                 View Profile
                               </Link>
@@ -238,7 +238,7 @@ const Navbar = () => {
                             <span className="name">Nipa Bali</span>
                             <Link
                               className="rbt-btn-link color-primary"
-                              to="/profile"
+                              to="/settings"
                             >
                               View Profile
                             </Link>
@@ -246,7 +246,7 @@ const Navbar = () => {
                         </div>
                         <ul className="user-list-wrapper">
                           <li>
-                            <Link to="/profile">
+                            <Link to="/dashboard">
                               <i className="feather-home" />
                               <span>My Dashboard</span>
                             </Link>
@@ -498,7 +498,6 @@ const Navbar = () => {
             <div className="rbt-offcanvas-footer" />
           </div>
         </div>
-        {/*// <!-- End Side Vav -->*/}
       </header>
       <CartModal toggleSideNav={toggleSideNav} />
       <Link className="close_side_menu" to="#" toggleSideNav={toggleSideNav} />

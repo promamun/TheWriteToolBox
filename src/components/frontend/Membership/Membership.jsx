@@ -6,7 +6,7 @@ class Membership extends Component {
   render() {
     return (
       <div>
-        <Brodcamp Title={"Membership"} SubTile={"Membership Plan"} />
+        <Brodcamp Title="Membership" SubTile="Membership Plan" />
         <div className="rbt-pricing-area bg-color-white rbt-section-gap">
           <div className="container">
             <div className="row g-5 mb--60">

@@ -6,7 +6,8 @@ import About from "./components/frontend/about";
 import Course from "./components/frontend/Course";
 import Contact from "./components/frontend/contact";
 import Blog from "./components/frontend/blog";
-import Membership from "./components/frontend/Membership";
+import BlogDetails from "./components/frontend/blogDetails"
+import Membership from "./components/frontend/Membership/index";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index";
 import Register from "./components/frontend/Auth/Register";
@@ -24,6 +25,7 @@ import OrderHistory from "./components/frontend/User/OrderHistory";
 import Setting from "./components/frontend/User/Setting";
 import Wishlist from "./components/frontend/User/Wishlist";
 import CourseDetails from "./components/frontend/Course/CourseDetails";
+import ProtectRoute from "./utils/ProtectRoute";
 
 function App() {
   return (
@@ -34,9 +36,10 @@ function App() {
             <Route exact path="/" Component={Home} />
             <Route exact path="/about-janine" Component={About} />
             <Route exact path="/courses" Component={Course} />
-            <Route exact path="/course-details" Component={CourseDetails} />
+            <Route exact path="/course-details/:id" Component={CourseDetails} />
             <Route exact path="/contact" Component={Contact} />
             <Route exact path="/blog" Component={Blog} />
+            <Route exact path="/blog-details" Component={BlogDetails} />
             <Route exact path="/memberships" Component={Membership} />
             <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
             <Route
@@ -59,13 +62,15 @@ function App() {
               path="/activate-account/:id"
               Component={AccountActivation}
             />
-            {/*User route*/}
-            <Route exact path="/dashboard" Component={UserDashboard} />
-            <Route exact path="/wishlist" Component={Wishlist} />
-            <Route exact path="/enrolled-courses" Component={EnrollCourses} />
-            <Route exact path="/reviews" Component={UserReview} />
-            <Route exact path="/order-history" Component={OrderHistory} />
-            <Route exact path="/settings" Component={Setting} />
+            {/*AFTER LOGIN ALL ROUTES */}
+            <Route element={<ProtectRoute />}>
+              <Route exact path="/dashboard" Component={UserDashboard} />
+              <Route exact path="/wishlist" Component={Wishlist} />
+              <Route exact path="/enrolled-courses" Component={EnrollCourses} />
+              <Route exact path="/reviews" Component={UserReview} />
+              <Route exact path="/order-history" Component={OrderHistory} />
+              <Route exact path="/settings" Component={Setting} />
+            </Route>
             {/* WHEN NO ROUTE FOUND */}
             <Route path="*" Component={Error404} />
           </Routes>

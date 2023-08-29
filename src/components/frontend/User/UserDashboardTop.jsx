@@ -1,9 +1,23 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import React, { Component } from "react";
 
-export default function UserDashboardTop() {
-  return (
-    <>
+export default class UserDashboardTop extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userDetails: {}
+    };
+  }
+  componentDidMount = () => {
+    let userDetails = localStorage.getItem("userDetails");
+
+    userDetails = userDetails ? JSON.parse(userDetails) : {};
+    this.setState({ userDetails });
+  };
+
+  render() {
+    let { userDetails } = this.state;
+    return (
       <div className="rbt-dashboard-content-wrapper">
         <div className="tutor-bg-photo bg_image bg_image--23 height-350" />
         {/*Start Tutor Information  */}
@@ -13,7 +27,7 @@ export default function UserDashboardTop() {
               <img src="assets/images/team/avatar-2.jpg" alt="Instructor" />
             </div>
             <div className="tutor-content">
-              <h5 className="title">Emily Hannah</h5>
+              <h5 className="title">{userDetails.name}</h5>
               <ul className="rbt-meta rbt-meta-white mt--5">
                 <li>
                   <i className="feather-book" />5 Courses Enroled
@@ -40,8 +54,7 @@ export default function UserDashboardTop() {
             </div>
           </div>
         </div>
-        {/*End Tutor Information  */}
       </div>
-    </>
-  );
+    );
+  }
 }
