@@ -42,7 +42,6 @@ const Navbar = () => {
     };
 
     let data = localStorage.getItem("userDetails");
-
     setUserDetails(data ? JSON.parse(data) : {});
 
     window.addEventListener("scroll", handleScroll);

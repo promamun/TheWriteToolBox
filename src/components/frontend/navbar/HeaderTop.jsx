@@ -26,12 +26,6 @@ function HeaderTop() {
                           <span className="d-none d-xxl-block">Followers</span>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="#">
-                          <i className="feather-phone" />
-                          +1-202-555-0174
-                        </Link>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -47,7 +41,7 @@ function HeaderTop() {
                           </span>
                           <span className="news-text">
                             <img src={Img} alt="Hand Emojji Images" />
-                            Intro price. Get Histudy for Big Sale -95% off.
+                            Intro price. Get TWT for Big Sale -80% off.
                           </span>
                         </div>
                       </div>
