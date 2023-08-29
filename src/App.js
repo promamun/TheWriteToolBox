@@ -6,13 +6,15 @@ import About from "./components/frontend/about";
 import Course from "./components/frontend/Course";
 import Contact from "./components/frontend/contact";
 import Blog from "./components/frontend/blog";
-import Membership from "./components/frontend/Membership";
+import BlogDetails from "./components/frontend/blogDetails"
+import Membership from "./components/frontend/Membership/index";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index";
 import Register from "./components/frontend/Auth/Register";
 import Login from "./components/frontend/Auth/Login";
 import Pen from "./components/frontend/landingPage/Index";
 import Faqs from "./components/frontend/faqs/Index";
+import ThankYou from "./components/frontend/thankUpage/ThankYou";
 import AccountActivation from "./components/frontend/page/AccountActivation";
 import UserDashboard from "./components/frontend/User/UserDashboard";
 import EnrollCourses from "./components/frontend/User/EnrollCourses";
@@ -23,6 +25,7 @@ import Wishlist from "./components/frontend/User/Wishlist";
 import CourseDetails from "./components/frontend/Course/CourseDetails";
 import Cart from "./components/frontend/cart/Cart";
 import Checkout from "./components/frontend/cart/Checkout";
+import ProtectRoute from "./utils/ProtectRoute";
 
 function App() {
   return (
@@ -45,6 +48,8 @@ function App() {
                 <Route path="terms-of-condition" element={<TermsConditions />} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />
+                <Route path="blog-details" element={<BlogDetails />} />
+                <Route path="thank-you" element={<ThankYou />} />
 
                 {/* Auth route */}
                 <Route path="register" element={<Register />} />
@@ -53,12 +58,14 @@ function App() {
                 <Route path="activate-account/:id" element={<AccountActivation />} />
 
                 {/* User route */}
-                <Route path="dashboard" element={<UserDashboard />} />
-                <Route path="wishlist" element={<Wishlist />} />
-                <Route path="enrolled-courses" element={<EnrollCourses />} />
-                <Route path="reviews" element={<UserReview />} />
-                <Route path="order-history" element={<OrderHistory />} />
-                <Route path="settings" element={<Setting />} />
+                <Route element={<ProtectRoute />}>
+                  <Route path="dashboard" element={<UserDashboard />} />
+                  <Route path="wishlist" element={<Wishlist />} />
+                  <Route path="enrolled-courses" element={<EnrollCourses />} />
+                  <Route path="reviews" element={<UserReview />} />
+                  <Route path="order-history" element={<OrderHistory />} />
+                  <Route path="settings" element={<Setting />} />
+                </Route>
 
                 {/* WHEN NO ROUTE FOUND */}
                 <Route path="*" element={<Error404 />} />

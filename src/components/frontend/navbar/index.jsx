@@ -17,7 +17,6 @@ const Navbar = () => {
     document.body.classList.toggle("cart-sidenav-menu-active");
     document.getElementById("sideManu").classList.toggle("side-menu-active");
   };
-
   useEffect(() => {
     const handleScroll = () => {
       const bodyHasStickyHeader =
@@ -136,9 +135,7 @@ const Navbar = () => {
                       <Link to="/about-janine">About Janine</Link>
                     </li>
                     <li className="with-megamenu has-menu-child-item">
-                      <Link to="/courses">
-                        Courses
-                      </Link>
+                      <Link to="/courses">Courses</Link>
                     </li>
                     <li>
                       <Link to="/memberships">Membership</Link>
@@ -169,7 +166,7 @@ const Navbar = () => {
                     <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                       {localStorage.getItem("token") ? (
                         <Link
-                          to="/"
+                          to="/settings"
                           className="text-sm text-gray-700 dark:text-gray-500 underline"
                         >
                           <i className="feather-user" /> {userDetails.name}
@@ -177,8 +174,8 @@ const Navbar = () => {
                       ) : (
                         <>
                           <Link
-                              to="/"
-                              className="text-sm text-gray-700 dark:text-gray-500 underline"
+                            to="/"
+                            className="text-sm text-gray-700 dark:text-gray-500 underline"
                           >
                             <i className="feather-user" />
                           </Link>
@@ -196,34 +193,34 @@ const Navbar = () => {
                               <span className="name">{userDetails.name}</span>
                               <Link
                                 className="rbt-btn-link color-primary"
-                                to="/profile"
+                                to="/settings"
                               >
                                 View Profile
                               </Link>
                             </div>
                           </div>
-                          <UserProfileManu Classname='user-list-wrapper'/>
+                          <UserProfileManu Classname="user-list-wrapper" />
                         </div>
                       </div>
-                    ):(
-                        <div className="rbt-user-menu-list-wrapper">
-                          <div className="inner">
-                            <ul className='user-list-wrapper'>
-                              <li>
-                                <Link to="/login">
-                                  <i className="feather-log-in" />
-                                  <span>Log in</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/register">
-                                  <i className="feather-log-in" />
-                                  <span>Register</span>
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
+                    ) : (
+                      <div className="rbt-user-menu-list-wrapper">
+                        <div className="inner">
+                          <ul className="user-list-wrapper">
+                            <li>
+                              <Link to="/login">
+                                <i className="feather-log-in" />
+                                <span>Log in</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/register">
+                                <i className="feather-log-in" />
+                                <span>Register</span>
+                              </Link>
+                            </li>
+                          </ul>
                         </div>
+                      </div>
                     )}
                   </li>
                   <li className="access-icon rbt-user-wrapper d-block d-xl-none">
@@ -240,7 +237,7 @@ const Navbar = () => {
                             <span className="name">Nipa Bali</span>
                             <Link
                               className="rbt-btn-link color-primary"
-                              to="/profile"
+                              to="/settings"
                             >
                               View Profile
                             </Link>
@@ -248,7 +245,7 @@ const Navbar = () => {
                         </div>
                         <ul className="user-list-wrapper">
                           <li>
-                            <Link to="/profile">
+                            <Link to="/dashboard">
                               <i className="feather-home" />
                               <span>My Dashboard</span>
                             </Link>
@@ -500,7 +497,6 @@ const Navbar = () => {
             <div className="rbt-offcanvas-footer" />
           </div>
         </div>
-        {/*// <!-- End Side Vav -->*/}
       </header>
       <CartModal toggleSideNav={toggleSideNav} />
       <Link className="close_side_menu" to="#" toggleSideNav={toggleSideNav} />
