@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 export default class UserDashboardTop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userDetails: {},
+      userDetails: {}
     };
   }
   componentDidMount = () => {
@@ -19,7 +20,7 @@ export default class UserDashboardTop extends Component {
     return (
       <div className="rbt-dashboard-content-wrapper">
         <div className="tutor-bg-photo bg_image bg_image--23 height-350" />
-
+        {/*Start Tutor Information  */}
         <div className="rbt-tutor-information">
           <div className="rbt-tutor-information-left">
             <div className="thumbnail rbt-avatars size-lg">
@@ -39,7 +40,7 @@ export default class UserDashboardTop extends Component {
           </div>
           <div className="rbt-tutor-information-right">
             <div className="tutor-btn">
-              <a className="rbt-btn btn-md hover-icon-reverse" href="#">
+              <Link className="rbt-btn btn-md hover-icon-reverse" to="#">
                 <span className="icon-reverse-wrapper">
                   <span className="btn-text">Become an Instructor</span>
                   <span className="btn-icon">
@@ -49,7 +50,7 @@ export default class UserDashboardTop extends Component {
                     <i className="feather-arrow-right" />
                   </span>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

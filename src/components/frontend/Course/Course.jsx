@@ -52,7 +52,6 @@ export default class Course extends Component {
                 </div>
               </div>
             </div>
-
             <div className="row g-5">
               {courses.map((item, key) => {
                 return (

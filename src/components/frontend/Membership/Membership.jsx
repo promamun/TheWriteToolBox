@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import Brodcamp from "../brodcamp/style2";
 import { Link } from "react-router-dom";
 
 class Membership extends Component {
   render() {
     return (
       <div>
-        <Brodcamp Title={"Membership"} SubTile={"Membership Plan"} />
         <div className="rbt-pricing-area bg-color-white rbt-section-gap">
           <div className="container">
             <div className="row g-5 mb--60">

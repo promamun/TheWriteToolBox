@@ -40,11 +40,6 @@ function JenienLetter() {
                     explode your expression, become a published author, and
                     attract those that were created to be in your tribe.
                   </p>
-                  <br />
-                  <br />
-                  <hr />
-                  <h1>QUESTIONS? ASK AWAY!</h1>
-                  <p><strong>Does this course cover grammar?</strong></p>
                 </div>
               </div>
             </Col>

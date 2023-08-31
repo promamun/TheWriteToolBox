@@ -17,7 +17,6 @@ const Navbar = () => {
     document.body.classList.toggle("cart-sidenav-menu-active");
     document.getElementById("sideManu").classList.toggle("side-menu-active");
   };
-
   useEffect(() => {
     const handleScroll = () => {
       const bodyHasStickyHeader =
@@ -43,7 +42,6 @@ const Navbar = () => {
     };
 
     let data = localStorage.getItem("userDetails");
-
     setUserDetails(data ? JSON.parse(data) : {});
 
     window.addEventListener("scroll", handleScroll);

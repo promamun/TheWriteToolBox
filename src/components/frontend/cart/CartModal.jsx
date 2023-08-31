@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function CartModal({toggleSideNav}) {
   return (
@@ -114,7 +115,7 @@ function CartModal({toggleSideNav}) {
                 </div>
                 <div className="close-btn">
                   <button className="rbt-round-btn">
-                    <i className="feather-x"></i>
+                    <i className="feather-x"/>
                   </button>
                 </div>
               </li>
@@ -132,26 +133,26 @@ function CartModal({toggleSideNav}) {
             <hr className="mb--0" />
             <div className="rbt-minicart-bottom mt--20">
               <div className="view-cart-btn">
-                <a
+                <Link
                   className="rbt-btn btn-border icon-hover w-100 text-center"
-                  href="#"
+                  to="/cart"
                 >
                   <span className="btn-text">View Cart</span>
                   <span className="btn-icon">
-                    <i className="feather-arrow-right"></i>
+                    <i className="feather-arrow-right"/>
                   </span>
-                </a>
+                </Link>
               </div>
               <div className="checkout-btn mt--20">
-                <a
+                <Link
                   className="rbt-btn btn-gradient icon-hover w-100 text-center"
-                  href="#"
+                  to="/checkout"
                 >
                   <span className="btn-text">Checkout</span>
                   <span className="btn-icon">
-                    <i className="feather-arrow-right"></i>
+                    <i className="feather-arrow-right"/>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

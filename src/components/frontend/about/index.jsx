@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import AboutJanin from "./AboutJanin";
 import {Helmet} from "react-helmet";
+import JanineIntro from "./JanineIntro";
+import Newsletter from "../home/Newsletter";
 
 class Index extends Component {
     render() {
@@ -11,7 +12,8 @@ class Index extends Component {
                         About Janin
                     </title>
                 </Helmet>
-                <AboutJanin/>
+                <JanineIntro/>
+                <Newsletter/>
             </div>
         );
     }

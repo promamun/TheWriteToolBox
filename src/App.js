@@ -1,18 +1,20 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import {BrowserRouter,Routes, Route,} from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/frontend/home/index";
 import Error404 from "./components/frontend/404/index";
 import About from "./components/frontend/about";
 import Course from "./components/frontend/Course";
-import Contact from "./components/frontend/contact";
-import Blog from "./components/frontend/blog";
-import Membership from "./components/frontend/Membership";
+import Contact from "./components/frontend/contact/index";
+import Blog from "./components/frontend/blog/Blog";
+import BlogDetails from "./components/frontend/blogDetails/index";
+import Membership from "./components/frontend/Membership/Membership";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index";
 import Register from "./components/frontend/Auth/Register";
 import Login from "./components/frontend/Auth/Login";
 import Pen from "./components/frontend/landingPage/Index";
 import Faqs from "./components/frontend/faqs/Index";
+import ThankYou from "./components/frontend/thankUpage/ThankYou";
 import AccountActivation from "./components/frontend/page/AccountActivation";
 import UserDashboard from "./components/frontend/User/UserDashboard";
 import EnrollCourses from "./components/frontend/User/EnrollCourses";
@@ -21,51 +23,56 @@ import OrderHistory from "./components/frontend/User/OrderHistory";
 import Setting from "./components/frontend/User/Setting";
 import Wishlist from "./components/frontend/User/Wishlist";
 import CourseDetails from "./components/frontend/Course/CourseDetails";
+import Cart from "./components/frontend/cart/Cart";
+import Checkout from "./components/frontend/cart/Checkout";
 import ProtectRoute from "./utils/ProtectRoute";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route exact path="/" Component={Home} />
-            <Route exact path="/about-janine" Component={About} />
-            <Route exact path="/courses" Component={Course} />
-            <Route exact path="/course-details/:id" Component={CourseDetails} />
-            <Route exact path="/contact" Component={Contact} />
-            <Route exact path="/blog" Component={Blog} />
-            <Route exact path="/memberships" Component={Membership} />
-            <Route exact path="/privacy-policy" Component={PrivacyPolicy} />
-            <Route
-              exact
-              path="/terms-of-condition"
-              Component={TermsConditions}
-            />
-            <Route exact path="/pen" Component={Pen} />
-            {/*auth route */}
-            <Route exact path="/register" Component={Register} />
-            <Route exact path="/login" Component={Login} />
-            <Route exact path="/pen" Component={Pen} />
-            <Route exact path="/faqs" Component={Faqs} />
-            <Route
-              exact
-              path="/activate-account/:id"
-              Component={AccountActivation}
-            />
-            {/*AFTER LOGIN ALL ROUTES */}
-            <Route element={<ProtectRoute />}>
-              <Route exact path="/dashboard" Component={UserDashboard} />
-              <Route exact path="/wishlist" Component={Wishlist} />
-              <Route exact path="/enrolled-courses" Component={EnrollCourses} />
-              <Route exact path="/reviews" Component={UserReview} />
-              <Route exact path="/order-history" Component={OrderHistory} />
-              <Route exact path="/settings" Component={Setting} />
-            </Route>
-            {/* WHEN NO ROUTE FOUND */}
-            <Route path="*" Component={Error404} />
-          </Routes>
-        </Layout>
+        <Routes>
+          {/* Route without Layout */}
+          <Route exact path="/pen" Component={Pen} />
+          <Route path='/*' element={
+            <Layout>
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="about-janine" element={<About />} />
+                <Route path="courses" element={<Course />} />
+                <Route path="course-details" element={<CourseDetails />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="blog" element={<Blog />} />
+                <Route path="memberships" element={<Membership />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="terms-of-condition" element={<TermsConditions />} />
+                <Route path="cart" element={<Cart />} />
+                <Route path="checkout" element={<Checkout />} />
+                <Route path="blog-details" element={<BlogDetails />} />
+                <Route path="thank-you" element={<ThankYou />} />
+
+                {/* Auth route */}
+                <Route path="register" element={<Register />} />
+                <Route path="login" element={<Login />} />
+                <Route path="faqs" element={<Faqs />} />
+                <Route path="activate-account/:id" element={<AccountActivation />} />
+
+                {/* User route */}
+                <Route element={<ProtectRoute />}>
+                  <Route path="dashboard" element={<UserDashboard />} />
+                  <Route path="wishlist" element={<Wishlist />} />
+                  <Route path="enrolled-courses" element={<EnrollCourses />} />
+                  <Route path="reviews" element={<UserReview />} />
+                  <Route path="order-history" element={<OrderHistory />} />
+                  <Route path="settings" element={<Setting />} />
+                </Route>
+
+                {/* WHEN NO ROUTE FOUND */}
+                <Route path="*" element={<Error404 />} />
+              </Routes>
+            </Layout>
+          }/>
+        </Routes>
       </BrowserRouter>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Blog from "./blog";
+import Blog from "./Blog";
 import Brodcamp from "../brodcamp/style2";
 import { Helmet } from "react-helmet";
 
