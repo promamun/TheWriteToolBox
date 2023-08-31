@@ -4,10 +4,10 @@ import Home from "./components/frontend/home/index";
 import Error404 from "./components/frontend/404/index";
 import About from "./components/frontend/about";
 import Course from "./components/frontend/Course";
-import Contact from "./components/frontend/contact";
-import Blog from "./components/frontend/blog";
-import BlogDetails from "./components/frontend/blogDetails"
-import Membership from "./components/frontend/Membership/index";
+import Contact from "./components/frontend/contact/index";
+import Blog from "./components/frontend/blog/index";
+import BlogDetails from "./components/frontend/blogDetails/index";
+import Membership from "./components/frontend/membership/index";
 import PrivacyPolicy from "./components/frontend/privacy_policy/privacyPolicy";
 import TermsConditions from "./components/frontend/TarmsConditions/index";
 import Register from "./components/frontend/Auth/Register";
