@@ -7,7 +7,7 @@ import ActionOne from "./ActionOne";
 import Course from "../Course/Course";
 import JaninFbStory from "./JaninFbStory";
 import FreeCourseContact from "../contact/FreeCourseContact";
-import Blog from "../blog/blog";
+import Blog from "../blog/Blog";
 import JaninBook from "./JaninBook";
 import Newsletter from "./Newsletter";
 import { Helmet } from "react-helmet";
