@@ -54,8 +54,7 @@ function App() {
                     path="terms-of-condition"
                     element={<TermsConditions />}
                   />
-                  <Route path="cart" element={<Cart />} />
-                  <Route path="checkout" element={<Checkout />} />
+
                   <Route path="blog-details" element={<BlogDetails />} />
                   <Route path="thank-you" element={<ThankYou />} />
 
@@ -70,8 +69,10 @@ function App() {
 
                   {/* User route */}
                   <Route element={<ProtectRoute />}>
-                    <Route path="dashboard" element={<UserDashboard />} />
-                    <Route path="wishlist" element={<Wishlist />} />
+                    <Route path="/dashboard" element={<UserDashboard />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} />
                     <Route
                       path="enrolled-courses"
                       element={<EnrollCourses />}
