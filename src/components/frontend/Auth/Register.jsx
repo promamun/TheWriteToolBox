@@ -128,7 +128,7 @@ export default class Register extends Component {
                         type="text"
                         required
                         validaterule={["required", "isName"]}
-                        validatemsg={["Last name is required"]}
+                        validatemsg={["Name is required"]}
                         onChange={this.handleChange}
                         value={data.name}
                       />

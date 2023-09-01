@@ -72,11 +72,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -119,11 +119,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  stroke-linecap="square"
+                                  strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -160,11 +160,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -201,11 +201,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -222,26 +222,28 @@ class Blog extends Component {
             </div>
           </div>
         </div>
-        <div class="row g-5 mt--15">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+        <div className="row g-5 mt--15">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-01.jpg"
                     alt="Card image"
-                  />{" "}
+                  />
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
-                  <Link to="blog-details.html">The Latest Trend In Education.</Link>
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
+                  <Link to="blog-details.html">
+                    The Latest Trend In Education.
+                  </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   It is a long established fact that a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -249,12 +251,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>
@@ -263,9 +262,9 @@ class Blog extends Component {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-02.jpg"
@@ -273,15 +272,17 @@ class Blog extends Component {
                   />{" "}
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
-                  <Link to="blog-details.html">The Modern Rules Of Education.</Link>
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
+                  <Link to="blog-details.html">
+                    The Modern Rules Of Education.
+                  </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   It is a long established fact that a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -289,12 +290,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>
@@ -303,9 +301,9 @@ class Blog extends Component {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-03.jpg"
@@ -313,15 +311,17 @@ class Blog extends Component {
                   />{" "}
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
-                  <Link to="blog-details.html">Why Is Education So Famous?</Link>
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
+                  <Link to="blog-details.html">
+                    Why Is Education So Famous?
+                  </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   It is a long established fact that a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -329,12 +329,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>
@@ -343,9 +340,9 @@ class Blog extends Component {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-04.jpg"
@@ -353,17 +350,17 @@ class Blog extends Component {
                   />{" "}
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
                   <Link to="blog-details.html">
                     Industry Insiders Say Education.
                   </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   Industry a long established that a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -371,12 +368,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>
@@ -385,9 +379,9 @@ class Blog extends Component {
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-05.jpg"
@@ -395,17 +389,17 @@ class Blog extends Component {
                   />{" "}
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
                   <Link to="blog-details.html">
                     Make You Love And Hate Education.
                   </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   Make a long established fact a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -413,12 +407,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>
@@ -428,9 +419,9 @@ class Blog extends Component {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="rbt-card variation-02 rbt-hover">
-              <div class="rbt-card-img">
+          <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="rbt-card variation-02 rbt-hover">
+              <div className="rbt-card-img">
                 <Link to="blog-details.html">
                   <img
                     src="assets/images/blog/blog-grid-06.jpg"
@@ -438,17 +429,17 @@ class Blog extends Component {
                   />{" "}
                 </Link>
               </div>
-              <div class="rbt-card-body">
-                <h5 class="rbt-card-title">
+              <div className="rbt-card-body">
+                <h5 className="rbt-card-title">
                   <Link to="blog-details.html">
                     Education Only A Handful Of People.
                   </Link>
                 </h5>
-                <p class="rbt-card-text">
+                <p className="rbt-card-text">
                   Education established fact that a reader.
                 </p>
-                <div class="rbt-card-bottom">
-                  <Link class="transparent-button" to="blog-details.html">
+                <div className="rbt-card-bottom">
+                  <Link className="transparent-button" to="blog-details.html">
                     Learn More
                     <i>
                       <svg
@@ -456,12 +447,9 @@ class Blog extends Component {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                        <g stroke="#27374D" fill="none" fillRule="evenodd">
                           <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                          <path
-                            stroke-linecap="square"
-                            d="M.663 5.572h14.594"
-                          />
+                          <path strokeLinecap="square" d="M.663 5.572h14.594" />
                         </g>
                       </svg>
                     </i>

@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 function BlogDetails() {
   return (
     <>
-      <div class="rbt-overlay-page-wrapper">
-        <div class="breadcrumb-image-container breadcrumb-style-max-width">
-          <div class="breadcrumb-image-wrapper">
+      <div className="rbt-overlay-page-wrapper">
+        <div className="breadcrumb-image-container breadcrumb-style-max-width">
+          <div className="breadcrumb-image-wrapper">
             <img
               src="assets/images/bg/bg-image-10.jpg"
               alt="Education Images"
             />
           </div>
-          <div class="breadcrumb-content-top text-center">
-            <h1 class="title">Skills That You Can Learn From Education.</h1>
+          <div className="breadcrumb-content-top text-center">
+            <h1 className="title">Skills That You Can Learn From Education.</h1>
             <p>Ten Advices That You Must Listen Before Studying Education.</p>
           </div>
         </div>
 
-        <div class="rbt-blog-details-area rbt-section-gapBottom breadcrumb-style-max-width">
-          <div class="blog-content-wrapper rbt-article-content-wrapper">
-            <div class="content">
-              <div class="post-thumbnail mb--30 position-relative wp-block-image alignwide">
+        <div className="rbt-blog-details-area rbt-section-gapBottom breadcrumb-style-max-width">
+          <div className="blog-content-wrapper rbt-article-content-wrapper">
+            <div className="content">
+              <div className="post-thumbnail mb--30 position-relative wp-block-image alignwide">
                 <figure>
                   <img
                     src="assets/images/blog/blog-single-03.png"
@@ -40,7 +40,7 @@ function BlogDetails() {
                 of Lorem Ipsum.
               </p>
 
-              <blockquote class="wp-block-quote">
+              <blockquote className="wp-block-quote">
                 <p>
                   Only one thing is impossible for God: To find any sense in any
                   copyright law on the planet.
@@ -52,30 +52,30 @@ function BlogDetails() {
                 </cite>
               </blockquote>
 
-              <div class="wp-block-gallery columns-3 is-cropped">
-                <ul class="blocks-gallery-grid">
-                  <li class="blocks-gallery-item">
+              <div className="wp-block-gallery columns-3 is-cropped">
+                <ul className="blocks-gallery-grid">
+                  <li className="blocks-gallery-item">
                     <figure>
                       <img
-                        class="radius-4"
+                        className="radius-4"
                         src="assets/images/blog/blog-gallery-01.jpg"
                         alt="Blog Images"
                       />
                     </figure>
                   </li>
-                  <li class="blocks-gallery-item">
+                  <li className="blocks-gallery-item">
                     <figure>
                       <img
-                        class="radius-4"
+                        className="radius-4"
                         src="assets/images/blog/blog-gallery-02.jpg"
                         alt="Blog Images"
                       />
                     </figure>
                   </li>
-                  <li class="blocks-gallery-item">
+                  <li className="blocks-gallery-item">
                     <figure>
                       <img
-                        class="radius-4"
+                        className="radius-4"
                         src="assets/images/blog/blog-gallery-03.jpg"
                         alt="Blog Images"
                       />
@@ -113,7 +113,7 @@ function BlogDetails() {
                 is a special and laudable accomplishment.
               </p>
 
-              <div class="post-thumbnail mb--30 position-relative wp-block-image alignwide">
+              <div className="post-thumbnail mb--30 position-relative wp-block-image alignwide">
                 <figure>
                   <img
                     src="assets/images/blog/blog-bl-02.jpg"
@@ -151,7 +151,7 @@ function BlogDetails() {
                 Worldwide Developer Relations. “Receiving an Apple Design Award
                 is a special and laudable accomplishment.
               </p>
-              <div class="tagcloud">
+              <div className="tagcloud">
                 <Link to="#">Education</Link>
                 <Link to="#">Life Style</Link>
                 <Link to="#">React</Link>
@@ -159,39 +159,39 @@ function BlogDetails() {
                 <Link to="#">Web App</Link>
                 <Link to="#">Application</Link>
               </div>
-              <div class="social-share-block">
-                <div class="post-like">
+              <div className="social-share-block">
+                <div className="post-like">
                   <Link to="#">
-                    <i class="feather feather-thumbs-up"></i>
+                    <i className="feather feather-thumbs-up"></i>
                     <span>2.2k Like</span>
                   </Link>
                 </div>
-                <ul class="social-icon social-default transparent-with-border">
+                <ul className="social-icon social-default transparent-with-border">
                   <li>
                     <Link to="https://www.facebook.com/">
-                      <i class="feather-facebook"></i>
+                      <i className="feather-facebook"></i>
                     </Link>
                   </li>
                   <li>
                     <Link to="https://www.twitter.com/">
-                      <i class="feather-twitter"></i>
+                      <i className="feather-twitter"></i>
                     </Link>
                   </li>
                   <li>
                     <Link to="https://www.instagram.com/">
-                      <i class="feather-instagram"></i>
+                      <i className="feather-instagram"></i>
                     </Link>
                   </li>
                   <li>
                     <Link to="https://www.linkdin.com/">
-                      <i class="feather-linkedin"></i>
+                      <i className="feather-linkedin"></i>
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div class="about-author">
-                <div class="media">
-                  <div class="thumbnail">
+              <div className="about-author">
+                <div className="media">
+                  <div className="thumbnail">
                     <Link to="#">
                       <img
                         src="assets/images/testimonial/testimonial-4.jpg"
@@ -199,40 +199,40 @@ function BlogDetails() {
                       />
                     </Link>
                   </div>
-                  <div class="media-body">
-                    <div class="author-info">
-                      <h5 class="title">
-                        <Link class="hover-flip-item-wrapper" to="#">
+                  <div className="media-body">
+                    <div className="author-info">
+                      <h5 className="title">
+                        <Link className="hover-flip-item-wrapper" to="#">
                           Farjana Bawnia
                         </Link>
                       </h5>
-                      <span class="b3 subtitle">Sr. UX Designer</span>
+                      <span className="b3 subtitle">Sr. UX Designer</span>
                     </div>
-                    <div class="content">
-                      <p class="description">
+                    <div className="content">
+                      <p className="description">
                         At 29 years old, my favorite compliment is being told
                         that I look like my mom. Seeing myself in her image,
                         like this daughter up top.
                       </p>
-                      <ul class="social-icon social-default icon-naked justify-content-start">
+                      <ul className="social-icon social-default icon-naked justify-content-start">
                         <li>
                           <Link to="https://www.facebook.com/">
-                            <i class="feather-facebook"></i>
+                            <i className="feather-facebook"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.twitter.com/">
-                            <i class="feather-twitter"></i>
+                            <i className="feather-twitter"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.instagram.com/">
-                            <i class="feather-instagram"></i>
+                            <i className="feather-instagram"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.linkdin.com/">
-                            <i class="feather-linkedin"></i>
+                            <i className="feather-linkedin"></i>
                           </Link>
                         </li>
                       </ul>
@@ -241,60 +241,61 @@ function BlogDetails() {
                 </div>
               </div>
 
-              <div class="rbt-comment-area">
-                <div class="rbt-total-comment-post">
-                  <div class="title">
-                    <h4 class="mb--0">30+ Comments</h4>
+              <div className="rbt-comment-area">
+                <div className="rbt-total-comment-post">
+                  <div className="title">
+                    <h4 className="mb--0">30+ Comments</h4>
                   </div>
-                  <div class="add-comment-button">
+                  <div className="add-comment-button">
                     <Link
-                      class="rbt-btn btn-gradient icon-hover radius-round btn-md"
+                      className="rbt-btn btn-gradient icon-hover radius-round btn-md"
                       to="#"
                     >
-                      <span class="btn-text">Add Your Comment</span>
-                      <span class="btn-icon">
-                        <i class="feather-arrow-right"></i>
+                      <span className="btn-text">Add Your Comment</span>
+                      <span className="btn-icon">
+                        <i className="feather-arrow-right"></i>
                       </span>
                     </Link>
                   </div>
                 </div>
 
-                <div class="comment-respond">
-                  <h4 class="title">Post a Comment</h4>
+                <div className="comment-respond">
+                  <h4 className="title">Post a Comment</h4>
                   <form action="#">
-                    <p class="comment-notes">
+                    <p className="comment-notes">
                       <span id="email-notes">
                         Your email address will not be published.
                       </span>{" "}
-                      Required fields are marked <span class="required">*</span>
+                      Required fields are marked{" "}
+                      <span className="required">*</span>
                     </p>
-                    <div class="row row--10">
-                      <div class="col-lg-4 col-md-4 col-12">
-                        <div class="form-group">
+                    <div className="row row--10">
+                      <div className="col-lg-4 col-md-4 col-12">
+                        <div className="form-group">
                           <label for="name">Your Name</label>
                           <input id="name" type="text" />
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-4 col-12">
-                        <div class="form-group">
+                      <div className="col-lg-4 col-md-4 col-12">
+                        <div className="form-group">
                           <label for="bl-email">Your Email</label>
                           <input id="bl-email" type="email" />
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-4 col-12">
-                        <div class="form-group">
+                      <div className="col-lg-4 col-md-4 col-12">
+                        <div className="form-group">
                           <label for="website">Your Website</label>
                           <input id="website" type="text" />
                         </div>
                       </div>
-                      <div class="col-12">
-                        <div class="form-group">
+                      <div className="col-12">
+                        <div className="form-group">
                           <label for="message">Leave a Reply</label>
                           <textarea id="message" name="message"></textarea>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <p class="comment-form-cookies-consent">
+                      <div className="col-lg-12">
+                        <p className="comment-form-cookies-consent">
                           <input
                             id="wp-comment-cookies-consent"
                             name="wp-comment-cookies-consent"
@@ -307,14 +308,14 @@ function BlogDetails() {
                           </label>
                         </p>
                       </div>
-                      <div class="col-lg-12">
+                      <div className="col-lg-12">
                         <Link
-                          class="rbt-btn btn-gradient icon-hover radius-round btn-md"
+                          className="rbt-btn btn-gradient icon-hover radius-round btn-md"
                           to="#"
                         >
-                          <span class="btn-text">Post Comment</span>
-                          <span class="btn-icon">
-                            <i class="feather-arrow-right"></i>
+                          <span className="btn-text">Post Comment</span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right"></i>
                           </span>
                         </Link>
                       </div>
@@ -323,36 +324,36 @@ function BlogDetails() {
                 </div>
               </div>
 
-              <div class="rbt-comment-area">
-                <h4 class="title">2 comments</h4>
-                <ul class="comment-list">
-                  <li class="comment">
-                    <div class="comment-body">
-                      <div class="single-comment">
-                        <div class="comment-img">
+              <div className="rbt-comment-area">
+                <h4 className="title">2 comments</h4>
+                <ul className="comment-list">
+                  <li className="comment">
+                    <div className="comment-body">
+                      <div className="single-comment">
+                        <div className="comment-img">
                           <img
                             src="assets/images/testimonial/testimonial-1.jpg"
                             alt="Author Images"
                           />
                         </div>
-                        <div class="comment-inner">
-                          <h6 class="commenter">
+                        <div className="comment-inner">
+                          <h6 className="commenter">
                             <Link to="#">Cameron Williamson</Link>
                           </h6>
-                          <div class="comment-meta">
-                            <div class="time-spent">
+                          <div className="comment-meta">
+                            <div className="time-spent">
                               Nov 23, 2018 at 12:23 pm
                             </div>
-                            <div class="reply-edit">
-                              <div class="reply">
-                                <Link class="comment-reply-link" to="#">
+                            <div className="reply-edit">
+                              <div className="reply">
+                                <Link className="comment-reply-link" to="#">
                                   Reply
                                 </Link>
                               </div>
                             </div>
                           </div>
-                          <div class="comment-text">
-                            <p class="b2">
+                          <div className="comment-text">
+                            <p className="b2">
                               Duis hendrerit velit scelerisque felis tempus, id
                               porta libero venenatis. Nulla facilisi. Phasellus
                               viverra magna commodo dui lacinia tempus. Donec
@@ -364,34 +365,34 @@ function BlogDetails() {
                         </div>
                       </div>
                     </div>
-                    <ul class="children">
-                      <li class="comment">
-                        <div class="comment-body">
-                          <div class="single-comment">
-                            <div class="comment-img">
+                    <ul className="children">
+                      <li className="comment">
+                        <div className="comment-body">
+                          <div className="single-comment">
+                            <div className="comment-img">
                               <img
                                 src="assets/images/testimonial/testimonial-2.jpg"
                                 alt="Author Images"
                               />
                             </div>
-                            <div class="comment-inner">
-                              <h6 class="commenter">
+                            <div className="comment-inner">
+                              <h6 className="commenter">
                                 <Link to="#">John Due</Link>
                               </h6>
-                              <div class="comment-meta">
-                                <div class="time-spent">
+                              <div className="comment-meta">
+                                <div className="time-spent">
                                   Nov 23, 2018 at 12:23 pm
                                 </div>
-                                <div class="reply-edit">
-                                  <div class="reply">
-                                    <Link class="comment-reply-link" to="#">
+                                <div className="reply-edit">
+                                  <div className="reply">
+                                    <Link className="comment-reply-link" to="#">
                                       Reply
                                     </Link>
                                   </div>
                                 </div>
                               </div>
-                              <div class="comment-text">
-                                <p class="b2">
+                              <div className="comment-text">
+                                <p className="b2">
                                   Pellentesque habitant morbi tristique senectus
                                   et netus et malesuada fames ac turpis egestas.
                                   Suspendisse lobortis cursus lacinia.
@@ -405,33 +406,33 @@ function BlogDetails() {
                       </li>
                     </ul>
                   </li>
-                  <li class="comment">
-                    <div class="comment-body">
-                      <div class="single-comment">
-                        <div class="comment-img">
+                  <li className="comment">
+                    <div className="comment-body">
+                      <div className="single-comment">
+                        <div className="comment-img">
                           <img
                             src="assets/images/testimonial/testimonial-3.jpg"
                             alt="Author Images"
                           />
                         </div>
-                        <div class="comment-inner">
-                          <h6 class="commenter">
+                        <div className="comment-inner">
+                          <h6 className="commenter">
                             <Link to="#">Rafin Shuvo</Link>
                           </h6>
-                          <div class="comment-meta">
-                            <div class="time-spent">
+                          <div className="comment-meta">
+                            <div className="time-spent">
                               Nov 23, 2018 at 12:23 pm
                             </div>
-                            <div class="reply-edit">
-                              <div class="reply">
-                                <Link class="comment-reply-link" to="#">
+                            <div className="reply-edit">
+                              <div className="reply">
+                                <Link className="comment-reply-link" to="#">
                                   Reply
                                 </Link>
                               </div>
                             </div>
                           </div>
-                          <div class="comment-text">
-                            <p class="b2">
+                          <div className="comment-text">
+                            <p className="b2">
                               Duis hendrerit velit scelerisque felis tempus, id
                               porta libero venenatis. Nulla facilisi. Phasellus
                               viverra magna commodo dui lacinia tempus. Donec
@@ -447,13 +448,15 @@ function BlogDetails() {
                 </ul>
               </div>
             </div>
-            <div class="related-post pt--60">
-              <div class="section-title text-start mb--40">
-                <span class="subtitle bg-primary-opacity">Related Post</span>
-                <h4 class="title">Similar Post</h4>
+            <div className="related-post pt--60">
+              <div className="section-title text-start mb--40">
+                <span className="subtitle bg-primary-opacity">
+                  Related Post
+                </span>
+                <h4 className="title">Similar Post</h4>
               </div>
-              <div class="rbt-card card-list variation-02 rbt-hover mt--30">
-                <div class="rbt-card-img">
+              <div className="rbt-card card-list variation-02 rbt-hover mt--30">
+                <div className="rbt-card-img">
                   <Link to="blog-details.html">
                     <img
                       src="assets/images/blog/blog-card-02.jpg"
@@ -461,14 +464,14 @@ function BlogDetails() {
                     />{" "}
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h5 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h5 className="rbt-card-title">
                     <Link to="blog-details.html">
                       Why Is Education So Famous?
                     </Link>
                   </h5>
-                  <div class="rbt-card-bottom">
-                    <Link class="transparent-button" to="blog-details.html">
+                  <div className="rbt-card-bottom">
+                    <Link className="transparent-button" to="blog-details.html">
                       Read Article
                       <i>
                         <svg
@@ -476,10 +479,10 @@ function BlogDetails() {
                           height="12"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                          <g stroke="#27374D" fill="none" fillRule="evenodd">
                             <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                             <path
-                              stroke-linecap="square"
+                              strokeLinecap="square"
                               d="M.663 5.572h14.594"
                             />
                           </g>
@@ -489,8 +492,8 @@ function BlogDetails() {
                   </div>
                 </div>
               </div>
-              <div class="rbt-card card-list variation-02 rbt-hover mt--30">
-                <div class="rbt-card-img">
+              <div className="rbt-card card-list variation-02 rbt-hover mt--30">
+                <div className="rbt-card-img">
                   <Link to="blog-details.html">
                     <img
                       src="assets/images/blog/blog-card-03.jpg"
@@ -498,14 +501,14 @@ function BlogDetails() {
                     />{" "}
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h5 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h5 className="rbt-card-title">
                     <Link to="blog-details.html">
                       Difficult Things About Education.
                     </Link>
                   </h5>
-                  <div class="rbt-card-bottom">
-                    <Link class="transparent-button" to="blog-details.html">
+                  <div className="rbt-card-bottom">
+                    <Link className="transparent-button" to="blog-details.html">
                       Read Article
                       <i>
                         <svg
@@ -513,10 +516,10 @@ function BlogDetails() {
                           height="12"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                          <g stroke="#27374D" fill="none" fillRule="evenodd">
                             <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                             <path
-                              stroke-linecap="square"
+                              strokeLinecap="square"
                               d="M.663 5.572h14.594"
                             />
                           </g>
@@ -526,8 +529,8 @@ function BlogDetails() {
                   </div>
                 </div>
               </div>
-              <div class="rbt-card card-list variation-02 rbt-hover mt--30">
-                <div class="rbt-card-img">
+              <div className="rbt-card card-list variation-02 rbt-hover mt--30">
+                <div className="rbt-card-img">
                   <Link to="blog-details.html">
                     <img
                       src="assets/images/blog/blog-card-04.jpg"
@@ -535,14 +538,14 @@ function BlogDetails() {
                     />{" "}
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h5 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h5 className="rbt-card-title">
                     <Link to="blog-details.html">
                       Education Is So Famous, But Why?
                     </Link>
                   </h5>
-                  <div class="rbt-card-bottom">
-                    <Link class="transparent-button" to="blog-details.html">
+                  <div className="rbt-card-bottom">
+                    <Link className="transparent-button" to="blog-details.html">
                       Read Article
                       <i>
                         <svg
@@ -550,10 +553,10 @@ function BlogDetails() {
                           height="12"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                          <g stroke="#27374D" fill="none" fillRule="evenodd">
                             <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                             <path
-                              stroke-linecap="square"
+                              strokeLinecap="square"
                               d="M.663 5.572h14.594"
                             />
                           </g>

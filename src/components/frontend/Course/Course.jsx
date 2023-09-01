@@ -1,11 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../../helper/axios";
-
 import message from "../../../helper/message";
 import { BUCKET_DOMAIN } from "../../../helper/helper";
+import { Button } from "react-bootstrap";
+import config from "../../../helper/config";
+import { getCartDetails } from "../../../app/action/CartAction";
+import { connect } from "react-redux";
+import _ from "lodash";
 
-export default class Course extends Component {
+const mapStateToProps = (state) => {
+  let { cart_details } = state;
+  return { cart_details };
+};
+
+const mapActionToProps = (dispatch) => {
+  return {
+    getCartDetails: () => dispatch(getCartDetails()),
+  };
+};
+class Course extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,8 +50,48 @@ export default class Course extends Component {
       });
   };
 
+  addToCart = (course_id) => {
+    this.setState({ isLoading: true });
+
+    let formData = {
+      course_id,
+    };
+
+    axios
+      .post("/add-to-cart", formData, config)
+      .then((res) => {
+        this.setState({ isLoading: false });
+        if (res.data.success) {
+          message.success(res.data.message);
+          this.props.getCartDetails();
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
+  isPresent = (id, data = []) => {
+    return _.findIndex(data, (o) => {
+      return o.course_id._id === id;
+    }) === -1
+      ? false
+      : true;
+  };
+
   render() {
     let { courses } = this.state;
+    let { cart_details, loading } = this.props.cart_details;
+
+    let allCarts = [];
+    if (!loading && cart_details) {
+      allCarts = cart_details.carts;
+    }
+
     return (
       <div>
         <div className="rbt-course-area bg-color-extra2 rbt-section-gap">
@@ -61,7 +115,7 @@ export default class Course extends Component {
                         <Link to={`/course-details/${item._id}`}>
                           <img
                             src={BUCKET_DOMAIN + item.thumbnail}
-                            alt="Card image"
+                            alt={item.title}
                           />
                           <div className="rbt-badge-3-custom bg-white">
                             <span>-50%</span>
@@ -107,18 +161,27 @@ export default class Course extends Component {
                             40 Students
                           </li>
                         </ul>
-                        <p className="rbt-card-text">{item.desc}</p>
+                        {/* <p className="rbt-card-text">{item.desc}</p> */}
                         <div className="rbt-card-bottom">
                           <div className="rbt-price">
                             <span className="current-price">${item.price}</span>
                             <span className="off-price">$120</span>
                           </div>
-                          <Link
-                            className="rbt-btn-link left-icon"
-                            // style="cursor: pointer"
-                          >
-                            <i className="feather-shopping-cart" /> Add To Cart
-                          </Link>
+                          {this.isPresent(item._id, allCarts) ? (
+                            <Link to="/cart" className="rbt-btn-link left-icon">
+                              Go To Cart
+                            </Link>
+                          ) : (
+                            <Button
+                              className="rbt-btn-link left-icon"
+                              onClick={() => {
+                                this.addToCart(item._id);
+                              }}
+                            >
+                              <i className="feather-shopping-cart" /> Add To
+                              Cart
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -153,3 +216,5 @@ export default class Course extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps, mapActionToProps)(Course);
