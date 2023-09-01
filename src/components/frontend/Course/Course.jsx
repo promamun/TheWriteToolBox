@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapActionToProps = (dispatch) => {
   return {
-    getLanguageContent: () => dispatch(getCartDetails()),
+    getCartDetails: () => dispatch(getCartDetails()),
   };
 };
 class Course extends Component {
@@ -63,6 +63,7 @@ class Course extends Component {
         this.setState({ isLoading: false });
         if (res.data.success) {
           message.success(res.data.message);
+          this.props.getCartDetails();
         } else {
           message.error(res.data.message);
         }
