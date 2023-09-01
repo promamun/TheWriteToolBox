@@ -3,50 +3,50 @@ import React from "react";
 function CheckOut() {
   return (
     <>
-      <div class="checkout_area bg-color-white rbt-section-gap">
-        <div class="container">
-          <div class="row g-5 checkout-form">
-            <div class="col-lg-7">
-              <div class="checkout-content-wrapper">
+      <div className="checkout_area bg-color-white rbt-section-gap">
+        <div className="container">
+          <div className="row g-5 checkout-form">
+            <div className="col-lg-7">
+              <div className="checkout-content-wrapper">
                 <div id="billing-form">
-                  <h4 class="checkout-title">Billing Address</h4>
+                  <h4 className="checkout-title">Billing Address</h4>
 
-                  <div class="row">
-                    <div class="col-md-6 col-12 mb--20">
+                  <div className="row">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>First Name*</label>
                       <input type="text" placeholder="First Name" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Last Name*</label>
                       <input type="text" placeholder="Last Name" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Email Address*</label>
                       <input type="email" placeholder="Email Address" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Phone no*</label>
                       <input type="text" placeholder="Phone number" />
                     </div>
 
-                    <div class="col-12 mb--20">
+                    <div className="col-12 mb--20">
                       <label>Company Name</label>
                       <input type="text" placeholder="Company Name" />
                     </div>
 
-                    <div class="col-12 mb--20">
+                    <div className="col-12 mb--20">
                       <label>Address*</label>
                       <input type="text" placeholder="Address line 1" />
                       <input type="text" placeholder="Address line 2" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Country*</label>
-                      <div class="rbt-modern-select bg-transparent height-45">
-                        <select class="w-100">
+                      <div className="rbt-modern-select bg-transparent height-45">
+                        <select className="w-100">
                           <option>Dhaka</option>
                           <option>Barisal</option>
                           <option>Khulna</option>
@@ -56,27 +56,27 @@ function CheckOut() {
                       </div>
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Town/City*</label>
                       <input type="text" placeholder="Town/City" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>State*</label>
                       <input type="text" placeholder="State" />
                     </div>
 
-                    <div class="col-md-6 col-12 mb--20">
+                    <div className="col-md-6 col-12 mb--20">
                       <label>Zip Code*</label>
                       <input type="text" placeholder="Zip Code" />
                     </div>
 
-                    <div class="col-12 mb--20">
-                      <div class="check-box">
+                    <div className="col-12 mb--20">
+                      <div className="check-box">
                         <input type="checkbox" id="create_account" />
                         <label for="create_account">Create an Acount?</label>
                       </div>
-                      <div class="check-box">
+                      <div className="check-box">
                         <input
                           type="checkbox"
                           id="shiping_address"
@@ -90,44 +90,44 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div id="shipping-form" class="mt--20">
-                  <h4 class="checkout-title">Shipping Address</h4>
-                  <div class="row g-5">
-                    <div class="col-md-6 col-12">
+                <div id="shipping-form" className="mt--20">
+                  <h4 className="checkout-title">Shipping Address</h4>
+                  <div className="row g-5">
+                    <div className="col-md-6 col-12">
                       <label>First Name*</label>
                       <input type="text" placeholder="First Name" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Last Name*</label>
                       <input type="text" placeholder="Last Name" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Email Address*</label>
                       <input type="email" placeholder="Email Address" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Phone no*</label>
                       <input type="text" placeholder="Phone number" />
                     </div>
 
-                    <div class="col-12">
+                    <div className="col-12">
                       <label>Company Name</label>
                       <input type="text" placeholder="Company Name" />
                     </div>
 
-                    <div class="col-12">
+                    <div className="col-12">
                       <label>Address*</label>
                       <input type="text" placeholder="Address line 1" />
                       <input type="text" placeholder="Address line 2" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Country*</label>
-                      <div class="rbt-modern-select bg-transparent height-45">
-                        <select class="w-100">
+                      <div className="rbt-modern-select bg-transparent height-45">
+                        <select className="w-100">
                           <option>Dhaka</option>
                           <option>Barisal</option>
                           <option>Khulna</option>
@@ -137,17 +137,17 @@ function CheckOut() {
                       </div>
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Town/City*</label>
                       <input type="text" placeholder="Town/City" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>State*</label>
                       <input type="text" placeholder="State" />
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div className="col-md-6 col-12">
                       <label>Zip Code*</label>
                       <input type="text" placeholder="Zip Code" />
                     </div>
@@ -156,12 +156,12 @@ function CheckOut() {
               </div>
             </div>
 
-            <div class="col-lg-5">
-              <div class="row pl--50 pl_md--0 pl_sm--0">
-                <div class="col-12 mb--60">
-                  <h4 class="checkout-title">Cart Total</h4>
+            <div className="col-lg-5">
+              <div className="row pl--50 pl_md--0 pl_sm--0">
+                <div className="col-12 mb--60">
+                  <h4 className="checkout-title">Cart Total</h4>
 
-                  <div class="checkout-cart-total">
+                  <div className="checkout-cart-total">
                     <h4>
                       Product <span>Total</span>
                     </h4>
@@ -188,16 +188,16 @@ function CheckOut() {
                       Shipping Fee <span>$00.00</span>
                     </p>
 
-                    <h4 class="mt--30">
+                    <h4 className="mt--30">
                       Grand Total <span>$1250.00</span>
                     </h4>
                   </div>
                 </div>
 
-                <div class="col-12 mb--60">
-                  <h4 class="checkout-title">Payment Method</h4>
-                  <div class="checkout-payment-method">
-                    <div class="single-method">
+                <div className="col-12 mb--60">
+                  <h4 className="checkout-title">Payment Method</h4>
+                  <div className="checkout-payment-method">
+                    <div className="single-method">
                       <input
                         type="radio"
                         id="payment_check"
@@ -211,7 +211,7 @@ function CheckOut() {
                       </p>
                     </div>
 
-                    <div class="single-method">
+                    <div className="single-method">
                       <input
                         type="radio"
                         id="payment_bank"
@@ -225,7 +225,7 @@ function CheckOut() {
                       </p>
                     </div>
 
-                    <div class="single-method">
+                    <div className="single-method">
                       <input
                         type="radio"
                         id="payment_cash"
@@ -239,7 +239,7 @@ function CheckOut() {
                       </p>
                     </div>
 
-                    <div class="single-method">
+                    <div className="single-method">
                       <input
                         type="radio"
                         id="payment_paypal"
@@ -253,7 +253,7 @@ function CheckOut() {
                       </p>
                     </div>
 
-                    <div class="single-method">
+                    <div className="single-method">
                       <input
                         type="radio"
                         id="payment_payoneer"
@@ -267,22 +267,22 @@ function CheckOut() {
                       </p>
                     </div>
 
-                    <div class="single-method">
+                    <div className="single-method">
                       <input type="checkbox" id="accept_terms" />
                       <label for="accept_terms">
                         I’ve read and accept the terms & conditions
                       </label>
                     </div>
                   </div>
-                  <div class="plceholder-button mt--50">
-                    <button class="rbt-btn btn-gradient hover-icon-reverse">
-                      <span class="icon-reverse-wrapper">
-                        <span class="btn-text">Place order</span>
-                        <span class="btn-icon">
-                          <i class="feather-arrow-right"></i>
+                  <div className="plceholder-button mt--50">
+                    <button className="rbt-btn btn-gradient hover-icon-reverse">
+                      <span className="icon-reverse-wrapper">
+                        <span className="btn-text">Place order</span>
+                        <span className="btn-icon">
+                          <i className="feather-arrow-right"></i>
                         </span>
-                        <span class="btn-icon">
-                          <i class="feather-arrow-right"></i>
+                        <span className="btn-icon">
+                          <i className="feather-arrow-right"></i>
                         </span>
                       </span>
                     </button>
@@ -293,7 +293,6 @@ function CheckOut() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

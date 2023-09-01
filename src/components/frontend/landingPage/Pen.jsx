@@ -8,32 +8,32 @@ function Pen() {
   return (
     <>
       <div
-        class="rbt-banner-6 variation-02 bg_image bg_image--7 header-transperent-spacer"
+        className="rbt-banner-6 variation-02 bg_image bg_image--7 header-transperent-spacer"
         data-black-overlay="2"
       >
-        <div class="wrapper w-100">
-          <div class="container">
-            <div class="row row--15 align-items-center">
-              <div class="col-lg-12">
-                <div class="inner text-start">
-                  <div class="section-title">
-                    <span class="subtitle bg-white-opacity d-inline-block">
+        <div className="wrapper w-100">
+          <div className="container">
+            <div className="row row--15 align-items-center">
+              <div className="col-lg-12">
+                <div className="inner text-start">
+                  <div className="section-title">
+                    <span className="subtitle bg-white-opacity d-inline-block">
                       MARIE FORLEO'S
                     </span>
                   </div>
-                  <h2 class="title w-700">
+                  <h2 className="title w-700">
                     B-School <br />
                     <strong>
-                      <span class="header-caption">
-                        <span class="cd-headline zoom">
-                          <span class="cd-words-wrapper">
-                            <b class="is-visible theme-gradient">
+                      <span className="header-caption">
+                        <span className="cd-headline zoom">
+                          <span className="cd-words-wrapper">
+                            <b className="is-visible theme-gradient">
                               <h5>
                                 The ultimate system to grow your business and
                                 own your freedom
                               </h5>
                             </b>
-                            <b class="is-hidden theme-gradient">
+                            <b className="is-hidden theme-gradient">
                               With GYM Instructor.
                             </b>
                           </span>
@@ -41,9 +41,9 @@ function Pen() {
                       </span>
                     </strong>
                   </h2>
-                  <div class="button-group mt--30 mt_sm--10">
+                  <div className="button-group mt--30 mt_sm--10">
                     <Link
-                      class="rbt-btn btn-gradient rbt-switch-btn rbt-switch-y"
+                      className="rbt-btn btn-gradient rbt-switch-btn rbt-switch-y"
                       to="#"
                     >
                       <span data-text="Join Us Today">Join Us Today</span>
@@ -55,26 +55,26 @@ function Pen() {
           </div>
         </div>
       </div>
-      <div class="rbt-about-area about-style-1 rbt-section-gapTop pb--30 pb_md--80 pb_sm--80 bg-color-white">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-              <div class="thumbnail-wrapper">
-                <div class="thumbnail image-1">
+      <div className="rbt-about-area about-style-1 rbt-section-gapTop pb--30 pb_md--80 pb_sm--80 bg-color-white">
+        <div className="container">
+          <div className="row g-5 align-items-center">
+            <div className="col-lg-6">
+              <div className="thumbnail-wrapper">
+                <div className="thumbnail image-1">
                   <img
                     data-parallax='{"x": 0, "y": -20}'
                     src="assets/images/about/about-01.png"
                     alt="Education Images"
                   />
                 </div>
-                <div class="thumbnail image-2 d-none d-xl-block">
+                <div className="thumbnail image-2 d-none d-xl-block">
                   <img
                     data-parallax='{"x": 0, "y": 60}'
                     src="assets/images/about/about-02.png"
                     alt="Education Images"
                   />
                 </div>
-                <div class="thumbnail image-3 d-none d-md-block">
+                <div className="thumbnail image-3 d-none d-md-block">
                   <img
                     data-parallax='{"x": 0, "y": 80}'
                     src="assets/images/about/about-03.png"
@@ -83,13 +83,13 @@ function Pen() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="inner pl--50 pl_sm--0 pl_md--0">
-                <div class="section-title text-start">
-                  <h2 class="title">What is Marie Forleo's B-School?</h2>
+            <div className="col-lg-6">
+              <div className="inner pl--50 pl_sm--0 pl_md--0">
+                <div className="section-title text-start">
+                  <h2 className="title">What is Marie Forleo's B-School?</h2>
                 </div>
 
-                <p class="description mt--30">
+                <p className="description mt--30">
                   B-School is the gold-standard online training experience for
                   entrepreneurs and values-driven creatives who want to
                   <strong>build a meaningful, profitable business.</strong>
@@ -115,30 +115,30 @@ function Pen() {
           </div>
         </div>
       </div>
-      <div class="rbt-author-area bg-gradient-8 rbt-section-gap">
-        <div class="container">
-          <div class="rbt-instructor">
-            <div class="single-course-author">
-              <div class="media row align-items-center g-5">
-                <div class="col-lg-3 col-xl-3 offset-xl-2">
-                  <div class="thumbnail">
+      <div className="rbt-author-area bg-gradient-8 rbt-section-gap">
+        <div className="container">
+          <div className="rbt-instructor">
+            <div className="single-course-author">
+              <div className="media row align-items-center g-5">
+                <div className="col-lg-3 col-xl-3 offset-xl-2">
+                  <div className="thumbnail">
                     <Link to="#">
                       <img
-                        class="radius-10 w-100"
+                        className="radius-10 w-100"
                         src="assets/images/team/team-08.jpg"
                         alt="Author Images"
                       />
                     </Link>
                   </div>
                 </div>
-                <div class="col-lg-5">
-                  <div class="media-body ml--15">
-                    <div class="author-info text-left">
-                      <h2 class="title color-white mb--0">John Due</h2>
-                      <span class="b3 color-white">Advanced Educator</span>
+                <div className="col-lg-5">
+                  <div className="media-body ml--15">
+                    <div className="author-info text-left">
+                      <h2 className="title color-white mb--0">John Due</h2>
+                      <span className="b3 color-white">Advanced Educator</span>
                     </div>
-                    <div class="content mt--20">
-                      <p class="description color-white">
+                    <div className="content mt--20">
+                      <p className="description color-white">
                         John is a brilliant educator, whose life was spent for
                         computer science and love of nature. Being a female, she
                         encountered a lot of obstacles and was forbidden to work
@@ -146,25 +146,25 @@ function Pen() {
                         talented gift, she was able to succeed and set an
                         example for others.
                       </p>
-                      <ul class="social-icon color-white social-default transparent-with-border justify-content-start mt--15">
+                      <ul className="social-icon color-white social-default transparent-with-border justify-content-start mt--15">
                         <li>
                           <Link to="https://www.facebook.com/">
-                            <i class="feather-facebook"></i>
+                            <i className="feather-facebook"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.twitter.com/">
-                            <i class="feather-twitter"></i>
+                            <i className="feather-twitter"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.instagram.com/">
-                            <i class="feather-instagram"></i>
+                            <i className="feather-instagram"></i>
                           </Link>
                         </li>
                         <li>
                           <Link to="https://www.linkdin.com/">
-                            <i class="feather-linkedin"></i>
+                            <i className="feather-linkedin"></i>
                           </Link>
                         </li>
                       </ul>
@@ -176,53 +176,55 @@ function Pen() {
           </div>
         </div>
       </div>
-      <div class="rbt-contact-me bg-color-white rbt-section-gapBottom">
-        <div class="container">
-          <div class="row mb--60">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <h2 class="title">
-                  <span class="theme-gradient">Contact</span> With Me
+      <div className="rbt-contact-me bg-color-white rbt-section-gapBottom">
+        <div className="container">
+          <div className="row mb--60">
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <h2 className="title">
+                  <span className="theme-gradient">Contact</span> With Me
                 </h2>
-                <p class="description has-medium-font-size mt--20">
+                <p className="description has-medium-font-size mt--20">
                   Learning new technology, data sience, university, communicate
                   to global world and build a bright future with our histudy.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <div class="thumbnail">
+          <div className="row g-5">
+            <div className="col-lg-6">
+              <div className="thumbnail">
                 <img
-                  class="w-100 radius-10"
+                  className="w-100 radius-10"
                   src="assets/images/about/contact-2.jpg"
                   alt="Contact Images"
                 />
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="rbt-contact-form contact-form-style-1 max-width-auto">
-                <div class="section-title text-start">
-                  <span class="subtitle bg-primary-opacity">
+            <div className="col-lg-6">
+              <div className="rbt-contact-form contact-form-style-1 max-width-auto">
+                <div className="section-title text-start">
+                  <span className="subtitle bg-primary-opacity">
                     EDUCATION FOR EVERYONE
                   </span>
                 </div>
-                <h3 class="title">Get a Free Course You Can Contact With Me</h3>
-                <form id="contact-form" class="w-100">
-                  <div class="form-group">
+                <h3 className="title">
+                  Get a Free Course You Can Contact With Me
+                </h3>
+                <form id="contact-form" className="w-100">
+                  <div className="form-group">
                     <CustomInput placeholder="Name" type="text" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <CustomInput placeholder="Email" type="email" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <CustomInput placeholder="Phone" type="text" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <TextArea Label="Message" />
                   </div>
-                  <div class="form-submit-group">
+                  <div className="form-submit-group">
                     <Button name="SUBMIT" />
                   </div>
                 </form>
@@ -231,13 +233,15 @@ function Pen() {
           </div>
         </div>
       </div>
-      <div class="service-wrapper bg-color-white rbt-section-gap">
-        <div class="container">
-          <div class="row mb--60">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <span class="subtitle bg-pink-opacity">Histudy Feature</span>
-                <h3 class="title">
+      <div className="service-wrapper bg-color-white rbt-section-gap">
+        <div className="container">
+          <div className="row mb--60">
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <span className="subtitle bg-pink-opacity">
+                  Histudy Feature
+                </span>
+                <h3 className="title">
                   Whether you have book ideas scrambling in your head, you’ve
                   nailed down your ideal book topic, you’ve already written your
                   manuscript, or you feel your book hasn’t done a thing for you,
@@ -246,20 +250,20 @@ function Pen() {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row row--15 mt_dec--30">
-                <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
-                  <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                      <div class="icon">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="row row--15 mt_dec--30">
+                <div className="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
+                  <div className="rbt-flipbox">
+                    <div className="rbt-flipbox-front rbt-flipbox-face inner">
+                      <div className="icon">
                         <img
                           src="assets/images/icons/card-icon-1.png"
                           alt="card-icon"
                         />
                       </div>
-                      <div class="content">
-                        <h5 class="title">
+                      <div className="content">
+                        <h5 className="title">
                           <Link to="#">GET YOU ORGANIZED</Link>
                         </h5>
                         <p>
@@ -271,18 +275,18 @@ function Pen() {
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
-                  <div class="rbt-flipbox">
-                    <div class="rbt-flipbox">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
+                <div className="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
+                  <div className="rbt-flipbox">
+                    <div className="rbt-flipbox">
+                      <div className="rbt-flipbox-front rbt-flipbox-face inner">
+                        <div className="icon">
                           <img
                             src="assets/images/icons/card-icon-2.png"
                             alt="card-icon"
                           />
                         </div>
-                        <div class="content">
-                          <h5 class="title">
+                        <div className="content">
+                          <h5 className="title">
                             <Link to="#">ALLEVIATE YOUR STRESS</Link>
                           </h5>
                           <p>
@@ -295,18 +299,18 @@ function Pen() {
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
-                  <div class="rbt-flipbox">
-                    <div class="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-3">
-                      <div class="rbt-flipbox-front rbt-flipbox-face inner">
-                        <div class="icon">
+                <div className="col-xl-3 col-md-6 col-sm-6 col-12 mt--30">
+                  <div className="rbt-flipbox">
+                    <div className="rbt-flipbox-wrap rbt-service rbt-service-1 card-bg-3">
+                      <div className="rbt-flipbox-front rbt-flipbox-face inner">
+                        <div className="icon">
                           <img
                             src="assets/images/icons/card-icon-3.png"
                             alt="card-icon"
                           />
                         </div>
-                        <div class="content">
-                          <h5 class="title">
+                        <div className="content">
+                          <h5 className="title">
                             <Link to="#">REACH THE GOAL LINE</Link>
                           </h5>
                           <p>
@@ -314,29 +318,29 @@ function Pen() {
                             breeze to achieve as you plan the follow through and
                             follow the plan.
                           </p>
-                          <Link class="rbt-btn-link stretched-link" to="#">
-                            Learn More<i class="feather-arrow-right"></i>
+                          <Link className="rbt-btn-link stretched-link" to="#">
+                            Learn More<i className="feather-arrow-right"></i>
                           </Link>
                         </div>
                       </div>
 
-                      <div class="rbt-flipbox-back rbt-flipbox-face inner">
-                        <ul class="rbt-list-style-3 color-white">
+                      <div className="rbt-flipbox-back rbt-flipbox-face inner">
+                        <ul className="rbt-list-style-3 color-white">
                           <li>
-                            <i class="feather-youtube"></i> 125 Free Video
+                            <i className="feather-youtube"></i> 125 Free Video
                           </li>
                           <li>
-                            <i class="feather-book"></i> 12 Subjects
+                            <i className="feather-book"></i> 12 Subjects
                           </li>
                           <li>
-                            <i class="feather-video"></i> Live Class
+                            <i className="feather-video"></i> Live Class
                           </li>
                           <li>
-                            <i class="feather-info"></i> MCQ and CQ Bank
+                            <i className="feather-info"></i> MCQ and CQ Bank
                           </li>
                         </ul>
                         <Link
-                          class="rbt-btn rbt-switch-btn btn-white btn-sm"
+                          className="rbt-btn rbt-switch-btn btn-white btn-sm"
                           to="#"
                         >
                           <span data-text="Learn More">Learn More</span>
@@ -345,19 +349,18 @@ function Pen() {
                     </div>
                   </div>
                 </div>
-              
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="rbt-cta-6 text-center">
-                <div class="content">
-                  <h1 class="title">Is B-School right for me?</h1>
+      <div className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="rbt-cta-6 text-center">
+                <div className="content">
+                  <h1 className="title">Is B-School right for me?</h1>
                   <p>
                     B-School is for determined and ambitious entrepreneurs who
                     are sick of spinning their wheels, agonizing over what to do
@@ -373,19 +376,19 @@ function Pen() {
           </div>
         </div>
       </div>
-      <div class="rbt-rbt-blog-area rbt-section-gap bg-color-white">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <h2 class="title">YES, B-School works for…</h2>
+      <div className="rbt-rbt-blog-area rbt-section-gap bg-color-white">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <h2 className="title">YES, B-School works for…</h2>
               </div>
             </div>
           </div>
-          <div class="row g-5 mt--30">
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-              <div class="rbt-card variation-02 rbt-hover">
-                <div class="rbt-card-img">
+          <div className="row g-5 mt--30">
+            <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
+              <div className="rbt-card variation-02 rbt-hover">
+                <div className="rbt-card-img">
                   <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
@@ -393,13 +396,13 @@ function Pen() {
                     />{" "}
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h4 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h4 className="rbt-card-title">
                     <Link to="course-details.html">
                       Product-Based Businesses
                     </Link>
                   </h4>
-                  <p class="rbt-card-text">
+                  <p className="rbt-card-text">
                     B-School grads are out there selling flowers, cupcakes,
                     books, apps, clothing, wood carvings and everything in
                     between. If you sell physical or digital products, B-School
@@ -408,9 +411,9 @@ function Pen() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-              <div class="rbt-card variation-02 rbt-hover">
-                <div class="rbt-card-img">
+            <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
+              <div className="rbt-card variation-02 rbt-hover">
+                <div className="rbt-card-img">
                   <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
@@ -418,13 +421,13 @@ function Pen() {
                     />
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h4 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h4 className="rbt-card-title">
                     <Link to="course-details.html">
                       Service-Based Businesses
                     </Link>
                   </h4>
-                  <p class="rbt-card-text">
+                  <p className="rbt-card-text">
                     Whether you teach people how to swing dance at their wedding
                     or do financial consulting for Fortune 500 companies, let
                     B-School take your service-based business to the next level.
@@ -432,9 +435,9 @@ function Pen() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-              <div class="rbt-card variation-02 rbt-hover">
-                <div class="rbt-card-img">
+            <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
+              <div className="rbt-card variation-02 rbt-hover">
+                <div className="rbt-card-img">
                   <Link to="course-details.html">
                     <img
                       src="assets/images/blog/kindergarten-01.jpg"
@@ -442,13 +445,13 @@ function Pen() {
                     />
                   </Link>
                 </div>
-                <div class="rbt-card-body">
-                  <h4 class="rbt-card-title">
+                <div className="rbt-card-body">
+                  <h4 className="rbt-card-title">
                     <Link to="course-details.html">
                       Brick-and-Mortar Businesse
                     </Link>
                   </h4>
-                  <p class="rbt-card-text">
+                  <p className="rbt-card-text">
                     Take your brick-and-mortar business online to reach a
                     broader audience, create new revenue streams, and stay
                     relevant in a changing economy.
@@ -460,13 +463,13 @@ function Pen() {
         </div>
       </div>
 
-      <div class="rbt-testimonial-area bg-color-light rbt-section-gap overflow-hidden">
-        <div class="wrapper mb--60">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-title text-center">
-                  <h1 class="title">
+      <div className="rbt-testimonial-area bg-color-light rbt-section-gap overflow-hidden">
+        <div className="wrapper mb--60">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title text-center">
+                  <h1 className="title">
                     Can I see reviews from past B-Schoolers?
                   </h1>
                 </div>
@@ -474,20 +477,20 @@ function Pen() {
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row align-items-center row--30">
-            <div class="col-lg-6">
+        <div className="container">
+          <div className="row align-items-center row--30">
+            <div className="col-lg-6">
               <div
-                class="rbt-testimonial-content tab-content"
+                className="rbt-testimonial-content tab-content"
                 id="myTabContent"
               >
                 <div
-                  class="tab-pane fade active show"
+                  className="tab-pane fade active show"
                   id="testimonial-tab1"
                   role="tabpanel"
                   aria-labelledby="testimonial-tab1-tab"
                 >
-                  <div class="inner">
+                  <div className="inner">
                     <p>
                       You can read over 200 B-School reviews. They reflect the
                       diversity of the 80,000+ students who've attended Marie
@@ -500,15 +503,15 @@ function Pen() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 mt_md--30 mt_sm--30">
+            <div className="col-lg-6 mt_md--30 mt_sm--30">
               <ul
-                class="testimonial-thumb-wrapper nav nav-tabs"
+                className="testimonial-thumb-wrapper nav nav-tabs"
                 id="myTab"
                 role="tablist"
               >
                 <li>
                   <Link
-                    class="active"
+                    className="active"
                     id="testimonial-tab1-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#testimonial-tab1"
@@ -516,8 +519,8 @@ function Pen() {
                     aria-controls="testimonial-tab1"
                     aria-selected="true"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-1.jpg"
                           alt="Testimonial Images"
@@ -536,8 +539,8 @@ function Pen() {
                     aria-controls="testimonial-tab2"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-2.jpg"
                           alt="Testimonial Images"
@@ -556,8 +559,8 @@ function Pen() {
                     aria-controls="testimonial-tab3"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-3.jpg"
                           alt="Testimonial Images"
@@ -575,8 +578,8 @@ function Pen() {
                     aria-controls="testimonial-tab4"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-4.jpg"
                           alt="Testimonial Images"
@@ -595,8 +598,8 @@ function Pen() {
                     aria-controls="testimonial-tab5"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-5.jpg"
                           alt="Testimonial Images"
@@ -615,8 +618,8 @@ function Pen() {
                     aria-controls="testimonial-tab6"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-6.jpg"
                           alt="Testimonial Images"
@@ -635,8 +638,8 @@ function Pen() {
                     aria-controls="testimonial-tab7"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-7.jpg"
                           alt="Testimonial Images"
@@ -655,8 +658,8 @@ function Pen() {
                     aria-controls="testimonial-tab8"
                     aria-selected="false"
                   >
-                    <div class="testimonial-thumbnai">
-                      <div class="thumb">
+                    <div className="testimonial-thumbnai">
+                      <div className="thumb">
                         <img
                           src="assets/images/testimonial/testimonial-8.jpg"
                           alt="Testimonial Images"

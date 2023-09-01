@@ -1,11 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../../helper/axios";
-
 import message from "../../../helper/message";
 import { BUCKET_DOMAIN } from "../../../helper/helper";
+import { Button } from "react-bootstrap";
+import config from "../../../helper/config";
+import { getCartDetails } from "../../../app/action/CartAction";
+import { connect } from "react-redux";
 
-export default class Course extends Component {
+const mapStateToProps = (state) => {
+  let { cart_details } = state;
+  return { cart_details };
+};
+
+const mapActionToProps = (dispatch) => {
+  return {
+    getLanguageContent: () => dispatch(getCartDetails()),
+  };
+};
+class Course extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,6 +38,30 @@ export default class Course extends Component {
         if (res.data.success) {
           let { courses } = res.data;
           this.setState({ courses });
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        this.setState({ isLoading: false });
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
+  addToCart = (course_id) => {
+    this.setState({ isLoading: true });
+
+    let formData = {
+      course_id,
+    };
+
+    axios
+      .post("/add-to-cart", formData, config)
+      .then((res) => {
+        this.setState({ isLoading: false });
+        if (res.data.success) {
+          message.success(res.data.message);
         } else {
           message.error(res.data.message);
         }
@@ -61,7 +98,7 @@ export default class Course extends Component {
                         <Link to={`/course-details/${item._id}`}>
                           <img
                             src={BUCKET_DOMAIN + item.thumbnail}
-                            alt="Card image"
+                            alt={item.title}
                           />
                           <div className="rbt-badge-3-custom bg-white">
                             <span>-50%</span>
@@ -107,18 +144,20 @@ export default class Course extends Component {
                             40 Students
                           </li>
                         </ul>
-                        <p className="rbt-card-text">{item.desc}</p>
+                        {/* <p className="rbt-card-text">{item.desc}</p> */}
                         <div className="rbt-card-bottom">
                           <div className="rbt-price">
                             <span className="current-price">${item.price}</span>
                             <span className="off-price">$120</span>
                           </div>
-                          <Link
+                          <Button
                             className="rbt-btn-link left-icon"
-                            // style="cursor: pointer"
+                            onClick={() => {
+                              this.addToCart(item._id);
+                            }}
                           >
                             <i className="feather-shopping-cart" /> Add To Cart
-                          </Link>
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -153,3 +192,5 @@ export default class Course extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps, mapActionToProps)(Course);
