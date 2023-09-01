@@ -29,68 +29,60 @@ import ProtectRoute from "./utils/ProtectRoute";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          {/* Route without Layout */}
-          <Route exact path="/pen" Component={Pen} />
-          <Route
-            path="/*"
-            element={
-              <Layout>
-                <Routes>
-                  <Route index element={<Home />} />
-                  <Route path="about-janine" element={<About />} />
-                  <Route path="courses" element={<Course />} />
-                  <Route
-                    path="course-details/:id"
-                    element={<CourseDetails />}
-                  />
-                  <Route path="contact" element={<Contact />} />
-                  <Route path="blog" element={<Blog />} />
-                  <Route path="memberships" element={<Membership />} />
-                  <Route path="privacy-policy" element={<PrivacyPolicy />} />
-                  <Route
-                    path="terms-of-condition"
-                    element={<TermsConditions />}
-                  />
+    <BrowserRouter>
+      <Routes>
+        {/* Route without Layout */}
+        <Route exact path="/pen" Component={Pen} />
+        <Route
+          path="/*"
+          element={
+            <Layout>
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="about-janine" element={<About />} />
+                <Route path="courses" element={<Course />} />
+                <Route path="course-details/:id" element={<CourseDetails />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="blog" element={<Blog />} />
+                <Route path="memberships" element={<Membership />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route
+                  path="terms-of-condition"
+                  element={<TermsConditions />}
+                />
 
-                  <Route path="blog-details" element={<BlogDetails />} />
-                  <Route path="thank-you" element={<ThankYou />} />
+                <Route path="blog-details" element={<BlogDetails />} />
+                <Route path="thank-you" element={<ThankYou />} />
 
-                  {/* Auth route */}
-                  <Route path="register" element={<Register />} />
-                  <Route path="login" element={<Login />} />
-                  <Route path="faqs" element={<Faqs />} />
-                  <Route
-                    path="activate-account/:id"
-                    element={<AccountActivation />}
-                  />
+                {/* Auth route */}
+                <Route path="register" element={<Register />} />
+                <Route path="login" element={<Login />} />
+                <Route path="faqs" element={<Faqs />} />
+                <Route
+                  path="activate-account/:id"
+                  element={<AccountActivation />}
+                />
 
-                  {/* User route */}
-                  <Route element={<ProtectRoute />}>
-                    <Route path="/dashboard" element={<UserDashboard />} />
-                    <Route path="/wishlist" element={<Wishlist />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/checkout" element={<Checkout />} />
-                    <Route
-                      path="enrolled-courses"
-                      element={<EnrollCourses />}
-                    />
-                    <Route path="reviews" element={<UserReview />} />
-                    <Route path="order-history" element={<OrderHistory />} />
-                    <Route path="settings" element={<Setting />} />
-                  </Route>
+                {/* User route */}
+                <Route element={<ProtectRoute />}>
+                  <Route path="/dashboard" element={<UserDashboard />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="enrolled-courses" element={<EnrollCourses />} />
+                  <Route path="reviews" element={<UserReview />} />
+                  <Route path="order-history" element={<OrderHistory />} />
+                  <Route path="settings" element={<Setting />} />
+                </Route>
 
-                  {/* WHEN NO ROUTE FOUND */}
-                  <Route path="*" element={<Error404 />} />
-                </Routes>
-              </Layout>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
+                {/* WHEN NO ROUTE FOUND */}
+                <Route path="*" element={<Error404 />} />
+              </Routes>
+            </Layout>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
