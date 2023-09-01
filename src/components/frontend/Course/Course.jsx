@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 import config from "../../../helper/config";
 import { getCartDetails } from "../../../app/action/CartAction";
 import { connect } from "react-redux";
+import _ from "lodash";
 
 const mapStateToProps = (state) => {
   let { cart_details } = state;
@@ -73,8 +74,23 @@ class Course extends Component {
       });
   };
 
+  isPresent = (id, data = []) => {
+    return _.findIndex(data, (o) => {
+      return o.course_id._id === id;
+    }) === -1
+      ? false
+      : true;
+  };
+
   render() {
     let { courses } = this.state;
+    let { cart_details, loading } = this.props.cart_details;
+
+    let allCarts = [];
+    if (!loading && cart_details) {
+      allCarts = cart_details.carts;
+    }
+
     return (
       <div>
         <div className="rbt-course-area bg-color-extra2 rbt-section-gap">
@@ -150,14 +166,21 @@ class Course extends Component {
                             <span className="current-price">${item.price}</span>
                             <span className="off-price">$120</span>
                           </div>
-                          <Button
-                            className="rbt-btn-link left-icon"
-                            onClick={() => {
-                              this.addToCart(item._id);
-                            }}
-                          >
-                            <i className="feather-shopping-cart" /> Add To Cart
-                          </Button>
+                          {this.isPresent(item._id, allCarts) ? (
+                            <Link to="/cart" className="rbt-btn-link left-icon">
+                              Go To Cart
+                            </Link>
+                          ) : (
+                            <Button
+                              className="rbt-btn-link left-icon"
+                              onClick={() => {
+                                this.addToCart(item._id);
+                              }}
+                            >
+                              <i className="feather-shopping-cart" /> Add To
+                              Cart
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>
