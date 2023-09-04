@@ -11,26 +11,50 @@ import Blog from "../blog/Blog";
 import JaninBook from "./JaninBook";
 import Newsletter from "./Newsletter";
 import { Helmet } from "react-helmet";
+import { getAllCourses } from "../../../app/action/CourseAction";
+import { connect } from "react-redux";
+import LoadingOverlay from "react-loading-overlay";
+
+const mapStateToProps = (state) => {
+  let { courses } = state;
+  return { courses };
+};
+
+const mapActionToProps = (dispatch) => {
+  return {
+    getAllCourses: () => dispatch(getAllCourses()),
+  };
+};
 
 class Index extends Component {
-    render() {
-        return (
-            <div>
-                <Helmet title={'Home'}/>
-                <Slider/>
-                <AboutJanin/>
-                <Testimonial/>
-                <CourseAdvice/>
-                <ActionOne/>
-                <Course/>
-                <JaninFbStory/>
-                <FreeCourseContact/>
-                <JaninBook/>
-                <Blog/>
-                <Newsletter/>
-            </div>
-        );
-    }
+  componentDidMount = () => {
+    this.props.getAllCourses();
+  };
+
+  render() {
+    let { loading } = this.props.courses;
+
+    return (
+      <LoadingOverlay active={loading} spinner text="Loading ...">
+        <Helmet title={"Home"} />
+        <Slider />
+        <AboutJanin />
+        <Testimonial />
+        <CourseAdvice />
+        <ActionOne />
+        <Course
+          title="GET STARTED NOW"
+          display="none"
+          buttonTitle="All Courses"
+        />
+        <JaninFbStory />
+        <FreeCourseContact />
+        <JaninBook />
+        <Blog />
+        <Newsletter />
+      </LoadingOverlay>
+    );
+  }
 }
 
-export default Index;
+export default connect(mapStateToProps, mapActionToProps)(Index);

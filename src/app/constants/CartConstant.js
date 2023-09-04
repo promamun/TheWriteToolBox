@@ -1,3 +1,7 @@
 export const CART_REQUEST = "CART_REQUEST";
 export const CART_SUCCESS = "CART_SUCCESS";
 export const CART_FAILED = "CART_FAILED";
+
+export const COURSE_REQUEST = "COURSE_REQUEST";
+export const COURSE_SUCCESS = "COURSE_SUCCESS";
+export const COURSE_FAILED = "COURSE_FAILED";
