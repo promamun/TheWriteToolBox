@@ -43,15 +43,6 @@ export default class Login extends Component {
       errors[name] = err;
       this.setState({ errors });
     });
-
-    if (name === "password") {
-      if (data.c_password && data.c_password !== value) {
-        errors.c_password = "Confirm Password should be same as password";
-      } else {
-        errors.c_password = "";
-      }
-      this.setState({ errors });
-    }
   };
 
   isValidForm = (errors) => {
