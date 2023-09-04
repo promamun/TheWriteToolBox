@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../../helper/axios";
 import message from "../../../helper/message";
-import { BUCKET_DOMAIN } from "../../../helper/helper";
-import { Button } from "react-bootstrap";
 import config from "../../../helper/config";
 import { getCartDetails } from "../../../app/action/CartAction";
 import { connect } from "react-redux";
 import _ from "lodash";
+import CourseSliderCard from "../slider/CourseSliderCard";
 
 const mapStateToProps = (state) => {
   let { cart_details } = state;
@@ -27,7 +26,6 @@ class Course extends Component {
       courses: [],
     };
   }
-
   componentDidMount = () => {
     this.setState({ isLoading: true });
 
@@ -91,6 +89,10 @@ class Course extends Component {
     if (!loading && cart_details) {
       allCarts = cart_details.carts;
     }
+    //this is for hide or display content
+    const displayNone = {
+      display:this.props.display ,
+    }
 
     return (
       <div>
@@ -99,93 +101,25 @@ class Course extends Component {
             <div className="row mb--60">
               <div className="col-lg-12">
                 <div className="section-title text-center">
-                  <span className="subtitle bg-secondary-opacity">
-                    Build My Expert Status
-                  </span>
-                  <h2 className="title">Explode My Expert Status</h2>
+                  <h2 className="title">{this.props.title}</h2>
+                </div>
+                <div className='text-center mt-5' style={displayNone}>
+                  <p>Choose the course that fits where you are at
+                    <br/>
+                    <strong>OR</strong>
+                    <br/>
+                    Choose all 4 courses to add a full bundle to your writer’s
+                    toolbox.
+                    <br/>
+                    The Writer’s Story Path
+                  </p>
                 </div>
               </div>
             </div>
             <div className="row g-5">
               {courses.map((item, key) => {
                 return (
-                  <div className="col-lg-3 col-md-6 col-12" key={key}>
-                    <div className="rbt-card variation-01 rbt-hover">
-                      <div className="rbt-card-img">
-                        <Link to={`/course-details/${item._id}`}>
-                          <img
-                            src={BUCKET_DOMAIN + item.thumbnail}
-                            alt={item.title}
-                          />
-                          <div className="rbt-badge-3-custom bg-white">
-                            <span>-50%</span>
-                            <span>Off</span>
-                          </div>
-                        </Link>
-                      </div>
-                      <div className="rbt-card-body">
-                        <div className="rbt-card-top">
-                          <div className="rbt-review">
-                            <div className="rating">
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                            </div>
-                            <span className="rating-count"> (15 Reviews)</span>
-                          </div>
-                          <div className="rbt-bookmark-btn">
-                            <Link
-                              className="rbt-round-btn"
-                              title="Bookmark"
-                              to="#"
-                            >
-                              <i className="feather-bookmark" />
-                            </Link>
-                          </div>
-                        </div>
-
-                        <h4 className="rbt-card-title">
-                          <Link to={`/course-details/${item._id}`}>
-                            {item.title}
-                          </Link>
-                        </h4>
-                        <ul className="rbt-meta">
-                          <li>
-                            <i className="feather-book" />
-                            20 Lessons
-                          </li>
-                          <li>
-                            <i className="feather-users" />
-                            40 Students
-                          </li>
-                        </ul>
-                        {/* <p className="rbt-card-text">{item.desc}</p> */}
-                        <div className="rbt-card-bottom">
-                          <div className="rbt-price">
-                            <span className="current-price">${item.price}</span>
-                            <span className="off-price">$120</span>
-                          </div>
-                          {this.isPresent(item._id, allCarts) ? (
-                            <Link to="/cart" className="rbt-btn-link left-icon">
-                              Go To Cart
-                            </Link>
-                          ) : (
-                            <Button
-                              className="rbt-btn-link left-icon"
-                              onClick={() => {
-                                this.addToCart(item._id);
-                              }}
-                            >
-                              <i className="feather-shopping-cart" /> Add To
-                              Cart
-                            </Button>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <CourseSliderCard course={item} clasName='col-lg-3 col-md-6 col-12' index={key}/>
                 );
               })}
             </div>
@@ -198,7 +132,7 @@ class Course extends Component {
                     to="/courses"
                   >
                     <span className="icon-reverse-wrapper">
-                      <span className="btn-text">All Course (4)</span>
+                      <span className="btn-text">{this.props.buttonTitle} (4)</span>
                       <span className="btn-icon">
                         <i className="feather-arrow-right" />
                       </span>

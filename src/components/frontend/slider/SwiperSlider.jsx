@@ -1,10 +1,34 @@
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Link} from "react-router-dom";
-import SliderImg3 from "../../../assets/images/course/course-01.jpg";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Autoplay, Pagination ,EffectCoverflow} from 'swiper/modules';
+import axios from "../../../helper/axios";
+import message from "../../../helper/message";
+import CourseSliderCard from "./CourseSliderCard";
 
 function SwiperSlider(){
+    const [isLoading, setIsLoading] = useState(false);
+    const [courses, setCourses] = useState([]);
+    console.log(courses)
+    useEffect(() => {
+        setIsLoading(true);
+
+        async function fetchCourses() {
+            try {
+                const response = await axios.get("/all-courses");
+                if (response.data.success) {
+                    setCourses(response.data.courses);
+                } else {
+                    message.error(response.data.message);
+                }
+            } catch (error) {
+                setIsLoading(false);
+                message.error("Something Went Wrong!!!");
+                console.error(error);
+            }
+        }
+
+        fetchCourses();
+    }, []);
     return(
         <>
             <div className="banner-card pb--60 mb--50 swiper mySwiper rbt-dot-bottom-center banner-swiper-active">
@@ -28,171 +52,11 @@ function SwiperSlider(){
                             disableOnInteraction: false,
                         }}  className='swiper-wrapper'  >
                     {/*// <!-- Start Single Card  -->*/}
-                    <SwiperSlide className={'swiper-slide'} >
-                        <div className="rbt-card variation-01 rbt-hover">
-                            <div className="rbt-card-img">
-                                <Link to="">
-                                    <img src={SliderImg3} alt="Course image" />
-                                    <div className="rbt-badge-3 bg-white">
-                                        <span>-40%</span>
-                                        <span>Off</span>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="rbt-card-body">
-                                <ul className="rbt-meta">
-                                    <li>
-                                        <i className="feather-book" />
-                                        12 Lessons
-                                    </li>
-                                    <li>
-                                        <i className="feather-users" />
-                                        50 Students
-                                    </li>
-                                </ul>
-                                <h4 className="rbt-card-title">
-                                    <Link to="">title</Link>
-                                </h4>
-                                <p className="rbt-card-text">description</p>
-                                <div className="rbt-review">
-                                    <div className="rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                    <span className="rating-count">
-                                (15 Reviews)
-                              </span>
-                                </div>
-                                <div className="rbt-card-bottom">
-                                    <div className="rbt-price">
-                                        <span className="current-price">$70</span>
-                                        <span className="off-price">$120</span>
-                                    </div>
-                                    <Link
-                                        className="rbt-btn-link left-icon"
-                                        onClick=""
-                                        // style="cursor: pointer"
-                                    >
-                                        <i className="feather-shopping-cart" />
-                                        Add To Cart
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={'swiper-slide'} >
-                        <div className="rbt-card variation-01 rbt-hover">
-                            <div className="rbt-card-img">
-                                <Link to="">
-                                    <img src={SliderImg3} alt="Course image" />
-                                    <div className="rbt-badge-3 bg-white">
-                                        <span>-40%</span>
-                                        <span>Off</span>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="rbt-card-body">
-                                <ul className="rbt-meta">
-                                    <li>
-                                        <i className="feather-book" />
-                                        12 Lessons
-                                    </li>
-                                    <li>
-                                        <i className="feather-users" />
-                                        50 Students
-                                    </li>
-                                </ul>
-                                <h4 className="rbt-card-title">
-                                    <Link to="">title</Link>
-                                </h4>
-                                <p className="rbt-card-text">description</p>
-                                <div className="rbt-review">
-                                    <div className="rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                    <span className="rating-count">
-                                (15 Reviews)
-                              </span>
-                                </div>
-                                <div className="rbt-card-bottom">
-                                    <div className="rbt-price">
-                                        <span className="current-price">$70</span>
-                                        <span className="off-price">$120</span>
-                                    </div>
-                                    <Link
-                                        className="rbt-btn-link left-icon"
-                                        onClick=""
-                                        // style="cursor: pointer"
-                                    >
-                                        <i className="feather-shopping-cart" />
-                                        Add To Cart
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className={'swiper-slide'} >
-                        <div className="rbt-card variation-01 rbt-hover">
-                            <div className="rbt-card-img">
-                                <Link to="">
-                                    <img src={SliderImg3} alt="Course image" />
-                                    <div className="rbt-badge-3 bg-white">
-                                        <span>-40%</span>
-                                        <span>Off</span>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="rbt-card-body">
-                                <ul className="rbt-meta">
-                                    <li>
-                                        <i className="feather-book" />
-                                        12 Lessons
-                                    </li>
-                                    <li>
-                                        <i className="feather-users" />
-                                        50 Students
-                                    </li>
-                                </ul>
-                                <h4 className="rbt-card-title">
-                                    <Link to="">title</Link>
-                                </h4>
-                                <p className="rbt-card-text">description</p>
-                                <div className="rbt-review">
-                                    <div className="rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                    <span className="rating-count">
-                                (15 Reviews)
-                              </span>
-                                </div>
-                                <div className="rbt-card-bottom">
-                                    <div className="rbt-price">
-                                        <span className="current-price">$70</span>
-                                        <span className="off-price">$120</span>
-                                    </div>
-                                    <Link
-                                        className="rbt-btn-link left-icon"
-                                        onClick=""
-                                        // style="cursor: pointer"
-                                    >
-                                        <i className="feather-shopping-cart" />
-                                        Add To Cart
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                    {courses.map((course, index) => (
+                        <SwiperSlide>
+                            <CourseSliderCard key={index} course={course} />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </>
