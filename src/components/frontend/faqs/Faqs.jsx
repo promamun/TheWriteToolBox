@@ -7,23 +7,23 @@ import Img from "../../../assets/images/about/contact.jpg";
 function Faqs() {
   return (
     <>
-      <div class="rbt-accordion-area accordion-style-1 bg-color-white rbt-section-gap">
-        <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <div class="rbt-accordion-style accordion">
-                <div class="section-title text-start mb--60">
-                  <h4 class="title">Purchases & Refunds</h4>
+      <div className="rbt-accordion-area accordion-style-1 bg-color-white rbt-section-gap">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-6">
+              <div className="rbt-accordion-style accordion">
+                <div className="section-title text-start mb--60">
+                  <h4 className="title">Purchases & Refunds</h4>
                 </div>
-                <div class="rbt-accordion-style rbt-accordion-04 accordion">
-                  <div class="accordion" id="accordionExamplec3">
-                    <div class="accordion-item card">
+                <div className="rbt-accordion-style rbt-accordion-04 accordion">
+                  <div className="accordion" id="accordionExamplec3">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="headingThree1"
                       >
                         <button
-                          class="accordion-button"
+                          className="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapseThree1"
@@ -35,11 +35,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="collapseThree1"
-                        class="accordion-collapse collapse show"
+                        className="accordion-collapse collapse show"
                         aria-labelledby="headingThree1"
                         data-bs-parent="#accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           You can run Histudy easily. Any School, University,
                           College can be use this histudy education template for
                           their educational purpose. A university can be run
@@ -49,13 +49,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="headingThree2"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapseThree2"
@@ -67,11 +67,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="collapseThree2"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="headingThree2"
                         data-bs-parent="#accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           After purchasing the product need you any support you
                           can be share with us with sending mail to
                           rainbowit10@gmail.com.
@@ -79,13 +79,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="headingThree3"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapseThree3"
@@ -98,11 +98,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="collapseThree3"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="headingThree3"
                         data-bs-parent="#accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           Yes, We will get update the Histudy. And you can get
                           it any time. Next time we will comes with more
                           feature. You can be get update for unlimited times.
@@ -111,13 +111,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="headingThree4"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapseThree4"
@@ -129,11 +129,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="collapseThree4"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="headingThree4"
                         data-bs-parent="#accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           If you're looking for random paragraphs, you've come
                           to the right place. When a random word or a random
                           sentence isn't quite enough, the next logical step is
@@ -146,20 +146,20 @@ function Faqs() {
               </div>
             </div>
 
-            <div class="col-lg-6">
-              <div class="rbt-accordion-style accordion">
-                <div class="section-title text-start mb--60">
-                  <h4 class="title">Making Courses</h4>
+            <div className="col-lg-6">
+              <div className="rbt-accordion-style accordion">
+                <div className="section-title text-start mb--60">
+                  <h4 className="title">Making Courses</h4>
                 </div>
-                <div class="rbt-accordion-style rbt-accordion-04 accordion">
-                  <div class="accordion" id="faqs-accordionExamplec3">
-                    <div class="accordion-item card">
+                <div className="rbt-accordion-style rbt-accordion-04 accordion">
+                  <div className="accordion" id="faqs-accordionExamplec3">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="faqs-headingThree1"
                       >
                         <button
-                          class="accordion-button"
+                          className="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#faqs-collapseThree1"
@@ -172,11 +172,11 @@ function Faqs() {
 
                       <div
                         id="faqs-collapseThree1"
-                        class="accordion-collapse collapse show"
+                        className="accordion-collapse collapse show"
                         aria-labelledby="faqs-headingThree1"
                         data-bs-parent="#faqs-accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           You can run Histudy easily. Any School, University,
                           College can be use this histudy education template for
                           their educational purpose. A university can be run
@@ -186,13 +186,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="faqs-headingThree2"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#faqs-collapseThree2"
@@ -204,11 +204,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="faqs-collapseThree2"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="faqs-headingThree2"
                         data-bs-parent="#faqs-accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           After purchasing the product need you any support you
                           can be share with us with sending mail to
                           rainbowit10@gmail.com.
@@ -216,13 +216,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="faqs-headingThree3"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#faqs-collapseThree3"
@@ -234,11 +234,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="faqs-collapseThree3"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="faqs-headingThree3"
                         data-bs-parent="#faqs-accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           Yes, We will get update the Histudy. And you can get
                           it any time. Next time we will comes with more
                           feature. You can be get update for unlimited times.
@@ -247,13 +247,13 @@ function Faqs() {
                       </div>
                     </div>
 
-                    <div class="accordion-item card">
+                    <div className="accordion-item card">
                       <h2
-                        class="accordion-header card-header"
+                        className="accordion-header card-header"
                         id="faqs-headingThree4"
                       >
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#faqs-collapseThree4"
@@ -265,11 +265,11 @@ function Faqs() {
                       </h2>
                       <div
                         id="faqs-collapseThree4"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="faqs-headingThree4"
                         data-bs-parent="#faqs-accordionExamplec3"
                       >
-                        <div class="accordion-body card-body">
+                        <div className="accordion-body card-body">
                           If you're looking for random paragraphs, you've come
                           to the right place. When a random word or a random
                           sentence isn't quite enough, the next logical step is
@@ -284,37 +284,43 @@ function Faqs() {
           </div>
         </div>
       </div>
-      <div class="rbt-contact-address rbt-section-gap">
-        <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <div class="thumbnail">
-                <img class="w-100 radius-6" src={Img} alt="Contact Images" />
+      <div className="rbt-contact-address rbt-section-gap">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-6">
+              <div className="thumbnail">
+                <img
+                  className="w-100 radius-6"
+                  src={Img}
+                  alt="Contact Images"
+                />
               </div>
             </div>
 
-            <div class="col-lg-6">
-              <div class="rbt-contact-form contact-form-style-1 max-width-auto">
-                <div class="section-title text-start">
-                  <span class="subtitle bg-primary-opacity">
+            <div className="col-lg-6">
+              <div className="rbt-contact-form contact-form-style-1 max-width-auto">
+                <div className="section-title text-start">
+                  <span className="subtitle bg-primary-opacity">
                     EDUCATION FOR EVERYONE
                   </span>
                 </div>
-                <h3 class="title">Get a Free Course You Can Contact With Me</h3>
-                <form id="contact-form" class="max-width-auto">
-                  <div class="form-group">
+                <h3 className="title">
+                  Get a Free Course You Can Contact With Me
+                </h3>
+                <form id="contact-form" className="max-width-auto">
+                  <div className="form-group">
                     <CustomInput placeholder="Name" type="text" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <CustomInput placeholder="Email" type="email" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <CustomInput placeholder="Phone" type="text" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <TextArea Label="Message" />
                   </div>
-                  <div class="form-submit-group">
+                  <div className="form-submit-group">
                     <Button name="Submit" />
                   </div>
                 </form>

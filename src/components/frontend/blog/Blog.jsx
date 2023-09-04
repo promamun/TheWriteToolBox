@@ -72,11 +72,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -119,11 +119,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  stroke-linecap="square"
+                                  strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -160,11 +160,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                // fill-rule="evenodd"
+                                // fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>
@@ -201,11 +201,11 @@ class Blog extends Component {
                               <g
                                 stroke="#27374D"
                                 fill="none"
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                               >
                                 <path d="M10.614 0l5.629 5.629-5.63 5.629" />
                                 <path
-                                  // stroke-linecap="square"
+                                  // strokeLinecap="square"
                                   d="M.663 5.572h14.594"
                                 />
                               </g>

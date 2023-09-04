@@ -22,7 +22,7 @@ class Index extends Component {
                 <Testimonial/>
                 <CourseAdvice/>
                 <ActionOne/>
-                <Course/>
+                <Course title='GET STARTED NOW' display='none' buttonTitle='All Courses'/>
                 <JaninFbStory/>
                 <FreeCourseContact/>
                 <JaninBook/>
