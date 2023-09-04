@@ -8,8 +8,8 @@ class Index extends Component {
     return (
       <div>
         <Helmet title={"Course"} />
-        <Course />
         <CourseAdvice />
+          <Course title='GET STARTED NOW' display='none' buttonTitle='All Courses'/>
       </div>
     );
   }
