@@ -1,14 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
-import axios from "../../../helper/axios";
-import message from "../../../helper/message";
 import CourseSliderCard from "./CourseSliderCard";
 import { useSelector } from "react-redux";
 
 function SwiperSlider() {
-  // const [courses, setCourses] = useState([]);
-
   let { courses } = useSelector((state) => state.courses);
 
   courses = courses ? courses.courses : [];
