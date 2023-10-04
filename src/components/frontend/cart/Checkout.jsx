@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingOverlay from "react-loading-overlay";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   const { cart_details } = useSelector((state) => {
@@ -129,7 +130,10 @@ export default function Checkout() {
                 {/*Payment Method */}
                 <div className="col-12 mb--60">
                   <div className="plceholder-button mt--50">
-                    <button className="rbt-btn btn-gradient hover-icon-reverse">
+                    <Link
+                      to="/pay"
+                      className="rbt-btn btn-gradient hover-icon-reverse"
+                    >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">Place order</span>
                         <span className="btn-icon">
@@ -139,7 +143,7 @@ export default function Checkout() {
                           <i className="feather-arrow-right" />
                         </span>
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
