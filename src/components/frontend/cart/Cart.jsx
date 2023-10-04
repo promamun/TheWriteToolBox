@@ -64,83 +64,89 @@ export default function Cart() {
       <div className="rbt-cart-area bg-color-white rbt-section-gap">
         <div className="cart_area">
           <div className="container">
-            <div className="row g-5">
-              <div className="col-lg-8 col-8">
-                <form action="#">
-                  {/*Cart Table */}
-                  <div className="cart-table table-responsive mb--60">
-                    <table className="table" id="cartReload1">
-                      <thead>
-                        <tr>
-                          <th className="pro-thumbnail">Image</th>
-                          <th className="pro-title">Product</th>
-                          <th className="pro-price">Price</th>
-                          <th className="pro-remove">Remove</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {cartCourses.map((course, key) => {
-                          return (
-                            <tr key={key}>
-                              <td className="pro-thumbnail">
-                                <Link to={`/course-details/${course._id}`}>
-                                  <img
-                                    src={BUCKET_DOMAIN + course.thumbnail}
-                                    alt={course.title}
-                                  />
-                                </Link>
-                              </td>
-                              <td className="pro-title">
-                                <Link to={`/course-details/${course._id}`}>
-                                  {course.title}
-                                </Link>
-                              </td>
-                              <td className="pro-price">
-                                <span>${course.price}</span>
-                              </td>
-                              <td
-                                className="pro-remove"
-                                onClick={() => {
-                                  removeToCart(course._id);
-                                }}
-                              >
-                                <a href="#">
-                                  <i className="feather-x" />
-                                </a>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                </form>
+            {cartCourses.length === 0 ? (
+              <div>
+                <h1>Your Cart is Empty</h1>
               </div>
-              <div className="col-lg-4 col-4">
-                <div className="cart-summary">
-                  <div className="cart-summary-wrap">
-                    <div className="section-title text-start">
-                      <h4 className="title mb--30">Cart Summary</h4>
+            ) : (
+              <div className="row g-5">
+                <div className="col-lg-8 col-8">
+                  <form action="#">
+                    {/*Cart Table */}
+                    <div className="cart-table table-responsive mb--60">
+                      <table className="table" id="cartReload1">
+                        <thead>
+                          <tr>
+                            <th className="pro-thumbnail">Image</th>
+                            <th className="pro-title">Product</th>
+                            <th className="pro-price">Price</th>
+                            <th className="pro-remove">Remove</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {cartCourses.map((course, key) => {
+                            return (
+                              <tr key={key}>
+                                <td className="pro-thumbnail">
+                                  <Link to={`/course-details/${course._id}`}>
+                                    <img
+                                      src={BUCKET_DOMAIN + course.thumbnail}
+                                      alt={course.title}
+                                    />
+                                  </Link>
+                                </td>
+                                <td className="pro-title">
+                                  <Link to={`/course-details/${course._id}`}>
+                                    {course.title}
+                                  </Link>
+                                </td>
+                                <td className="pro-price">
+                                  <span>${course.price}</span>
+                                </td>
+                                <td
+                                  className="pro-remove"
+                                  onClick={() => {
+                                    removeToCart(course._id);
+                                  }}
+                                >
+                                  <a href="#">
+                                    <i className="feather-x" />
+                                  </a>
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
                     </div>
-                    <p>
-                      Sub Total <span id="subtotal1">${totalPrice}</span>
-                    </p>
-                  </div>
+                  </form>
+                </div>
+                <div className="col-lg-4 col-4">
+                  <div className="cart-summary">
+                    <div className="cart-summary-wrap">
+                      <div className="section-title text-start">
+                        <h4 className="title mb--30">Cart Summary</h4>
+                      </div>
+                      <p>
+                        Sub Total <span id="subtotal1">${totalPrice}</span>
+                      </p>
+                    </div>
 
-                  <div className="rbt-button-group float-md-end">
-                    <Link
-                      className="rbt-btn btn-gradient icon-hover"
-                      to="/checkout"
-                    >
-                      <span className="btn-text">Checkout</span>
-                      <span className="btn-icon">
-                        <i className="feather-arrow-right" />
-                      </span>
-                    </Link>
+                    <div className="rbt-button-group float-md-end">
+                      <Link
+                        className="rbt-btn btn-gradient icon-hover"
+                        to="/checkout"
+                      >
+                        <span className="btn-text">Checkout</span>
+                        <span className="btn-icon">
+                          <i className="feather-arrow-right" />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
