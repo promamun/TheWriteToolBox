@@ -248,39 +248,6 @@ export default function CourseDetails() {
                                         </li>
                                       );
                                     })}
-
-                                    {/* <li>
-                                  <Link to="#">
-                                    <div className="course-content-left">
-                                      <i className="feather-play-circle"></i>{" "}
-                                      <span className="text">
-                                        Watch Before Start
-                                      </span>
-                                    </div>
-                                    <div className="course-content-right">
-                                      <span className="min-lable">0.5 min</span>
-                                      <span className="rbt-badge variation-03 bg-primary-opacity">
-                                        <i className="feather-eye"></i> Preview
-                                      </span>
-                                    </div>
-                                  </Link>
-                                </li>
-
-                                <li>
-                                  <Link to="#">
-                                    <div className="course-content-left">
-                                      <i className="feather-file-text"></i>{" "}
-                                      <span className="text">
-                                        Read Before You Start
-                                      </span>
-                                    </div>
-                                    <div className="course-content-right">
-                                      <span className="course-lock">
-                                        <i className="feather-lock"></i>
-                                      </span>
-                                    </div>
-                                  </Link>
-                                </li> */}
                                   </ul>
                                 </div>
                               </div>
