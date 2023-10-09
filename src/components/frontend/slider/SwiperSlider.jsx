@@ -6,9 +6,7 @@ import { useSelector } from "react-redux";
 
 function SwiperSlider() {
   let { courses } = useSelector((state) => state.courses);
-
   courses = courses ? courses.courses : [];
-
   return (
     <div className="banner-card pb--60 mb--50 swiper mySwiper rbt-dot-bottom-center banner-swiper-active">
       <Swiper

@@ -28,6 +28,7 @@ import Checkout from "./components/frontend/cart/Checkout";
 import ProtectRoute from "./utils/ProtectRoute";
 import Pay from "./components/frontend/cart/Pay";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import CoursePreview from "./components/frontend/Course/CoursePreview";
 
 function App() {
   const initialOptions = {
@@ -43,6 +44,7 @@ function App() {
         <Routes>
           {/* Route without Layout */}
           <Route exact path="/pen" Component={Pen} />
+          <Route exact path="/course-preview" Component={CoursePreview}/>
           <Route
             path="/*"
             element={

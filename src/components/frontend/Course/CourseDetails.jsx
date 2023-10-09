@@ -38,7 +38,7 @@ export default function CourseDetails() {
     <LoadingOverlay active={loading} spinner text="Loading ...">
       <div className="rbt-breadcrumb-default rbt-breadcrumb-style-3">
         <div className="breadcrumb-inner">
-          <img src="assets/images/bg/bg-image-10.jpg" alt="Education Images" />
+          <img src="/assets/images/bg/bg-image-10.jpg" alt="Education Images" />
         </div>
         <div className="container">
           <div className="row">
@@ -63,7 +63,7 @@ export default function CourseDetails() {
                     <span className="rbt-badge-2">
                       <span className="image">
                         <img
-                          src="assets/images/icons/card-icon-1.png"
+                          src="/assets/images/icons/card-icon-1.png"
                           alt="Best Seller Icon"
                         />
                       </span>{" "}
@@ -184,7 +184,7 @@ export default function CourseDetails() {
                               aria-expanded="true"
                               aria-controls="collapseTwo1"
                             >
-                              Intro to Course and Histudy{" "}
+                              Intro to Course and TWT{" "}
                               <span className="rbt-badge-5 ml--10">
                                 1hr 30min
                               </span>
@@ -1178,12 +1178,12 @@ export default function CourseDetails() {
                   {/*Start Viedo Wrapper  */}
                   <Link
                     className="video-popup-with-text video-popup-wrapper text-center popup-video sidebar-video-hidden mb--15"
-                    to="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
+                    to="/course-preview"
                   >
                     <div className="video-content">
                       <img
                         className="w-100 rbt-radius"
-                        src="assets/images/others/video-01.jpg"
+                        src="/assets/images/others/video-01.jpg"
                         alt="Video Images"
                       />
                       <div className="position-to-top">

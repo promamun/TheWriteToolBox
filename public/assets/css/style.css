@@ -42,7 +42,7 @@
 	|
 	|
 	|___Elements Styles
-	|	|___ button
+	|	|___ button 
 	|	|___ section-title
 	|	|___ breadcrumb
 	|	|___ card
@@ -80,34 +80,34 @@
 	|	|___ 404
 
 	|___Blog Styles
-	|	|___ blog
-	|	|___ post-default
-	|	|___ sidebar
-	|	|___ blog-details
-	|	|___ unit-test
+	|	|___ blog 
+	|	|___ post-default 
+	|	|___ sidebar 
+	|	|___ blog-details 
+	|	|___ unit-test 
 
 	|___Shop Styles
-	|	|___ shop
-	|	|___ product-details
-	|	|___ my-account
-	|	|___ cart
-	|	|___ checkout
-	|	|___ minicart
+	|	|___ shop 
+	|	|___ product-details 
+	|	|___ my-account 
+	|	|___ cart 
+	|	|___ checkout 
+	|	|___ minicart 
 
 	|___Template Styles
-	|	|___ banner
-	|	|___ course-details
-	|	|___ course-sidebar
-	|	|___ contact
-	|	|___ sidebar
-	|	|___ course-action-bottom
+	|	|___ banner 
+	|	|___ course-details 
+	|	|___ course-sidebar 
+	|	|___ contact 
+	|	|___ sidebar 
+	|	|___ course-action-bottom 
 
 
 	|___Footer Styles
-	|	|___ footer
-	|	|___ copyright
-	|	|___ back-to-top
-	|	|___ dark
+	|	|___ footer 
+	|	|___ copyright 
+	|	|___ back-to-top 
+	|	|___ dark 
 	|
 	|
 	|___ END STYLESHEET INDEXING
@@ -115,7 +115,6 @@
 ***************************************************************/
 /**************************************
     Default Styles
-
 ***************************************/
 /*-- Variables --*/
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&amp;display=swap");
@@ -324,12 +323,7 @@ samp {
   hyphens: none;
   color: var(--color-primary);
 }
-@font-face {
-    font-family: 'Chilanka';
-    src: url('../fonts/chilanka.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 kbd,
 ins {
   color: #ffffff;
@@ -461,16 +455,8 @@ input[type=submit] {
   appearance: button;
   cursor: pointer;
 }
-button[disabled]{
-    opacity: 0.6; /* Reduce the opacity to indicate disabled state */
-    cursor: not-allowed; /* Change the cursor to indicate unclickable */
-    pointer-events: none;
-}
-a[disabled]{
-    opacity: 0.6; /* Reduce the opacity to indicate disabled state */
-    cursor: not-allowed; /* Change the cursor to indicate unclickable */
-    pointer-events: none;
-}
+
+button[disabled],
 input[disabled] {
   cursor: default;
 }
@@ -610,7 +596,7 @@ blockquote b {
  * Typography
  */
 /*
-	font-family: 'Source Serif Pro', serif;
+	font-family: 'Source Serif Pro', serif; 
 */
 * {
   box-sizing: border-box;
@@ -981,7 +967,7 @@ var {
 }
 
 /*---------------------------
-	List Style
+	List Style 
 ---------------------------*/
 ul,
 ol {
@@ -1079,7 +1065,7 @@ ol ul {
     All Extend Here
 =======================*/
 /* -----------------------------
-    Hover Dropdown Extend
+    Hover Dropdown Extend  
 --------------------------------*/
 .rbt-header .mainmenu-nav .mainmenu li.with-megamenu .rbt-megamenu, .rbt-header .mainmenu-nav .mainmenu li.has-dropdown .submenu, .rbt-user-wrapper .rbt-user-menu-list-wrapper, .rbt-category-menu-wrapper .category-dropdown-menu, ul.rbt-dropdown-menu li .sub-menu {
   position: absolute;
@@ -1120,7 +1106,7 @@ ol ul {
 }
 
 /*----------------------
-    Bg Image
+    Bg Image  
 ------------------------*/
 .bg_image, .bgImagePosition {
   background-repeat: no-repeat;
@@ -1131,7 +1117,8 @@ ol ul {
 .copyright-style-1 .copyright-link, .footer-widget .ft-link, .rbt-single-widget ul.rbt-sidebar-list-wrapper, .rbt-widget-details .rbt-course-details-list-wrapper,
 .rbt-widget-details .rbt-default-sidebar-list,
 .rbt-default-sidebar-wrapper .rbt-course-details-list-wrapper,
-.rbt-default-sidebar-wrapper .rbt-default-sidebar-list, .rbt-sorting-list .course-switch-layout, .rbt-single-product .product-feature, .comment-list ul.children, .comment-list, .blog-meta, .course-feature-list, .plan-offer-list, .rbt-list-style-3, .rbt-list-style-1, .filter-tab-button, .advance-pricing .pricing-right .plan-offer-list, .pricing-table .pricing-body .list-item, .pricing-billing-duration ul, .rbt-meta, .social-share-transparent, .rbt-user-menu-list-wrapper .user-list-wrapper, .rbt-secondary-menu, ul.rbt-dropdown-menu {
+.rbt-default-sidebar-wrapper .rbt-default-sidebar-list, .rbt-sorting-list .course-switch-layout, .rbt-single-product .product-feature, .comment-list ul.children, .comment-list, .blog-meta, .course-feature-list, .plan-offer-list, .rbt-list-style-3, .rbt-list-style-1, .filter-tab-button,
+.rbt-default-tab-button, .advance-pricing .pricing-right .plan-offer-list, .pricing-table .pricing-body .list-item, .pricing-billing-duration ul, .rbt-meta, .social-share-transparent, .rbt-user-menu-list-wrapper .user-list-wrapper, .rbt-secondary-menu, ul.rbt-dropdown-menu {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1146,7 +1133,7 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 /*----------------------
-    Text Color
+    Text Color  
 ------------------------*/
 .color-body {
   color: var(--color-body) !important;
@@ -1201,7 +1188,7 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 /*----------------------
-    Background Color
+    Background Color  
 ------------------------*/
 .bg-color-primary {
   background-color: var(--color-primary) !important;
@@ -1473,7 +1460,7 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 /*-------------------------------------
-    Background Opacity With Text Colors
+    Background Opacity With Text Colors  
 ---------------------------------------*/
 .bg-primary-opacity {
   background: var(--primary-opacity) !important;
@@ -1510,8 +1497,8 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
   color: var(--color-warning) !important;
 }
 
-/*----------------------
-    Common Css
+/*---------------------- 
+    Common Css 
 --------------------------*/
 .liststyle {
   padding: 0;
@@ -1654,7 +1641,7 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 /*===============================
-    Background Color
+    Background Color 
 =================================*/
 .bg-color-primary {
   background: var(--color-primary);
@@ -1705,7 +1692,7 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 /*---------------------
-    Height and width
+    Height and width 
 ------------------------*/
 .fullscreen {
   min-height: 100vh;
@@ -2121,7 +2108,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=============================
-	Overlay styles
+	Overlay styles 
 ==============================*/
 [data-overlay],
 [data-black-overlay],
@@ -2246,7 +2233,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*------------------------------
-    Scroll Up
+    Scroll Up 
 --------------------------------*/
 #scrollUp {
   width: 70px;
@@ -2339,7 +2326,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*--------------------
-    Contact Form
+    Contact Form 
 ----------------------*/
 .form-message {
   margin-bottom: 0;
@@ -2377,7 +2364,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=========================
-    Section Separation
+    Section Separation 
 ==========================*/
 .slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -2394,6 +2381,10 @@ textarea:-ms-input-placeholder {
 
 .mt_dec--100 {
   margin-top: -100px;
+}
+
+.mt_dec--5 {
+  margin-top: -5px !important;
 }
 
 .rbt-section-gap {
@@ -8044,7 +8035,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*------------------------
-    Edu Common Styles
+    Edu Common Styles  
 --------------------------*/
 /*-------------------------
     Rbt Default
@@ -8311,6 +8302,12 @@ textarea:-ms-input-placeholder {
   padding: 30px;
 }
 
+.edu-bg-gray {
+  background: var(--color-grey);
+  border-radius: 6px;
+  padding: 20px;
+}
+
 .card-info {
   display: inline-block;
 }
@@ -8372,7 +8369,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*-------------------------
-    Card Author Meta
+    Card Author Meta 
 -------------------------*/
 .rbt-author-meta {
   display: flex;
@@ -8405,7 +8402,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*-----------------------------
-    Rbt Border Style
+    Rbt Border Style  
 ------------------------------*/
 hr {
   background-color: var(--color-border);
@@ -8418,6 +8415,10 @@ hr {
 
 .rbt-border {
   border: 1px solid var(--color-border) !important;
+}
+
+.rbt-border-2 {
+  border: 2px solid var(--color-border) !important;
 }
 
 .rbt-border-dashed {
@@ -8511,7 +8512,7 @@ hr {
 }
 
 /*-----------------------------
-    Rbt Border Radius
+    Rbt Border Radius  
 -------------------------------*/
 .square {
   border-radius: 0 !important;
@@ -8600,7 +8601,7 @@ hr {
 }
 
 /*--------------------------
-    Font Weight
+    Font Weight 
 ---------------------------*/
 .w-300 {
   font-weight: 300 !important;
@@ -8631,7 +8632,7 @@ hr {
 }
 
 /*-----------------------------
-    Card bg Inner Color
+    Card bg Inner Color 
 --------------------------------*/
 .bg-card-color-1 .inner {
   background: #fde29275 !important;
@@ -8710,10 +8711,7 @@ hr {
 }
 
 .bg_image--11 {
-  background-image: url(../images/bg/bg-image-11.png);
-}
-.bg_image--111 {
-    background-image: url("../images/bg/bg-image-111.png");
+  background-image: url(../images/bg/bg-image-11.jpg);
 }
 
 .bg_image--12 {
@@ -8920,6 +8918,7 @@ input[type=password],
 input[type=email],
 input[type=number],
 input[type=tel],
+input[type=date],
 textarea {
   font-size: 16px;
   font-weight: 400;
@@ -8941,6 +8940,7 @@ input[type=password]::placeholder,
 input[type=email]::placeholder,
 input[type=number]::placeholder,
 input[type=tel]::placeholder,
+input[type=date]::placeholder,
 textarea::placeholder {
   color: var(--body-color);
   /* Firefox */
@@ -8951,6 +8951,7 @@ input[type=password]:-ms-input-placeholder,
 input[type=email]:-ms-input-placeholder,
 input[type=number]:-ms-input-placeholder,
 input[type=tel]:-ms-input-placeholder,
+input[type=date]:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: var(--body-color);
@@ -8961,6 +8962,7 @@ input[type=password]::-ms-input-placeholder,
 input[type=email]::-ms-input-placeholder,
 input[type=number]::-ms-input-placeholder,
 input[type=tel]::-ms-input-placeholder,
+input[type=date]::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--body-color);
@@ -8979,6 +8981,9 @@ input[type=number].input-active,
 input[type=tel].p-holder__active,
 .input-active input[type=tel],
 input[type=tel].input-active,
+input[type=date].p-holder__active,
+.input-active input[type=date],
+input[type=date].input-active,
 textarea.p-holder__active,
 textarea.input-active {
   border-color: var(--color-primary);
@@ -8997,6 +9002,9 @@ input[type=number].input-active::placeholder,
 input[type=tel].p-holder__active::placeholder,
 .input-active input[type=tel]::placeholder,
 input[type=tel].input-active::placeholder,
+input[type=date].p-holder__active::placeholder,
+.input-active input[type=date]::placeholder,
+input[type=date].input-active::placeholder,
 textarea.p-holder__active::placeholder,
 textarea.input-active::placeholder {
   color: var(--color-primary);
@@ -9016,6 +9024,9 @@ input[type=number].input-active:-ms-input-placeholder,
 input[type=tel].p-holder__active:-ms-input-placeholder,
 .input-active input[type=tel]:-ms-input-placeholder,
 input[type=tel].input-active:-ms-input-placeholder,
+input[type=date].p-holder__active:-ms-input-placeholder,
+.input-active input[type=date]:-ms-input-placeholder,
+input[type=date].input-active:-ms-input-placeholder,
 textarea.p-holder__active:-ms-input-placeholder,
 textarea.input-active:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -9034,6 +9045,9 @@ input[type=number].input-active::-ms-input-placeholder,
 input[type=tel].p-holder__active::-ms-input-placeholder,
 .input-active input[type=tel]::-ms-input-placeholder,
 input[type=tel].input-active::-ms-input-placeholder,
+input[type=date].p-holder__active::-ms-input-placeholder,
+.input-active input[type=date]::-ms-input-placeholder,
+input[type=date].input-active::-ms-input-placeholder,
 textarea.p-holder__active::-ms-input-placeholder,
 textarea.input-active::-ms-input-placeholder {
   /* Microsoft Edge */
@@ -9052,6 +9066,9 @@ input[type=number].input-error,
 input[type=tel].p-holder__error,
 .input-error input[type=tel],
 input[type=tel].input-error,
+input[type=date].p-holder__error,
+.input-error input[type=date],
+input[type=date].input-error,
 textarea.p-holder__error,
 textarea.input-error {
   border-color: #f4282d;
@@ -9070,6 +9087,9 @@ input[type=number].input-error::placeholder,
 input[type=tel].p-holder__error::placeholder,
 .input-error input[type=tel]::placeholder,
 input[type=tel].input-error::placeholder,
+input[type=date].p-holder__error::placeholder,
+.input-error input[type=date]::placeholder,
+input[type=date].input-error::placeholder,
 textarea.p-holder__error::placeholder,
 textarea.input-error::placeholder {
   color: #f4282d;
@@ -9089,6 +9109,9 @@ input[type=number].input-error:-ms-input-placeholder,
 input[type=tel].p-holder__error:-ms-input-placeholder,
 .input-error input[type=tel]:-ms-input-placeholder,
 input[type=tel].input-error:-ms-input-placeholder,
+input[type=date].p-holder__error:-ms-input-placeholder,
+.input-error input[type=date]:-ms-input-placeholder,
+input[type=date].input-error:-ms-input-placeholder,
 textarea.p-holder__error:-ms-input-placeholder,
 textarea.input-error:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -9107,6 +9130,9 @@ input[type=number].input-error::-ms-input-placeholder,
 input[type=tel].p-holder__error::-ms-input-placeholder,
 .input-error input[type=tel]::-ms-input-placeholder,
 input[type=tel].input-error::-ms-input-placeholder,
+input[type=date].p-holder__error::-ms-input-placeholder,
+.input-error input[type=date]::-ms-input-placeholder,
+input[type=date].input-error::-ms-input-placeholder,
 textarea.p-holder__error::-ms-input-placeholder,
 textarea.input-error::-ms-input-placeholder {
   /* Microsoft Edge */
@@ -9125,6 +9151,9 @@ input[type=number].input-error:focus,
 input[type=tel].p-holder__error:focus,
 .input-error input[type=tel]:focus,
 input[type=tel].input-error:focus,
+input[type=date].p-holder__error:focus,
+.input-error input[type=date]:focus,
+input[type=date].input-error:focus,
 textarea.p-holder__error:focus,
 textarea.input-error:focus {
   border-color: #f4282d;
@@ -9134,6 +9163,7 @@ input[type=password]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=tel]:focus,
+input[type=date]:focus,
 textarea:focus {
   border-color: var(--color-primary);
 }
@@ -9202,6 +9232,33 @@ input[type=radio] ~ label::after {
   left: 3px;
   background: #fff;
   border-radius: 50%;
+}
+
+.form-switch {
+  display: flex;
+  align-items: center;
+}
+.form-switch input[type=checkbox] {
+  opacity: 1;
+  position: relative;
+  margin-left: 0 !important;
+  margin-top: 0;
+  outline: none;
+  margin-bottom: 0;
+}
+.form-switch input[type=checkbox]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.form-switch input[type=checkbox]:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-switch input[type=checkbox] ~ label {
+  padding-left: 10px;
+}
+.form-switch input[type=checkbox] ~ label::before, .form-switch input[type=checkbox] ~ label::after {
+  display: none;
 }
 
 .form-group {
@@ -9298,7 +9355,64 @@ input[disabled] {
   display: none;
 }
 
-/* --------------------------------
+/* For Image Radio  */
+.rbt-image-checkbox {
+  display: flex;
+  height: 100%;
+}
+.rbt-image-checkbox label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding-left: 0 !important;
+  border: 3px solid var(--color-border);
+  border-radius: 6px;
+}
+.rbt-image-checkbox label::after {
+  background-image: url(../images/icons/yes.png) !important;
+  opacity: 0;
+  position: absolute !important;
+  content: "" !important;
+  background-attachment: scroll !important;
+  background-size: cover !important;
+  transform: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 0 none;
+  left: auto !important;
+  top: -20px !important;
+  right: -20px !important;
+}
+.rbt-image-checkbox label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rbt-image-checkbox input[type=radio] ~ label::before {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+  border: 0 none;
+  border-radius: 0;
+}
+.rbt-image-checkbox input[type=radio]:checked + label::after, .rbt-image-checkbox input[type=radio]:checked + label::before {
+  opacity: 1;
+}
+.rbt-image-checkbox input[type=radio] {
+  display: none;
+}
+
+/* -------------------------------- 
 
 Primary style
 
@@ -9354,8 +9468,9 @@ Primary style
   opacity: 1;
 }
 
-/* --------------------------------
-  xrotate-1
+/* -------------------------------- 
+
+  xrotate-1 
 
   -------------------------------- */
 .cd-headline.rotate-1 .cd-words-wrapper {
@@ -9527,9 +9642,9 @@ Primary style
     opacity: 0;
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xtype
+  xtype 
 
   -------------------------------- */
 .cd-headline.type .cd-words-wrapper {
@@ -9644,9 +9759,9 @@ Primary style
     opacity: 0;
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xrotate-2
+  xrotate-2 
 
   -------------------------------- */
 .cd-headline.rotate-2 .cd-words-wrapper {
@@ -9833,9 +9948,9 @@ Primary style
     transform: translateZ(-20px) rotateX(-90deg);
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xloading-bar
+  xloading-bar 
 
   -------------------------------- */
 .cd-headline.loading-bar span {
@@ -9883,9 +9998,9 @@ Primary style
   top: 0;
 }
 
-/* --------------------------------
+/* -------------------------------- 
 
-  xslide
+  xslide 
 
   -------------------------------- */
 .cd-headline.slide span {
@@ -10024,9 +10139,9 @@ Primary style
     transform: translateY(100%);
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xclip
+  xclip 
 
   -------------------------------- */
 .cd-headline.clip span {
@@ -10057,9 +10172,9 @@ Primary style
   opacity: 1;
 }
 
-/* --------------------------------
+/* -------------------------------- 
 
-  xzoom
+  xzoom 
 
   -------------------------------- */
 .cd-headline.zoom .cd-words-wrapper {
@@ -10161,9 +10276,9 @@ Primary style
     transform: translateZ(-100px);
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xrotate-3
+  xrotate-3 
 
   -------------------------------- */
 .cd-headline.rotate-3 .cd-words-wrapper {
@@ -10284,9 +10399,9 @@ Primary style
     transform: rotateY(-180deg);
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xscale
+  xscale 
 
   -------------------------------- */
 .cd-headline.scale b {
@@ -10424,9 +10539,9 @@ Primary style
     opacity: 0;
   }
 }
-/* --------------------------------
+/* -------------------------------- 
 
-  xpush
+  xpush 
 
   -------------------------------- */
 .cd-headline.push b {
@@ -10558,7 +10673,7 @@ Primary style
 	Header Styles
 ***************************************/
 /*---------------------------
-    Header Common Styles
+    Header Common Styles  
 ----------------------------*/
 .logo a {
   display: block;
@@ -10579,7 +10694,7 @@ Primary style
 }
 
 /*-----------------------------
-    Header Space Between
+    Header Space Between  
 ------------------------------*/
 .header-space-betwween {
   padding-left: 150px;
@@ -10625,7 +10740,7 @@ Primary style
 }
 
 /*----------------------------
-    Header Top Information
+    Header Top Information 
 -----------------------------*/
 .rbt-information-list {
   display: flex;
@@ -10663,7 +10778,7 @@ Primary style
 }
 
 /*--------------------------
-    Dropdown Menu
+    Dropdown Menu  
 ----------------------------*/
 ul.rbt-dropdown-menu li {
   margin: 0;
@@ -11368,7 +11483,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*-------------------------
-    Header Animation
+    Header Animation  
 --------------------------*/
 @keyframes headerSticky {
   0% {
@@ -11387,7 +11502,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   }
 }
 /*---------------------
-    Header Top
+    Header Top  
 ----------------------*/
 .rbt-header-top.rbt-header-top-1 {
   position: relative;
@@ -11523,7 +11638,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*----------------------------
-    Header Top Bar
+    Header Top Bar  
 ----------------------------*/
 .rbt-header-top-2 {
   border-bottom: 1px solid var(--color-border);
@@ -11697,14 +11812,14 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*------------------------------------------
-    Header With TopBar Transparent
+    Header With TopBar Transparent  
 ----------------------------------------------*/
 .rbt-transparent-header .rbt-header-top {
   border-color: #525260;
 }
 
 /*--------------------------
-    Header Top Styles
+    Header Top Styles  
 -----------------------------*/
 .rbt-header-campaign {
   padding: 8px 0;
@@ -11729,7 +11844,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   }
 }
 .rbt-header-campaign.deactive {
-  display: none;
+  display: none !important;
 }
 
 .rbt-header-top-news {
@@ -11798,7 +11913,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*---------------------------
-    Header Mid Style
+    Header Mid Style  
 ----------------------------*/
 .rbt-header-middle {
   padding-top: 15px;
@@ -11833,7 +11948,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*---------------------
-    Social Share
+    Social Share  
 -----------------------*/
 .social-share-transparent {
   display: flex;
@@ -11889,7 +12004,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*----------------------------
-    Navigation Position
+    Navigation Position  
 ------------------------------*/
 .mainbar-row {
   display: flex;
@@ -11909,7 +12024,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*-----------------------
-    Header Style
+    Header Style  
 ---------------------------*/
 .rbt-header {
   position: relative;
@@ -12100,7 +12215,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*--------------------------
-    Navigation Styles
+    Navigation Styles 
 ----------------------------*/
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -12364,7 +12479,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*----------------------------
-    Mega Menu Options
+    Mega Menu Options  
 ------------------------------*/
 .mega-top-banner {
   background-image: url(../images/course/category-10.png), radial-gradient(100% 100% at 100% 0%, #484C7A 0%, #23263B 100%);
@@ -12464,7 +12579,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*-----------------------
-    Single Demo
+    Single Demo  
 ------------------------*/
 @media only screen and (max-width: 1199px) {
   .single-dropdown-menu-presentation .single-mega-item {
@@ -12602,7 +12717,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*----------------------
-    Load More Btn
+    Load More Btn  
 -----------------------*/
 .rbt-megamenu .load-demo-btn {
   position: absolute;
@@ -12614,7 +12729,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*----------------------
-    Extra Css
+    Extra Css  
 ------------------------*/
 .rbt-header .rbt-border-bottom-light .mainmenu-nav .mainmenu li.with-megamenu .rbt-megamenu .wrapper {
   border-top: 0 none;
@@ -12626,10 +12741,10 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*--------------------
-    Mega Menu
+    Mega Menu  
 -----------------------*/
 /*------------------------------
-    Popup Menu Styles
+    Popup Menu Styles  
 --------------------------------*/
 .popup-mobile-menu {
   z-index: 9999;
@@ -12905,7 +13020,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*--------------------------------
-    Offcanvas Menu
+    Offcanvas Menu  
 --------------------------------*/
 .rbt-offcanvas-trigger .offcanvas-trigger {
   display: block;
@@ -12997,7 +13112,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*-------------------------------
-    Offcanvas Menu Sidebar
+    Offcanvas Menu Sidebar  
 --------------------------------*/
 .side-menu,
 .rbt-cart-side-menu {
@@ -13168,7 +13283,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*---------------------------------
-    Rainbow Offcanvas Side Menu
+    Rainbow Offcanvas Side Menu  
 -----------------------------------*/
 .rbt-offcanvas-side-menu {
   z-index: 9999;
@@ -13283,7 +13398,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 
 /*---------------------------------------
-    One Page Navigation Inner Section
+    One Page Navigation Inner Section 
 ------------------------------------------*/
 .rbt-inner-onepage-navigation {
   border-radius: 500px;
@@ -13380,7 +13495,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 	Elements Styles
 ***************************************/
 /*===================
-Button Area
+Button Area 
 ====================*/
 .rbt-button-group {
   display: flex;
@@ -13392,6 +13507,13 @@ Button Area
 .rbt-button-group a,
 .rbt-button-group button {
   margin: 10px;
+}
+
+.disabled,
+.rbt-btn:disabled,
+fieldset:disabled {
+  pointer-events: none !important;
+  opacity: 0.65 !important;
 }
 
 .rbt-btn {
@@ -13546,6 +13668,22 @@ Button Area
   transform: translateX(-7px);
   transition: opacity 0.25s, transform 0.5s;
   padding-left: 0;
+}
+.rbt-btn.icon-hover.icon-hover-left .btn-text {
+  transform: translateX(-7px);
+}
+.rbt-btn.icon-hover.icon-hover-left .btn-icon {
+  margin-inline-start: 0;
+  margin-inline-end: -7px;
+}
+.rbt-btn.icon-hover.icon-hover-left .btn-icon i {
+  transform: translateX(7px);
+}
+.rbt-btn.icon-hover.icon-hover-left:hover .btn-icon i {
+  transform: translateX(-7px);
+}
+.rbt-btn.icon-hover.icon-hover-left:hover .btn-text {
+  transform: translateX(7px);
 }
 .rbt-btn.hover-icon-reverse .icon-reverse-wrapper {
   display: flex;
@@ -13889,7 +14027,7 @@ Button Area
 }
 
 /*-------------------------------
-    Button Bg Color Variation
+    Button Bg Color Variation 
 --------------------------------*/
 a.bg-primary-opacity:hover,
 button.bg-primary-opacity:hover {
@@ -13974,7 +14112,7 @@ button.btn-underline-gradient:hover::after {
 }
 
 /*-----------------------
-    Modern Button
+    Modern Button  
 ------------------------*/
 a.rbt-moderbt-btn {
   position: relative;
@@ -14026,7 +14164,7 @@ a.rbt-moderbt-btn:hover::before {
 }
 
 /*----------------------------------
-    Education Transparent Button
+    Education Transparent Button 
 ------------------------------------*/
 a.rbt-btn-link,
 button.rbt-btn-link,
@@ -14105,7 +14243,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------
- Video Player Button
+ Video Player Button 
 -------------------------*/
 .video-popup-wrapper {
   position: relative;
@@ -14168,6 +14306,18 @@ span.transparent-button:hover i {
     opacity: 0;
   }
 }
+.btn-round-white-opacity {
+  padding: 0;
+  border: 0 none;
+  background: var(--white-opacity);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 37px;
+}
+
 /*--------------------------
     Section Title
 ---------------------------*/
@@ -14328,7 +14478,7 @@ span.transparent-button:hover i {
 }
 
 /*====================
-    Breadcrump Area
+    Breadcrump Area 
 ======================*/
 .rbt-breadcrumb-default .title {
   color: var(--color-heading);
@@ -14352,7 +14502,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------------
-    Breadcrumd Page List
+    Breadcrumd Page List  
 -------------------------------*/
 .page-list {
   padding: 0;
@@ -14389,7 +14539,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------------
-    Breadcrumb Style Two
+    Breadcrumb Style Two  
 ------------------------------*/
 .breadcrumb-style-max-width {
   max-width: 1085px;
@@ -14521,7 +14671,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------------
-    Breadcrumb Style Main
+    Breadcrumb Style Main  
 ------------------------------*/
 .rbt-page-banner-wrapper {
   display: flex;
@@ -14603,7 +14753,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------------
-    Breadcrumb Style Three
+    Breadcrumb Style Three  
 ------------------------------*/
 .rbt-breadcrumb-default.rbt-breadcrumb-style-3 {
   position: relative;
@@ -14673,8 +14823,8 @@ span.transparent-button:hover i {
   margin: 5px;
 }
 
-/*-----------------------------
-    Edu Course Style
+/*----------------------------- 
+    Edu Course Style 
 -------------------------------*/
 .rbt-card {
   overflow: hidden;
@@ -15459,7 +15609,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------------
-    Service Card Styles
+    Service Card Styles  
 ------------------------------*/
 .rbt-service.rbt-service-1 {
   border-radius: 6px;
@@ -15665,7 +15815,7 @@ span.transparent-button:hover i {
 }
 
 /*-------------------------------
-    Service Style Five
+    Service Style Five  
 ---------------------------------*/
 .service-card-5 .inner {
   border-radius: 5px;
@@ -15790,7 +15940,7 @@ span.transparent-button:hover i {
 }
 
 /*-------------------------------
-    Service Style Five
+    Service Style Five  
 ---------------------------------*/
 .service-card-6 {
   height: 100%;
@@ -15869,7 +16019,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------
-    Swiper Slider
+    Swiper Slider  
 ------------------------*/
 .slick-initialized .slick-slide {
   margin-bottom: -10px;
@@ -15938,7 +16088,7 @@ span.transparent-button:hover i {
 }
 
 /*---------------------------
-    Slick Arrow Styles
+    Slick Arrow Styles  
 -----------------------------*/
 .rbt-arrow-between {
   position: relative;
@@ -16112,7 +16262,7 @@ span.transparent-button:hover i {
 }
 
 /*------------------------
-    Feature Styles
+    Feature Styles  
 -------------------------*/
 .rbt-feature {
   display: flex;
@@ -16240,7 +16390,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------
-    About Styles
+    About Styles  
 ------------------------*/
 .about-style-1 {
   position: relative;
@@ -16346,7 +16496,7 @@ span.transparent-button:hover i {
   z-index: 2;
 }
 .about-style-2 .about-wrapper {
-  margin-top: 30px;
+  margin-top: -150px;
   background: var(--color-white);
   border-radius: 10px;
   padding: 15px;
@@ -16404,7 +16554,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------------
-    Call To Action Styles
+    Call To Action Styles  
 ------------------------------*/
 .rbt-callto-action.callto-action-default {
   position: relative;
@@ -16437,7 +16587,7 @@ span.transparent-button:hover i {
 }
 
 /*--------------------------------
-    Call To Action Style
+    Call To Action Style  
 --------------------------------*/
 .rbt-cta-default.style-2 .content-wrapper {
   background-color: var(--color-white);
@@ -16633,7 +16783,7 @@ span.transparent-button:hover i {
 }
 
 /*-------------------------
-    Accordion Area
+    Accordion Area  
 --------------------------*/
 .rbt-accordion-style .card {
   background: var(--color-primary-lighter);
@@ -16739,6 +16889,12 @@ span.transparent-button:hover i {
 .rbt-accordion-style.rbt-accordion-02.right-no-padding .card .card-body {
   padding-right: 0;
 }
+.rbt-accordion-style.rbt-accordion-02.for-right-content .card .card-header {
+  padding: 12px 44px 12px 16px;
+}
+.rbt-accordion-style.rbt-accordion-02.for-right-content .card .card-body {
+  padding: 10px 16px;
+}
 .rbt-accordion-style.rbt-accordion-03 .card {
   background: transparent;
   border-radius: 0 !important;
@@ -16799,7 +16955,7 @@ span.transparent-button:hover i {
 }
 
 /*--------------------------
-    Rbt Card Table
+    Rbt Card Table  
 --------------------------*/
 .rbt-table {
   border: 0 none;
@@ -16838,7 +16994,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------------
-    Accordion Color White
+    Accordion Color White  
 -------------------------------*/
 .rbt-accordion-color-white .rbt-accordion-style .card .card-header button[aria-expanded=true] {
   color: var(--color-white);
@@ -16876,8 +17032,57 @@ span.transparent-button:hover i {
   border-bottom: 2px solid var(--color-border-2);
 }
 
+/* Accordion New Lesson Page  */
+.rbt-accordion-style.for-right-content .rbt-course-main-content .course-content-right {
+  flex-shrink: 0;
+}
+.rbt-accordion-style.for-right-content .rbt-course-main-content .course-content-right span.rbt-check i {
+  font-size: 13px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-primary);
+  border-radius: 100%;
+  color: var(--color-white);
+  display: inline-block;
+  text-align: center;
+  line-height: 18px;
+}
+.rbt-accordion-style.for-right-content .rbt-course-main-content .course-content-right span.rbt-check.unread i {
+  background: transparent;
+  color: var(--color-primary-opacity);
+  font-size: 16px;
+  opacity: 0.3;
+  width: auto;
+  height: auto;
+}
+.rbt-accordion-style.for-right-content .rbt-course-main-content li a {
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.rbt-accordion-style.for-right-content .rbt-course-main-content li a .course-content-left {
+  padding-right: 15px;
+  align-items: flex-start;
+}
+.rbt-accordion-style.for-right-content .rbt-course-main-content li a .course-content-left i {
+  margin-top: 3px;
+}
+.rbt-accordion-style.for-right-content .card .card-header {
+  padding: 12px 32px 12px 16px !important;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-accordion-style.for-right-content .card .card-header button {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-accordion-style.for-right-content .card .card-header button {
+    display: flex;
+  }
+}
+
 /*----------------------
-    Edu Image Gallery
+    Edu Image Gallery  
 ------------------------*/
 .rbt-image-gallery-1 {
   position: relative;
@@ -16969,7 +17174,7 @@ span.transparent-button:hover i {
 }
 
 /*------------------------
-    Counter Up Styles
+    Counter Up Styles  
 -------------------------*/
 .rbt-counterup {
   background: var(--color-white);
@@ -17234,7 +17439,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------
-    Black Overlay
+    Black Overlay  
 ------------------------*/
 .bg-black-overlay .rbt-counterup .inner .content .counter {
   color: var(--color-white);
@@ -17317,7 +17522,7 @@ span.transparent-button:hover i {
 }
 
 /*--------------------------
-    Pricing Table
+    Pricing Table  
 ----------------------------*/
 .pricing-billing-duration {
   text-align: right;
@@ -17574,7 +17779,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------------
-    Advance Pricing Table
+    Advance Pricing Table  
 ------------------------------*/
 .advance-pricing {
   background: var(--color-white);
@@ -17669,7 +17874,7 @@ span.transparent-button:hover i {
 }
 
 /*------------------------
-    Edu Badge Styles
+    Edu Badge Styles  
 --------------------------*/
 .rbt-badge-group {
   display: flex;
@@ -17814,46 +18019,7 @@ span.transparent-button:hover i {
 .rbt-badge-3::after {
   transform: rotate(90deg);
 }
-.rbt-badge-3-custom {
-    position: absolute;
-    bottom: 3px;
-    right: 26px;
-    height: 51px;
-    width: 54px;
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background: transparent !important;
-}
-.rbt-badge-3-custom span {
-    font-size: var(--font-size-b4);
-    line-height: 1.2;
-    color: #ffffff;
-    display: block;
-    font-weight: var(--f-bold);
-    font-family: var(--font-secondary);
-}
-.rbt-badge-3-custom::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: url(../images/icons/offer-badge-bg-color.svg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-}
-.rbt-badge-3-custom::after {
-    transform: rotate(90deg);
-}
+
 .rbt-badge-4 {
   display: inline-block;
   height: auto;
@@ -18409,7 +18575,7 @@ span.transparent-button:hover i {
 }
 
 /*---------------------
-    Team Tab
+    Team Tab   
 --------------------*/
 .rbt-team-tab-thumb {
   list-style: none;
@@ -18647,7 +18813,7 @@ span.transparent-button:hover i {
 }
 
 /*---------------------------
-    Team Modal Style
+    Team Modal Style  
 -----------------------------*/
 .rbt-team-modal-thumb {
   list-style: none;
@@ -18721,7 +18887,7 @@ span.transparent-button:hover i {
 }
 
 /*-----------------------
-    Social Icons
+    Social Icons 
 -------------------------*/
 .social-default {
   display: flex;
@@ -18828,7 +18994,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------------
-    Edu Pagination Style
+    Edu Pagination Style  
 ------------------------------*/
 .rbt-pagination {
   margin: -8px;
@@ -18880,7 +19046,7 @@ span.transparent-button:hover i {
 }
 
 /*-------------------------
-    Back To Top
+    Back To Top  
 ---------------------------*/
 @-webkit-keyframes border-transform {
   0%, 100% {
@@ -18987,7 +19153,7 @@ span.transparent-button:hover i {
 }
 
 /*----------------------
-    Newsletter Styles
+    Newsletter Styles  
 ------------------------*/
 .newsletter-form input {
   flex-grow: 1;
@@ -19048,7 +19214,7 @@ span.transparent-button:hover i {
 }
 
 /*-------------------------------
-    Newsletter Styles One
+    Newsletter Styles One 
 ----------------------------------*/
 .newsletter-style-1 {
   padding: 100px 50px;
@@ -19095,7 +19261,7 @@ span.transparent-button:hover i {
 }
 
 /*---------------------
-    Brand Styles
+    Brand Styles 
 ----------------------*/
 .brand-style-1 {
   padding: 0;
@@ -19310,7 +19476,9 @@ span.transparent-button:hover i {
   }
 }
 .filter-button-default button,
-.filter-tab-button button {
+.filter-button-default a,
+.filter-tab-button button,
+.filter-tab-button a {
   border: 0 none;
   padding: 0px 35px;
   text-transform: capitalize;
@@ -19328,19 +19496,25 @@ span.transparent-button:hover i {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .filter-button-default button,
-.filter-tab-button button {
+.filter-button-default a,
+.filter-tab-button button,
+.filter-tab-button a {
     padding: 0px 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .filter-button-default button,
-.filter-tab-button button {
+.filter-button-default a,
+.filter-tab-button button,
+.filter-tab-button a {
     padding: 0px 24px;
   }
 }
 @media only screen and (max-width: 767px) {
   .filter-button-default button,
-.filter-tab-button button {
+.filter-button-default a,
+.filter-tab-button button,
+.filter-tab-button a {
     padding: 0 20px;
     height: 48px;
     line-height: 48px;
@@ -19349,7 +19523,9 @@ span.transparent-button:hover i {
   }
 }
 .filter-button-default button .course-number,
-.filter-tab-button button .course-number {
+.filter-button-default a .course-number,
+.filter-tab-button button .course-number,
+.filter-tab-button a .course-number {
   position: absolute;
   display: inline-block;
   right: 20px;
@@ -19360,25 +19536,74 @@ span.transparent-button:hover i {
 }
 @media only screen and (max-width: 767px) {
   .filter-button-default button .course-number,
-.filter-tab-button button .course-number {
+.filter-button-default a .course-number,
+.filter-tab-button button .course-number,
+.filter-tab-button a .course-number {
     right: 10px;
     top: 4px;
   }
 }
 .filter-button-default button.is-checked, .filter-button-default button.active, .filter-button-default button:hover,
+.filter-button-default a.is-checked,
+.filter-button-default a.active,
+.filter-button-default a:hover,
 .filter-tab-button button.is-checked,
 .filter-tab-button button.active,
-.filter-tab-button button:hover {
+.filter-tab-button button:hover,
+.filter-tab-button a.is-checked,
+.filter-tab-button a.active,
+.filter-tab-button a:hover {
   background-color: var(--color-primary);
   color: var(--color-white) !important;
 }
 
-.filter-tab-button li {
+.filter-tab-button li,
+.rbt-default-tab-button li {
   margin: 0;
 }
 
+.rbt-default-tab-button li {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  margin: 3px;
+  flex-grow: 1;
+  text-align: center;
+}
+.rbt-default-tab-button li a {
+  margin: 0;
+  position: relative;
+  display: block;
+  color: var(--color-heading);
+  z-index: 2;
+  padding: 10px 25px;
+  border-radius: 500px;
+  outline: none;
+}
+.rbt-default-tab-button li a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  background: var(--black-opacity);
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  opacity: 1;
+  transition: 0.4s;
+  z-index: -1;
+  border-radius: 500px;
+}
+.rbt-default-tab-button li a.current, .rbt-default-tab-button li a.active, .rbt-default-tab-button li a:hover {
+  color: var(--color-white);
+}
+.rbt-default-tab-button li a.current::after, .rbt-default-tab-button li a.active::after, .rbt-default-tab-button li a:hover::after {
+  width: 100%;
+  opacity: 1;
+  background: var(--color-primary);
+}
+
 /*----------------------------------
-    Portfolio Grid Layout
+    Portfolio Grid Layout  
 ----------------------------------*/
 .grid-metro2 {
   margin: 0 -15px;
@@ -19484,7 +19709,7 @@ span.transparent-button:hover i {
 }
 
 /*---------------------
-    Extra Css
+    Extra Css  
 -----------------------*/
 .bg-gradient-8 .filter-button-default button,
 .bg-gradient-8 .filter-tab-button button {
@@ -19651,8 +19876,73 @@ span.transparent-button:hover i {
   transition: 0.4s;
 }
 
+.upload-area label {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.upload-area label i {
+  font-size: 40px;
+  stroke-width: 1px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.upload-area label p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-white);
+}
+.upload-area label span {
+  font-size: 20px;
+  color: var(--color-white);
+}
+.upload-area .upload-formate h6.title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.upload-area .upload-formate p.formate {
+  font-size: 16px;
+}
+.upload-area .brows-file-wrapper {
+  position: relative;
+  border: 2px dashed #575767;
+  border-radius: 5px;
+}
+.upload-area .brows-file-wrapper input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.upload-area .brows-file-wrapper label {
+  position: relative;
+  z-index: 10;
+  transition: var(--transition);
+}
+.upload-area .brows-file-wrapper img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  cursor: pointer;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.upload-area .brows-file-wrapper:hover label {
+  transform: scale(0.8);
+}
+
 /* ---------------------------
-Testimonial Styles
+Testimonial Styles 
 ------------------------------*/
 .rbt-testimonial-content .inner {
   padding-bottom: 20px;
@@ -19774,7 +20064,7 @@ Testimonial Styles
 }
 
 /* ------------------------------
-Testimonial Thumbnail
+Testimonial Thumbnail 
 -------------------------------- */
 ul.testimonial-thumb-wrapper {
   list-style: none;
@@ -19870,7 +20160,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /* ------------------------------
-    Testimonial Style Two
+    Testimonial Style Two 
 -------------------------------- */
 .scroll-animation-wrapper {
   position: relative;
@@ -20405,7 +20695,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------------
-    Advance Tab Style Two
+    Advance Tab Style Two  
 --------------------------*/
 .tab-button-style-2 {
   border-bottom: 2px solid var(--color-border);
@@ -20506,7 +20796,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*---------------------
-    Tab Styles
+    Tab Styles  
 -----------------------*/
 .rbt-default-tab {
   position: relative;
@@ -20579,7 +20869,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*----------------------
-    Category Styles
+    Category Styles  
 -------------------------*/
 .rbt-category-gallery {
   position: relative;
@@ -20700,7 +20990,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*--------------------------
-    split Area Styles
+    split Area Styles  
 ----------------------------*/
 .rbt-splite-style .shape img {
   max-height: 96px;
@@ -20781,7 +21071,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*------------------------
-    Countdown Styles
+    Countdown Styles  
 -------------------------*/
 .countdown-style-1 .countdown {
   display: flex;
@@ -20830,7 +21120,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-----------------------
-    Progress Bar
+    Progress Bar 
 -----------------------*/
 .single-progress + .single-progress {
   margin-top: 40px;
@@ -20923,7 +21213,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-----------------------------------
-    Radial Progress
+    Radial Progress 
 -----------------------------------*/
 .radial-progress-single {
   text-align: center;
@@ -20978,7 +21268,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*--------------------------
-    Category Box Layout
+    Category Box Layout  
 ----------------------------*/
 .rbt-cat-box-1 {
   display: block;
@@ -21318,7 +21608,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
   transform: translate3d(0, -10px, 0);
 }
 /*---------------------------
-    Filter Exanded
+    Filter Exanded  
 -----------------------------*/
 .default-exp-wrapper {
   border-top: 1px solid var(--color-border);
@@ -21403,7 +21693,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------------
-    Price Filter
+    Price Filter  
 --------------------------*/
 .price--output input {
   border: 0 none;
@@ -21514,7 +21804,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------
-    Bootstrap Select
+    Bootstrap Select  
 ----------------------*/
 .rbt-modern-select .bootstrap-select button.btn-light {
   border: 0 none;
@@ -21667,21 +21957,29 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-----------------------
-    Team Styles
+    Team Styles  
 ------------------------*/
-.modal {
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+.rbt-team-modal,
+.rbt-default-modal {
   z-index: 99999999;
   background: var(--color-white);
   padding: 60px 15px !important;
 }
-.modal .modal-news {
+.rbt-team-modal .modal-news,
+.rbt-default-modal .modal-news {
   max-width: 1000px !important;
 }
-.modal .modal-dialog {
+.rbt-team-modal .modal-dialog,
+.rbt-default-modal .modal-dialog {
   width: 100%;
   max-width: 1230px;
 }
-.modal .modal-dialog .modal-content {
+.rbt-team-modal .modal-dialog .modal-content,
+.rbt-default-modal .modal-dialog .modal-content {
   padding: 45px;
   border-radius: 10px;
   overflow: hidden;
@@ -21691,71 +21989,85 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
   box-shadow: var(--shadow-1);
 }
 @media only screen and (max-width: 767px) {
-  .modal .modal-dialog .modal-content {
+  .rbt-team-modal .modal-dialog .modal-content,
+.rbt-default-modal .modal-dialog .modal-content {
     padding: 30px;
   }
 }
 @media only screen and (max-width: 479px) {
-  .modal .modal-dialog .modal-content {
+  .rbt-team-modal .modal-dialog .modal-content,
+.rbt-default-modal .modal-dialog .modal-content {
     padding: 40px 15px 25px 15px;
   }
 }
-.modal .modal-dialog .modal-content .modal-header {
+.rbt-team-modal .modal-dialog .modal-content .modal-header,
+.rbt-default-modal .modal-dialog .modal-content .modal-header {
   padding: 0;
   border: none;
 }
-.modal .modal-dialog .modal-content .modal-header .rbt-round-btn {
+.rbt-team-modal .modal-dialog .modal-content .modal-header .rbt-round-btn,
+.rbt-default-modal .modal-dialog .modal-content .modal-header .rbt-round-btn {
   right: 20px;
   position: absolute;
   top: 20px;
   opacity: 1;
   transition: var(--transition);
 }
-.modal .modal-dialog .modal-content .modal-body .inner {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .inner,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .inner {
   position: relative;
 }
-.modal .modal-dialog .modal-content .modal-body .inner .thumb img {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .inner .thumb img,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .inner .thumb img {
   border-radius: 6px;
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info {
   margin-bottom: 20px;
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .title {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .title,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .title {
   margin-bottom: 7px;
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .designation {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .designation,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details .author-info .designation {
   display: block;
   font-size: 19px;
   font-weight: 500;
   margin-bottom: 12px;
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details p,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
   padding-right: 16%;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
+  .rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details p,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
     padding-right: 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  .modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
+  .rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details p,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details p {
     padding-right: 0;
   }
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form {
   display: block;
   font-size: 14px;
   margin-bottom: 12px;
   letter-spacing: 0.6px;
   font-style: italic;
 }
-.modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form img {
+.rbt-team-modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form img,
+.rbt-default-modal .modal-dialog .modal-content .modal-body .rbt-team-details .team-form img {
   padding-right: 10px;
   max-height: 18px;
 }
 
 /*----------------------
-    Rbt List Style
+    Rbt List Style  
 ------------------------*/
 .rbt-list-style-1 li {
   display: flex;
@@ -21881,7 +22193,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------------------
- Modern Course Features
+ Modern Course Features  
 -------------------------------*/
 .modern-course-features-box {
   background: var(--primary-opacity);
@@ -22025,7 +22337,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*---------------------------
-    Course Feature List
+    Course Feature List  
 -----------------------------*/
 .course-feature-list {
   display: flex;
@@ -22251,7 +22563,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------------
-    Search Style Default
+    Search Style Default  
 --------------------------*/
 .rbt-search-style {
   position: relative;
@@ -22285,7 +22597,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*-------------------------
-    Search Style One
+    Search Style One  
 --------------------------*/
 .rbt-search-style-1 {
   position: relative;
@@ -22314,7 +22626,7 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
 }
 
 /*----------------------
-    RBT Video Styles
+    RBT Video Styles  
 -----------------------*/
 .mfp-bg {
   z-index: 9999;
@@ -22403,7 +22715,7 @@ img.mfp-img {
 }
 
 /*----------------------
-    Error Styles
+    Error Styles  
 ------------------------*/
 .rbt-error-area .title {
   font-size: 150px;
@@ -22431,7 +22743,7 @@ img.mfp-img {
 	Blog Styles
 ***************************************/
 /*-----------------------
-    Blog Style
+    Blog Style  
 -------------------------*/
 .rbt-blog-grid.rbt-card .rbt-card-body .rbt-card-title {
   margin-bottom: 13px;
@@ -22535,7 +22847,7 @@ figcaption {
 }
 
 /*-----------------------
-    Blog Meta
+    Blog Meta  
 -----------------------*/
 .blog-meta {
   display: flex;
@@ -22584,7 +22896,7 @@ figcaption {
 }
 
 /*---------------------------
-    Blog Sidebar Styles
+    Blog Sidebar Styles  
 ----------------------------*/
 .rbt-categori-leftbar {
   display: flex;
@@ -22765,7 +23077,7 @@ figcaption {
 }
 
 /*----------------------------
-    Blog Details Styles
+    Blog Details Styles  
 ----------------------------*/
 .blog-content-wrapper audio {
   display: block;
@@ -22932,7 +23244,7 @@ figcaption {
 }
 
 /*------------------------
-    Comment Post Total
+    Comment Post Total  
 ---------------------------*/
 .rbt-total-comment-post {
   display: flex;
@@ -22953,7 +23265,7 @@ figcaption {
 }
 
 /*------------------------
-    Comment Form
+    Comment Form  
 -------------------------*/
 .comment-respond {
   margin: 40px 0;
@@ -22967,7 +23279,7 @@ figcaption {
 }
 
 /* --------------------------
-    Comments Styles
+    Comments Styles  
 -----------------------------*/
 .comment-list ul.children {
   padding-left: 75px;
@@ -23067,7 +23379,7 @@ figcaption {
 }
 
 /*---------------------------
-    Unit Test Blog Details
+    Unit Test Blog Details  
 -----------------------------*/
 .wp-block-quote,
 blockquote,
@@ -23205,7 +23517,7 @@ blockquote.has-text-align-right cite,
 	Shop Styles
 ***************************************/
 /*------------------------
-    Shop Styles
+    Shop Styles  
 --------------------------*/
 .filter-select select {
   border: 0 none;
@@ -23215,7 +23527,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*---------------------------
-    Product Details
+    Product Details 
 ----------------------------*/
 .pro-qty {
   max-width: 120px;
@@ -23379,7 +23691,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*----------------------
-    My Account
+    My Account  
 ------------------------*/
 .rbt-my-account-tab-button {
   flex-direction: column;
@@ -23861,6 +24173,47 @@ blockquote.has-text-align-right cite,
   }
 }
 
+.pro-quantity .pro-qty {
+  max-width: 120px;
+  height: 50px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0;
+  display: flex;
+  margin: auto;
+  min-width: 50px;
+  align-items: center;
+}
+.pro-quantity .pro-qty .qtybtn {
+  width: 45px;
+  display: block;
+  float: left;
+  line-height: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-body);
+  height: 50px;
+}
+.pro-quantity .pro-qty input {
+  width: 28px;
+  float: left;
+  border: none;
+  height: 33px;
+  line-height: 33px;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 575px) {
+  .pro-quantity .pro-qty {
+    margin: 0;
+  }
+}
+
 /*---------------------------------------
     13. Checkout
 -----------------------------------------*/
@@ -23921,7 +24274,9 @@ blockquote.has-text-align-right cite,
   width: 100%;
 }
 .checkout-form input,
-.rbt-default-form input {
+.checkout-form textarea,
+.rbt-default-form input,
+.rbt-default-form textarea {
   width: 100%;
   background-color: transparent;
   border: 2px solid var(--color-border);
@@ -23933,7 +24288,9 @@ blockquote.has-text-align-right cite,
   margin-bottom: 15px;
 }
 .checkout-form input[type=checkbox],
-.rbt-default-form input[type=checkbox] {
+.checkout-form textarea[type=checkbox],
+.rbt-default-form input[type=checkbox],
+.rbt-default-form textarea[type=checkbox] {
   width: auto;
 }
 .checkout-form .check-box,
@@ -24058,7 +24415,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*---------------------
-    Minicart Style
+    Minicart Style  
 ---------------------*/
 .rbt-minicart-wrapper {
   padding: 0;
@@ -24180,7 +24537,7 @@ blockquote.has-text-align-right cite,
 }
 
 .height-750 {
-  height: 450px;
+  height: 750px;
   display: flex;
   align-items: center;
 }
@@ -24247,7 +24604,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-------------------------------------------------------
-    Banner Style AdminHome One And AdminHome Five (variation-2)
+    Banner Style Home One And Home Five (variation-2)
 -------------------------------------------------------------*/
 .rbt-banner-1 {
   background-color: var(--color-light);
@@ -24589,7 +24946,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*------------------------------
-    Banner Style AdminHome Two
+    Banner Style Home Two  
 -------------------------------*/
 .rbt-banner-2 {
   background-color: var(--color-light);
@@ -24646,7 +25003,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    AdminHome 03 Banner
+    Home 03 Banner 
 ------------------------*/
 .rbt-banner-3 {
   overflow: hidden;
@@ -24673,7 +25030,7 @@ blockquote.has-text-align-right cite,
   margin-bottom: 10px;
 }
 .rbt-banner-3 .banner-content .inner .title {
-  font-size: 60px;
+  font-size: 75px;
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -24787,7 +25144,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    AdminHome 04 Banner
+    Home 04 Banner  
 ------------------------*/
 .rbt-banner-4 {
   position: relative;
@@ -24889,7 +25246,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------
-    Banner AdminHome 06 && 12
+    Banner Home 06 && 12   
 --------------------------------*/
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-banner-5 {
@@ -24978,6 +25335,7 @@ blockquote.has-text-align-right cite,
   line-height: 1.7;
   margin-bottom: 40px;
   color: var(--color-white);
+  opacity: 0.7;
   letter-spacing: -0.5px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -25039,7 +25397,7 @@ blockquote.has-text-align-right cite,
 }
 .rbt-banner-5 .inner.text-start .title {
   padding: 0;
-  max-width: 50%;
+  max-width: 36%;
   font-size: 53px;
   line-height: 1.3;
 }
@@ -25067,7 +25425,7 @@ blockquote.has-text-align-right cite,
 }
 .rbt-banner-5 .inner.text-start .description {
   padding: 0;
-  max-width: 50%;
+  max-width: 33%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-banner-5 .inner.text-start .description {
@@ -25089,7 +25447,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------------
-    Banner AdminHome 07 && 09 && 13
+    Banner Home 07 && 09 && 13 
 ------------------------------------------*/
 .rbt-banner-6 .inner .rbt-badge {
   background: rgba(0, 0, 0, 0.45);
@@ -25268,7 +25626,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Banner AdminHome 08
+    Banner Home 08
 ------------------------*/
 .rbt-banner-7 {
   height: 850px;
@@ -25353,7 +25711,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*--------------------------------------
-    Banner AdminHome 10 && 14 && 15 &&  about
+    Banner Home 10 && 14 && 15 &&  about 
 ----------------------------------------*/
 .rbt-banner-8 .inner .meta-text {
   font-weight: 600;
@@ -25577,6 +25935,7 @@ blockquote.has-text-align-right cite,
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.3;
+  z-index: -1;
 }
 @media only screen and (max-width: 767px) {
   .rbt-banner-8.with-shape .shape-image {
@@ -25624,7 +25983,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Banner Style 9
+    Banner Style 9  
 ------------------------*/
 .rbt-banner-9 {
   justify-content: center;
@@ -25683,7 +26042,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-----------------------
-    Banner Style 10
+    Banner Style 10 
 ------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rbt-banner-10 {
@@ -25697,7 +26056,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*----------------------
- tool tip
+ tool tip 
 ------------------------*/
 .profile-share {
   display: flex;
@@ -25806,7 +26165,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*------------------------
-    Swiper Thumb
+    Swiper Thumb  
 -------------------------*/
 .rbt-swiper-thumb {
   position: absolute;
@@ -25867,17 +26226,17 @@ blockquote.has-text-align-right cite,
 }
 
 /*-------------------------
-    Course Details
+    Course Details  
 --------------------------*/
 /*-------------------------
-    Single Course Meta
+    Single Course Meta  
 --------------------------*/
 .rbt-single-course-meta .rbt-course-review {
   margin-left: 15px;
 }
 
 /*---------------------------
-    Video Course Content
+    Video Course Content  
 ----------------------------*/
 .rbt-course-main-content li a {
   display: flex;
@@ -25889,6 +26248,9 @@ blockquote.has-text-align-right cite,
   .rbt-course-main-content li a {
     display: block;
   }
+}
+.rbt-course-main-content li a.active {
+  color: var(--color-primary);
 }
 .rbt-course-main-content li:first-child {
   margin-top: 0;
@@ -25976,7 +26338,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*----------------------------
-    Rbt rating Styles
+    Rbt rating Styles  
 ------------------------------*/
 .rating-box {
   border-radius: 5px;
@@ -26058,7 +26420,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*---------------------------------
-    Featured Review List Wrapper
+    Featured Review List Wrapper  
 -----------------------------------*/
 .rbt-course-review.about-author {
   padding: 25px 0;
@@ -26072,7 +26434,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*---------------------------
-    Course Top
+    Course Top  
 ----------------------------*/
 .rbt-course-top-wrapper .select-label {
   opacity: 0.8;
@@ -26147,7 +26509,7 @@ blockquote.has-text-align-right cite,
 }
 
 /*-------------------------
-    Course Grid Column
+    Course Grid Column  
 ---------------------------*/
 .rbt-course-grid-column {
   display: flex;
@@ -26231,8 +26593,8 @@ blockquote.has-text-align-right cite,
   transition: none;
 }
 
-/*-------------------------
-Course Sidebar
+/*------------------------- 
+Course Sidebar 
 -------------------------*/
 .course-sidebar-top {
   margin-top: -500px;
@@ -26373,7 +26735,7 @@ Course Sidebar
 }
 
 /*------------------------
-    Contact Styles
+    Contact Styles 
 --------------------------*/
 .rbt-address {
   padding: 40px;
@@ -26427,10 +26789,10 @@ Course Sidebar
 }
 
 /*-----------------------
-    Course Sidebar
+    Course Sidebar  
 ------------------------*/
 /*-----------------------------
-    Rbt Sidebar Common Style
+    Rbt Sidebar Common Style 
 --------------------------------*/
 .rbt-check-group {
   position: relative;
@@ -26469,7 +26831,7 @@ Course Sidebar
 }
 
 /*---------------------------
-    Rbt Show More Button
+    Rbt Show More Button  
 ------------------------------*/
 .rbt-show-more-btn {
   font-size: 14px;
@@ -26558,7 +26920,7 @@ Course Sidebar
 }
 
 /*------------------------
-    Rbt Single Widget
+    Rbt Single Widget  
 -------------------------*/
 .rbt-single-widget {
   background: var(--color-white);
@@ -26715,7 +27077,7 @@ Course Sidebar
 }
 
 /*-----------------------------------
-    Instructor Dashboard Style
+    Instructor Dashboard Style  
 ----------------------------------*/
 .tutor-bg-photo {
   border-radius: 10px;
@@ -26791,7 +27153,7 @@ Course Sidebar
 }
 
 /*----------------------------
-    Instructor Dashboard
+    Instructor Dashboard  
 ------------------------------*/
 @media only screen and (max-width: 767px) {
   .rbt-dashboard-table .rbt-table {
@@ -26805,14 +27167,248 @@ Course Sidebar
   }
 }
 
+/*--------------------------
+    Lesson Styles  
+-----------------------------*/
+.rbt-lesson-content-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-lesson-content-wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-lesson-content-wrapper {
+    flex-direction: column;
+  }
+}
+.rbt-lesson-content-wrapper .rbt-lesson-leftsidebar {
+  flex: 0 0 400px;
+  width: 400px;
+  background-color: var(--color-extra2);
+  border-right: 1px solid var(--color-border);
+  max-height: 100%;
+  overflow-y: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-lesson-content-wrapper .rbt-lesson-leftsidebar {
+    width: 100%;
+    border-right: 0 none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-lesson-content-wrapper .rbt-lesson-leftsidebar {
+    width: 100%;
+    border-right: 0 none;
+  }
+}
+.rbt-lesson-content-wrapper .rbt-lesson-rightsidebar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------
+    Lesson Page Style  
+--------------------------*/
+.rbt-lesson-leftsidebar .rbt-title-style-3,
+.rbt-lesson-leftsidebar .lesson-search-wrapper {
+  padding: 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-lesson-leftsidebar .rbt-course-main-content li a {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-lesson-leftsidebar .rbt-course-main-content li a {
+    display: flex;
+  }
+}
+.rbt-lesson-leftsidebar .rbt-title-style-3 {
+  margin-bottom: 10px;
+}
+
+.rbt-lesson-rightsidebar {
+  display: flex;
+}
+.rbt-lesson-rightsidebar .inner {
+  padding: 100px 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-lesson-rightsidebar .inner {
+    padding: 30px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-lesson-rightsidebar .inner {
+    padding: 30px 0;
+  }
+}
+.rbt-lesson-rightsidebar .content {
+  padding: 40px 50px;
+  width: 85%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rbt-lesson-rightsidebar .content {
+    padding: 40px 30px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rbt-lesson-rightsidebar .content {
+    padding: 40px 30px;
+    width: 100%;
+  }
+}
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper label,
+.rbt-lesson-rightsidebar .rbt-form-check label {
+  border: 2px solid var(--color-border);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=checkbox]:checked ~ label,
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=radio]:checked ~ label,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=checkbox]:checked ~ label,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=radio]:checked ~ label {
+  border-color: var(--color-primary);
+}
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=checkbox] ~ label::before,
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=radio] ~ label::before,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=checkbox] ~ label::before,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=radio] ~ label::before {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=checkbox] ~ label::after,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=checkbox] ~ label::after {
+  top: 44%;
+  left: 12px;
+}
+.rbt-lesson-rightsidebar .rbt-checkbox-wrapper input[type=radio] ~ label::after,
+.rbt-lesson-rightsidebar .rbt-form-check input[type=radio] ~ label::after {
+  top: 41%;
+  left: 13px;
+}
+
+.rbt-lesson-rightsidebar.lesson-video .inner {
+  padding: 0;
+}
+
+.quize-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.quize-top-meta span {
+  color: var(--color-body);
+}
+.quize-top-meta span + span {
+  padding-left: 30px;
+}
+
+.rbt-custom-file-upload {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 6px;
+  border: var(--border-width) dashed var(--color-border);
+  cursor: pointer;
+  box-shadow: var(--shadow-10);
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.rbt-custom-file-upload:hover {
+  background: var(--black-opacity) !important;
+  border-color: var(--color-primary);
+}
+.rbt-custom-file-upload input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  padding: 5px;
+  border-radius: 6px;
+  border: var(--border-width) solid var(--color-border);
+  height: auto !important;
+}
+.rbt-custom-file-upload input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: var(--primary-opacity) !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--color-primary) !important;
+  cursor: pointer;
+}
+.rbt-custom-file-upload input[type=file]::file-selector-button:hover {
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+/*----------------------
+    Lesson Top Bar  
+-------------------------*/
+.lesson-top-bar {
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  padding-right: 10px;
+}
+.lesson-top-bar h5 {
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 500;
+}
+.lesson-top-bar .rbt-round-btn i {
+  color: #fff;
+}
+.lesson-top-bar .rbt-round-btn:hover i {
+  color: var(--color-primary);
+}
+.lesson-top-bar .lesson-top-left {
+  display: flex;
+  align-items: center;
+}
+.lesson-top-bar .lesson-top-left .rbt-lesson-toggle {
+  margin-right: 20px;
+}
+.lesson-top-bar .lesson-top-left .rbt-lesson-toggle .sidebar-hide i::before {
+  transition: 0.3s;
+}
+.lesson-top-bar .lesson-top-left .rbt-lesson-toggle .sidebar-hide i::before {
+  content: "\e912";
+}
+
+.rbt-lesson-leftsidebar.sibebar-none {
+  display: none;
+}
+
 /**************************************
 	Footer Styles
 ***************************************/
 /*===========================
-    Start Footer Area
+    Start Footer Area 
 =============================*/
 /*-----------------------
-    Footer Style One
+    Footer Style One  
 -------------------------*/
 .footer-style-1 .footer-top {
   padding-top: 80px;
@@ -26914,7 +27510,7 @@ Course Sidebar
 }
 
 /*----------------------
-    Copyright Styles
+    Copyright Styles  
 -----------------------*/
 .copyright-style-1 p {
   color: var(--color-body);
@@ -26955,10 +27551,10 @@ Course Sidebar
 }
 
 /*-------------------------
-    Back To Top
+    Back To Top  
 ---------------------------*/
 /*----------------------------
-    BG Color Darker
+    BG Color Darker  
 ------------------------------*/
 .bg-color-darker {
   --dark-border: #525260;
@@ -27009,7 +27605,7 @@ Course Sidebar
 }
 
 /*----------------------------
-    Slider Default Style
+    Slider Default Style 
 ------------------------------*/
 .slider-fixed--height {
   width: 100%;
@@ -27279,7 +27875,7 @@ Course Sidebar
 }
 
 /*-----------------------
-    Service Area
+    Service Area  
 ------------------------*/
 @media only screen and (max-width: 767px) {
   .splash-service-main .service-wrapper {
@@ -27391,7 +27987,7 @@ Course Sidebar
 }
 
 /*-------------------------------
-    Modern Course Features
+    Modern Course Features  
 -------------------------------*/
 .top-features-box {
   background: linear-gradient(208.29deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%);
@@ -27562,7 +28158,7 @@ Course Sidebar
 }
 
 /*--------------------------
-    Single Demo Area
+    Single Demo Area  
 ----------------------------*/
 .has-section-before-title {
   position: relative;
@@ -27578,6 +28174,7 @@ Course Sidebar
   font-size: 650px;
   font-weight: 700;
   line-height: 0.8em;
+  margin-top: -30px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .has-section-before-title .section-before-title {
@@ -27592,11 +28189,6 @@ Course Sidebar
 @media only screen and (max-width: 767px) {
   .has-section-before-title .section-before-title {
     font-size: 300px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .has-section-before-title .section-before-title {
-    font-size: 150px;
   }
 }
 
@@ -27770,7 +28362,7 @@ Course Sidebar
 }
 
 /*--------------------------
-    Inner Page Layout Area
+    Inner Page Layout Area  
 ------------------------------*/
 .rbt-inner-page-layout-area .rbt-splite-style .split-inner {
   padding-left: 200px;
@@ -27917,7 +28509,7 @@ Course Sidebar
 }
 
 /*--------------------------
-    Testimonial Styles
+    Testimonial Styles  
 ----------------------------*/
 .rbt-splash-testimonial-area .rbt-testimonial-box {
   height: 100%;
@@ -27946,7 +28538,7 @@ Course Sidebar
 }
 
 /*------------------------
-    Preview Service
+    Preview Service  
 --------------------------*/
 .rbt-splash-service {
   text-align: left;
@@ -28111,8 +28703,8 @@ Course Sidebar
   transform: translateY(0px);
 }
 
-/*------------------------
-    Call To Action Footer
+/*------------------------ 
+    Call To Action Footer  
 --------------------------*/
 .overlpping-call-to-action {
   padding-bottom: 340px;
@@ -28232,7 +28824,7 @@ Course Sidebar
 }
 
 /*---------------------------
-    Plugin Presentation
+    Plugin Presentation 
 ----------------------------*/
 .rbt-feature-column:nth-child(odd) {
   padding-top: 50px;
@@ -28299,7 +28891,7 @@ Course Sidebar
 }
 
 /*-----------------------------
-    All Feature Presentation
+    All Feature Presentation 
 -------------------------------*/
 .rbt-splash-feature-box {
   background-color: var(--color-white);
