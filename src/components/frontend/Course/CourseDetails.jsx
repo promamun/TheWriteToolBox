@@ -227,9 +227,11 @@ export default function CourseDetails() {
                                     {section.videos.map((content, c_key) => {
                                       return (
                                         <li key={c_key}>
-                                          <Link to="#">
+                                          <Link
+                                            to={`/course-preview?id=${id}&sec_pos=${key}&vdo_pos=${c_key}`}
+                                          >
                                             <div className="course-content-left">
-                                              <i className="feather-play-circle"></i>{" "}
+                                              <i className="feather-play-circle" />
                                               <span className="text">
                                                 {content.asset_title ||
                                                   "Demo Title"}
@@ -267,7 +269,7 @@ export default function CourseDetails() {
                       <div className="section-title">
                         <h4 className="rbt-title-style-3">Details</h4>
                       </div>
-                      description
+                      <div dangerouslySetInnerHTML={{ __html: course.desc }} />
                     </div>
                   </div>
                 </div>

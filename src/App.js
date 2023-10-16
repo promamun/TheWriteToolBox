@@ -44,7 +44,6 @@ function App() {
         <Routes>
           {/* Route without Layout */}
           <Route exact path="/pen" Component={Pen} />
-          <Route exact path="/course-preview" Component={CoursePreview}/>
           <Route
             path="/*"
             element={
@@ -92,6 +91,11 @@ function App() {
                     <Route path="reviews" element={<UserReview />} />
                     <Route path="order-history" element={<OrderHistory />} />
                     <Route path="settings" element={<Setting />} />
+                    <Route
+                      exact
+                      path="/course-preview"
+                      Component={CoursePreview}
+                    />
                   </Route>
 
                   {/* WHEN NO ROUTE FOUND */}
