@@ -80,7 +80,7 @@ export default function CourseSliderCard({ course, clasName }) {
       : [];
 
   const isEnrolled = (id, data = []) => {
-    return _.findIndex(data, (o) => o.course_id === id) !== -1;
+    return _.findIndex(data, (o) => o.course_id._id === id) !== -1;
   };
 
   return (

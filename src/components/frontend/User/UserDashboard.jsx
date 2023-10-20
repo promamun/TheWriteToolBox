@@ -1,11 +1,36 @@
-import React from "react";
-import UserManuSidebar from "./UserManuSidebar";
-import UserDashboardTop from "./UserDashboardTop";
+import React, { useEffect, useState } from "react";
 import UserLayout from "./UserLayout";
+import axios from "../../../helper/axios";
+import config from "../../../helper/config";
+import LoadingOverlay from "react-loading-overlay";
+import message from "../../../helper/message";
 
 export default function UserDashboard() {
+  const [loading, setLoading] = useState(false);
+  const [dashboard_data, setDashboardData] = useState({});
+
+  useEffect(() => {
+    setLoading(true);
+
+    axios
+      .get("/dashboard-data", config)
+      .then((res) => {
+        setLoading(false);
+        if (res.data.success) {
+          setDashboardData(res.data.dashboard);
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  }, []);
+
   return (
-    <>
+    <LoadingOverlay active={loading} spinner text="Loading ...">
       <UserLayout>
         <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
           <div className="content">
@@ -23,7 +48,7 @@ export default function UserDashboard() {
                     <div className="content">
                       <h3 className="counter without-icon color-primary">
                         <span className="odometer" data-count="30">
-                          00
+                          {dashboard_data.enrolled_courses}
                         </span>
                       </h3>
                       <span className="rbt-title-style-2 d-block">
@@ -82,6 +107,6 @@ export default function UserDashboard() {
           </div>
         </div>
       </UserLayout>
-    </>
+    </LoadingOverlay>
   );
 }
