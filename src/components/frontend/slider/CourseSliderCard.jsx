@@ -7,11 +7,13 @@ import config from "../../../helper/config";
 import message from "../../../helper/message";
 import { getCartDetails } from "../../../app/action/CartAction";
 import { useDispatch, useSelector } from "react-redux";
+import { getEnrolledCourses } from "../../../app/action/EnrolledAction";
 
 export default function CourseSliderCard({ course, clasName }) {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const cartDetails = useSelector((state) => state.cart_details);
+  const enrolled = useSelector((state) => state.enrolled);
 
   const addToCart = (courseId) => {
     setIsLoading(true);
@@ -38,6 +40,31 @@ export default function CourseSliderCard({ course, clasName }) {
       });
   };
 
+  const enrolledCourse = (courseId) => {
+    setIsLoading(true);
+
+    const formData = {
+      course_id: courseId,
+    };
+
+    axios
+      .post("/enrolled", formData, config)
+      .then((res) => {
+        setIsLoading(false);
+        if (res.data.success) {
+          message.success(res.data.message);
+          dispatch(getEnrolledCourses());
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
   const isPresent = (id, data = []) => {
     return _.findIndex(data, (o) => o.course_id._id === id) !== -1;
   };
@@ -46,6 +73,16 @@ export default function CourseSliderCard({ course, clasName }) {
     !cartDetails.loading && cartDetails.cart_details
       ? cartDetails.cart_details.carts
       : [];
+
+  const enrolled_courses =
+    !enrolled.loading && enrolled.enrolled
+      ? enrolled.enrolled.enrolled_courses
+      : [];
+
+  const isEnrolled = (id, data = []) => {
+    return _.findIndex(data, (o) => o.course_id === id) !== -1;
+  };
+
   return (
     <div className={clasName}>
       <div className="rbt-card variation-01 rbt-hover">
@@ -75,11 +112,11 @@ export default function CourseSliderCard({ course, clasName }) {
           <p className="rbt-card-text">description</p>
           <div className="rbt-review">
             <div className="rating">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
             </div>
             <span className="rating-count">(15 Reviews)</span>
           </div>
@@ -88,7 +125,23 @@ export default function CourseSliderCard({ course, clasName }) {
               <span className="current-price">${course.price}</span>
               <span className="off-price">$120</span>
             </div>
-            {isPresent(course._id, allCarts) ? (
+
+            {isEnrolled(course._id, enrolled_courses) ? (
+              <Link
+                to={`/course-details/${course._id}`}
+                className="rbt-btn-link left-icon"
+              >
+                ENROLLED
+              </Link>
+            ) : course.isFree ? (
+              <Link
+                to="#"
+                className="rbt-btn-link left-icon"
+                onClick={() => enrolledCourse(course._id)}
+              >
+                ENROLLE NOW
+              </Link>
+            ) : isPresent(course._id, allCarts) ? (
               <Link to="/cart" className="rbt-btn-link left-icon">
                 Go To Cart
               </Link>

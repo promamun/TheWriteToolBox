@@ -2,18 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import CourseSliderCard from "../slider/CourseSliderCard";
-import { getAllCourses } from "../../../app/action/CourseAction";
 
 const mapStateToProps = (state) => {
-  let { courses } = state;
-  return { courses };
+  let { courses, enrolled } = state;
+  return { courses, enrolled };
 };
 
-const mapActionToProps = (dispatch) => {
-  return {
-    getAllCourses: () => dispatch(getAllCourses()),
-  };
-};
 class Course extends Component {
   constructor(props) {
     super(props);
@@ -95,4 +89,4 @@ class Course extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapActionToProps)(Course);
+export default connect(mapStateToProps)(Course);

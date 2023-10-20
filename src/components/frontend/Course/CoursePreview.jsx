@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../../helper/axios";
 import message from "../../../helper/message";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import config from "../../../helper/config";
 import ReactPlayer from "react-player";
+import qs from "query-string";
+import "./course.css";
 
 export default function CoursePreview() {
-  const queryParams = new URLSearchParams(window.location.search);
-  const id = queryParams.get("id");
-  const sec_pos = queryParams.get("sec_pos");
-  const vdo_pos = queryParams.get("vdo_pos");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const queryParams = qs.parse(location.search);
+  const id = queryParams["id"];
+  let sec_pos = queryParams["sec_pos"];
+  let vdo_pos = queryParams["vdo_pos"];
 
   const [loading, setLoading] = useState(false);
   const [, setCourse] = useState({});
   const [allSection, setAllSections] = useState([]);
-
   const [isCollapsed, setCollapsed] = useState([]);
 
   const [url, setUrl] = useState(null);
@@ -34,7 +37,7 @@ export default function CoursePreview() {
           let arr = new Array(sections.length).fill(false);
 
           if (sections.length > 0) {
-            arr[0] = true;
+            arr[sec_pos] = true;
           }
           setCollapsed([...arr]);
 
@@ -70,6 +73,78 @@ export default function CoursePreview() {
         console.error(err);
         message.error("Something Went Wrong!!!");
       });
+  };
+
+  const playNext = () => {
+    const allVideosLen = allSection[sec_pos]?.videos?.length;
+    const totalSectionLen = allSection?.length;
+
+    // CHECK NEXT VIDEO AVAILABLE OR NOT
+
+    if (allVideosLen - 1 == vdo_pos) {
+      // NOT AVAILABLE SO CHANGE SECTION
+
+      // CHECK NEXT SECTION AVAILABLE OR NOT
+
+      if (totalSectionLen - 1 == sec_pos) {
+        // NOT AVAILABLE
+        sec_pos = 0;
+      } else {
+        sec_pos = Number(sec_pos) + 1;
+      }
+      vdo_pos = 0;
+    } else {
+      vdo_pos = Number(vdo_pos) + 1;
+    }
+
+    navigate({
+      pathname: "/course-preview",
+      search: `?id=${id}&sec_pos=${sec_pos}&vdo_pos=${vdo_pos}`,
+    });
+
+    let { videos } = allSection[sec_pos];
+
+    getReadingDocumentUrl(videos[vdo_pos]?._id);
+
+    isCollapsed[sec_pos] = true;
+
+    setCollapsed([...isCollapsed]);
+  };
+
+  const playPrevious = () => {
+    const allVideosLen = allSection[sec_pos]?.videos?.length;
+    const totalSectionLen = allSection?.length;
+
+    // CHECK PREVIOUS VIDEO AVAILABLE OR NOT
+
+    if (vdo_pos === "0") {
+      // NOT AVAILABLE SO CHANGE SECTION
+
+      // CHECK PREVIOUS SECTION AVAILABLE OR NOT
+
+      if (sec_pos === "0") {
+        // NOT AVAILABLE
+        sec_pos = totalSectionLen - 1;
+      } else {
+        sec_pos = Number(sec_pos) - 1;
+      }
+      vdo_pos = allVideosLen - 1;
+    } else {
+      vdo_pos = Number(vdo_pos) - 1;
+    }
+
+    navigate({
+      pathname: "/course-preview",
+      search: `?id=${id}&sec_pos=${sec_pos}&vdo_pos=${vdo_pos}`,
+    });
+
+    let { videos } = allSection[sec_pos];
+
+    getReadingDocumentUrl(videos[vdo_pos]?._id);
+
+    isCollapsed[sec_pos] = true;
+
+    setCollapsed([...isCollapsed]);
   };
 
   return (
@@ -138,6 +213,11 @@ export default function CoursePreview() {
                               return (
                                 <li key={c_key}>
                                   <Link
+                                    className={`${
+                                      key == sec_pos && c_key == vdo_pos
+                                        ? "playing"
+                                        : ""
+                                    }   `}
                                     to={`/course-preview?id=${id}&sec_pos=${key}&vdo_pos=${c_key}`}
                                     onClick={() => {
                                       getReadingDocumentUrl(content._id);
@@ -157,7 +237,7 @@ export default function CoursePreview() {
                                         <i className="feather-circle "></i>
                                       </span>
 
-                                      {/* READING COMPLETE */}
+                                      {/* TODO:READING COMPLETE */}
 
                                       {/* <span className="rbt-check">
                                 <i className="feather-check"></i>
@@ -205,8 +285,14 @@ export default function CoursePreview() {
           </div>
           <div className="inner">
             <div className="plyr__video-embed rbtplayer">
-              {/* <iframe src={url} allowFullScreen allow="autoplay" /> */}
-              <ReactPlayer url={url} width="640" height="360" controls />
+              <ReactPlayer
+                url={url}
+                width="640"
+                height="360"
+                controls
+                onEnded={playNext}
+                playing={true}
+              />
             </div>
             <div className="content">
               <div className="section-title">
@@ -221,22 +307,22 @@ export default function CoursePreview() {
 
           <div className="bg-color-extra2 ptb--15 overflow-hidden">
             <div className="rbt-button-group">
-              <a
+              <button
                 className="rbt-btn icon-hover icon-hover-left btn-md bg-primary-opacity"
-                href="#"
+                onClick={playPrevious}
               >
                 <span className="btn-icon">
                   <i className="feather-arrow-left" />
                 </span>
-                <span className="btn-text">Previous</span>
-              </a>
+                Previous
+              </button>
 
-              <a className="rbt-btn icon-hover btn-md" href="#">
-                <span className="btn-text">Next</span>
+              <button className="rbt-btn icon-hover btn-md" onClick={playNext}>
+                Next
                 <span className="btn-icon">
                   <i className="feather-arrow-right" />
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

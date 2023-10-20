@@ -10,6 +10,8 @@ import config from "../../../helper/config";
 import UserProfileManu from "./UserProfileManu";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartDetails } from "../../../app/action/CartAction";
+import { getEnrolledCourses } from "../../../app/action/EnrolledAction";
+import { getAllCourses } from "../../../app/action/CourseAction";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -22,6 +24,8 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getCartDetails());
+    dispatch(getEnrolledCourses());
+    dispatch(getAllCourses());
     const handleScroll = () => {
       const bodyHasStickyHeader =
         document.body.classList.contains("rbt-header-sticky");

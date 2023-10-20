@@ -11,7 +11,6 @@ import Blog from "../blog/Blog";
 import JaninBook from "./JaninBook";
 import Newsletter from "./Newsletter";
 import { Helmet } from "react-helmet";
-import { getAllCourses } from "../../../app/action/CourseAction";
 import { connect } from "react-redux";
 import LoadingOverlay from "react-loading-overlay";
 
@@ -20,17 +19,7 @@ const mapStateToProps = (state) => {
   return { courses };
 };
 
-const mapActionToProps = (dispatch) => {
-  return {
-    getAllCourses: () => dispatch(getAllCourses()),
-  };
-};
-
 class Index extends Component {
-  componentDidMount = () => {
-    this.props.getAllCourses();
-  };
-
   render() {
     let { loading } = this.props.courses;
 
@@ -57,4 +46,4 @@ class Index extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapActionToProps)(Index);
+export default connect(mapStateToProps)(Index);

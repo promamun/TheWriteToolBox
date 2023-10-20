@@ -56,6 +56,11 @@ function App() {
                     path="course-details/:id"
                     element={<CourseDetails />}
                   />
+                  <Route
+                    exact
+                    path="/course-preview"
+                    Component={CoursePreview}
+                  />
                   <Route path="contact" element={<Contact />} />
                   <Route path="blog" element={<Blog />} />
                   <Route path="memberships" element={<Membership />} />
@@ -91,11 +96,6 @@ function App() {
                     <Route path="reviews" element={<UserReview />} />
                     <Route path="order-history" element={<OrderHistory />} />
                     <Route path="settings" element={<Setting />} />
-                    <Route
-                      exact
-                      path="/course-preview"
-                      Component={CoursePreview}
-                    />
                   </Route>
 
                   {/* WHEN NO ROUTE FOUND */}

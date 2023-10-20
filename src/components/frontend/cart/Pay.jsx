@@ -5,9 +5,12 @@ import config from "../../../helper/config";
 import message from "../../../helper/message";
 import { useDispatch } from "react-redux";
 import { getCartDetails } from "../../../app/action/CartAction";
+import { useNavigate } from "react-router-dom";
 
 export default function Pay() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const createOrder = async () => {
     let order_id = "";
     await axios
@@ -32,6 +35,9 @@ export default function Pay() {
         if (res.data.success) {
           message.success(res.data.message);
           dispatch(getCartDetails());
+          navigate({
+            pathname: "/enrolled-courses",
+          });
         }
       })
       .catch((err) => {

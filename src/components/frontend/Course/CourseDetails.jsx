@@ -2,11 +2,22 @@ import React, { useEffect, useState } from "react";
 import LoadingOverlay from "react-loading-overlay";
 import axios from "../../../helper/axios";
 import message from "../../../helper/message";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { BUCKET_DOMAIN } from "../../../helper/helper";
 import moment from "moment";
+import { useDispatch, useSelector } from "react-redux";
+import { getCartDetails } from "../../../app/action/CartAction";
+import config from "../../../helper/config";
+import _ from "lodash";
+import { getEnrolledCourses } from "../../../app/action/EnrolledAction";
 
 export default function CourseDetails() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const cartDetails = useSelector((state) => state.cart_details);
+  const enrolled = useSelector((state) => state.enrolled);
+
   const [loading, setLoading] = useState(false);
   const [course, setCourse] = useState({});
   const [allSection, setAllSections] = useState([]);
@@ -43,6 +54,79 @@ export default function CourseDetails() {
         message.error("Something Went Wrong!!!");
       });
   }, [id]);
+
+  const addToCart = (courseId, gotoCheckOut = false) => {
+    setLoading(true);
+
+    const formData = {
+      course_id: courseId,
+    };
+
+    axios
+      .post("/add-to-cart", formData, config)
+      .then((res) => {
+        setLoading(false);
+        if (res.data.success) {
+          message.success(res.data.message);
+          dispatch(getCartDetails());
+          if (gotoCheckOut) {
+            navigate({
+              pathname: "/checkout",
+            });
+          }
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
+  const enrolledCourse = (courseId) => {
+    setLoading(true);
+
+    const formData = {
+      course_id: courseId,
+    };
+
+    axios
+      .post("/enrolled", formData, config)
+      .then((res) => {
+        setLoading(false);
+        if (res.data.success) {
+          message.success(res.data.message);
+          dispatch(getEnrolledCourses());
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        message.error("Something Went Wrong!!!");
+        console.error(err);
+      });
+  };
+
+  const isPresent = (id, data = []) => {
+    return _.findIndex(data, (o) => o.course_id._id === id) !== -1;
+  };
+
+  const allCarts =
+    !cartDetails.loading && cartDetails.cart_details
+      ? cartDetails.cart_details.carts
+      : [];
+
+  const enrolled_courses =
+    !enrolled.loading && enrolled.enrolled
+      ? enrolled.enrolled.enrolled_courses
+      : [];
+
+  const isEnrolled = (id, data = []) => {
+    return _.findIndex(data, (o) => o.course_id === id) !== -1;
+  };
 
   return (
     <LoadingOverlay active={loading} spinner text="Loading ...">
@@ -85,19 +169,19 @@ export default function CourseDetails() {
                   <div className="feature-sin rating">
                     <Link to="#">4.8</Link>
                     <Link to="#">
-                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star" />
                     </Link>
                     <Link to="#">
-                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star" />
                     </Link>
                     <Link to="#">
-                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star" />
                     </Link>
                     <Link to="#">
-                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star" />
                     </Link>
                     <Link to="#">
-                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star" />
                     </Link>
                   </div>
 
@@ -140,7 +224,7 @@ export default function CourseDetails() {
                   <img
                     className="w-100"
                     src={BUCKET_DOMAIN + course.thumbnail}
-                    alt="Course image"
+                    alt={course.title}
                   />
                 </div>
                 <div className="rbt-inner-onepage-navigation sticky-top mt--30">
@@ -242,7 +326,7 @@ export default function CourseDetails() {
                                                 {content.duration}
                                               </span>
                                               <span className="rbt-badge variation-03 bg-primary-opacity">
-                                                <i className="feather-eye"></i>{" "}
+                                                <i className="feather-eye" />
                                                 Preview
                                               </span>
                                             </div>
@@ -685,21 +769,21 @@ export default function CourseDetails() {
                   {/*Start Viedo Wrapper  */}
                   <Link
                     className="video-popup-with-text video-popup-wrapper text-center popup-video sidebar-video-hidden mb--15"
-                    to="/course-preview"
+                    to={`/course-preview?id=${id}&sec_pos=0&vdo_pos=0`}
                   >
                     <div className="video-content">
                       <img
                         className="w-100 rbt-radius"
-                        src="/assets/images/others/video-01.jpg"
+                        src={BUCKET_DOMAIN + course.thumbnail}
                         alt="Video Images"
                       />
                       <div className="position-to-top">
                         <span className="rbt-btn rounded-player-2 with-animation">
-                          <span className="play-icon"></span>
+                          <span className="play-icon" />
                         </span>
                       </div>
                       <span className="play-view-text d-block color-white">
-                        <i className="feather-eye"></i> Preview this course
+                        <i className="feather-eye" /> Preview this course
                       </span>
                     </div>
                   </Link>
@@ -712,37 +796,83 @@ export default function CourseDetails() {
                       </div>
                       <div className="discount-time">
                         <span className="rbt-badge color-danger bg-color-danger-opacity">
-                          <i className="feather-clock"></i> 3 days left!
+                          <i className="feather-clock" /> 3 days left!
                         </span>
                       </div>
                     </div>
 
-                    <div className="add-to-card-button mt--15">
-                      <Link
-                        className="rbt-btn btn-gradient icon-hover w-100 d-block text-center"
-                        to="#"
-                      >
-                        <span className="btn-text">Add to Cart</span>
-                        <span className="btn-icon">
-                          <i className="feather-arrow-right"></i>
-                        </span>
-                      </Link>
-                    </div>
+                    {isEnrolled(id, enrolled_courses) ? (
+                      <div className="add-to-card-button mt--15">
+                        <div className="rbt-btn btn-gradient icon-hover w-100 d-block text-center">
+                          <span className="btn-text">ENROLLED</span>
+                        </div>
+                      </div>
+                    ) : course.isFree ? (
+                      <div className="add-to-card-button mt--15">
+                        <button
+                          className="rbt-btn btn-gradient icon-hover w-100 d-block text-center"
+                          onClick={() => enrolledCourse(id)}
+                        >
+                          ENROLLE NOW
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </button>
+                      </div>
+                    ) : isPresent(id, allCarts) ? (
+                      <div className="add-to-card-button mt--15">
+                        <Link
+                          className="rbt-btn btn-gradient icon-hover w-100 d-block text-center"
+                          to="/cart"
+                        >
+                          <span className="btn-text">Go To Cart</span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className="add-to-card-button mt--15">
+                        <button
+                          className="rbt-btn btn-gradient icon-hover w-100 d-block text-center"
+                          onClick={() => addToCart(id)}
+                        >
+                          Add To Cart
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </button>
+                      </div>
+                    )}
 
-                    <div className="buy-now-btn mt--15">
-                      <Link
-                        className="rbt-btn btn-border icon-hover w-100 d-block text-center"
-                        to="#"
-                      >
-                        <span className="btn-text">Buy Now</span>
-                        <span className="btn-icon">
-                          <i className="feather-arrow-right"></i>
-                        </span>
-                      </Link>
-                    </div>
+                    {!isEnrolled(id, enrolled_courses) && !course.isFree && (
+                      <div className="buy-now-btn mt--15">
+                        {isPresent(id, allCarts) ? (
+                          <Link
+                            className="rbt-btn btn-border icon-hover w-100 d-block text-center"
+                            to="/checkout"
+                          >
+                            <span className="btn-text">Buy Now</span>
+                            <span className="btn-icon">
+                              <i className="feather-arrow-right" />
+                            </span>
+                          </Link>
+                        ) : (
+                          <button
+                            className="rbt-btn btn-border icon-hover w-100 d-block text-center"
+                            onClick={() => addToCart(id, true)}
+                          >
+                            Buy Now
+                            <span className="btn-icon">
+                              <i className="feather-arrow-right" />
+                            </span>
+                          </button>
+                        )}
+                      </div>
+                    )}
 
                     <span className="subtitle">
-                      <i className="feather-rotate-ccw"></i> 30-Day Money-Back
+                      <i className="feather-rotate-ccw" /> 30-Day Money-Back
                       Guarantee
                     </span>
 
@@ -805,22 +935,22 @@ export default function CourseDetails() {
                         <ul className="social-icon social-default transparent-with-border justify-content-center">
                           <li>
                             <Link to="https://www.facebook.com/">
-                              <i className="feather-facebook"></i>
+                              <i className="feather-facebook" />
                             </Link>
                           </li>
                           <li>
                             <Link to="https://www.twitter.com/">
-                              <i className="feather-twitter"></i>
+                              <i className="feather-twitter" />
                             </Link>
                           </li>
                           <li>
                             <Link to="https://www.instagram.com/">
-                              <i className="feather-instagram"></i>
+                              <i className="feather-instagram" />
                             </Link>
                           </li>
                           <li>
                             <Link to="https://www.linkdin.com/">
-                              <i className="feather-linkedin"></i>
+                              <i className="feather-linkedin" />
                             </Link>
                           </li>
                         </ul>
@@ -829,7 +959,7 @@ export default function CourseDetails() {
                       <div className="contact-with-us text-center">
                         <p>For details about the course</p>
                         <p className="rbt-badge-2 mt--10 justify-content-center w-100">
-                          <i className="feather-phone mr--5"></i> Call Us:{" "}
+                          <i className="feather-phone mr--5" /> Call Us:{" "}
                           <Link to="#">
                             <strong>+444 555 666 777</strong>
                           </Link>
