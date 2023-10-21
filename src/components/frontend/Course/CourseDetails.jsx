@@ -125,7 +125,7 @@ export default function CourseDetails() {
       : [];
 
   const isEnrolled = (id, data = []) => {
-    return _.findIndex(data, (o) => o.course_id._id === id) !== -1;
+    return _.findIndex(data, (o) => o.course_details._id === id) !== -1;
   };
 
   return (

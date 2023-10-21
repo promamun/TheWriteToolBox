@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getEnrolledCourses } from "../../../app/action/EnrolledAction";
 import { BUCKET_DOMAIN } from "../../../helper/helper";
+import _ from "lodash";
 
 export default function EnrollCourses() {
   const dispatch = useDispatch();
@@ -17,6 +18,15 @@ export default function EnrollCourses() {
     !enrolled.loading && enrolled.enrolled
       ? enrolled.enrolled.enrolled_courses
       : [];
+
+  const total_student =
+    !enrolled.loading && enrolled.enrolled
+      ? enrolled.enrolled.total_student
+      : [];
+
+  const getStudentCount = (course_id, data = []) => {
+    return _.find(data, (o) => o._id === course_id)?.count;
+  };
 
   return (
     <UserLayout>
@@ -84,14 +94,14 @@ export default function EnrollCourses() {
               aria-labelledby="home-tab-4"
             >
               <div className="row g-5">
-                {enrolled_courses.map(({ course_id }, key) => {
+                {enrolled_courses.map(({ course_details, sections }, key) => {
                   return (
                     <div key={key} className="col-lg-4 col-md-6 col-12">
                       <div className="rbt-card variation-01 rbt-hover">
                         <div className="rbt-card-img">
-                          <Link to={`/course-details/${course_id._id}`}>
+                          <Link to={`/course-details/${course_details._id}`}>
                             <img
-                              src={BUCKET_DOMAIN + course_id.thumbnail}
+                              src={BUCKET_DOMAIN + course_details.thumbnail}
                               alt="Card image"
                             />
                           </Link>
@@ -119,18 +129,22 @@ export default function EnrollCourses() {
                             </div>
                           </div>
                           <h4 className="rbt-card-title">
-                            <Link to={`/course-details/${course_id._id}`}>
-                              {course_id.title}
+                            <Link to={`/course-details/${course_details._id}`}>
+                              {course_details.title}
                             </Link>
                           </h4>
                           <ul className="rbt-meta">
                             <li>
                               <i className="feather-book" />
-                              20 Lessons
+                              {sections} Lessons
                             </li>
                             <li>
                               <i className="feather-users" />
-                              40 Students
+                              {getStudentCount(
+                                course_details._id,
+                                total_student
+                              )}{" "}
+                              Students
                             </li>
                           </ul>
 

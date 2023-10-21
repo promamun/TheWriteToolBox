@@ -80,7 +80,7 @@ export default function CourseSliderCard({ course, clasName }) {
       : [];
 
   const isEnrolled = (id, data = []) => {
-    return _.findIndex(data, (o) => o.course_id._id === id) !== -1;
+    return _.findIndex(data, (o) => o.course_details._id === id) !== -1;
   };
 
   return (
@@ -99,11 +99,11 @@ export default function CourseSliderCard({ course, clasName }) {
           <ul className="rbt-meta">
             <li>
               <i className="feather-book" />
-              12 Lessons
+              {course.sections} Lessons
             </li>
             <li>
               <i className="feather-users" />
-              50 Students
+              {course.total_students} Students
             </li>
           </ul>
           <h4 className="rbt-card-title">
